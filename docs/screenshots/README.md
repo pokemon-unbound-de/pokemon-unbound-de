@@ -19,11 +19,12 @@ P1:
 - Poké Mart
 - Mission/Quest Log
 - Town Map
-- ordinary NPC dialogue — ✅ covered (batch75; more variants still welcome)
+- ordinary NPC dialogue — ✅ covered (added Aug 2026; more variants welcome)
 
 P2:
 
 - Save Screen
-- PC Storage — ✅ covered (batch75)
-- Settings — ✅ covered (batch75)
+- PC access menu — ✅ covered (added Aug 2026)
+- PC Storage (box view)
+- Settings — ✅ covered (added Aug 2026)
 - additional overworld examples

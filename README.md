@@ -1,6 +1,6 @@
 # Pokémon Unbound DE
 
-German Pokémon Unbound translation and localization QA project.
+A community-driven German (Deutsch) localization of Pokémon Unbound — a full translation with official Pokémon terminology, lore-aware wording, and hands-on in-game QA.
 
 ## About
 
@@ -15,7 +15,7 @@ Alpha / work in progress.
 Current public status:
 
 - Documentation and QA workflow are public.
-- 14 curated screenshots are available for review.
+- A growing set of curated screenshots is available for review.
 - A patch-only release policy is not finalized yet.
 
 ## What This Repository Is
@@ -87,6 +87,16 @@ Screenshots are from the local development build and are shown only to demonstra
 <p align="center">
   <img src="docs/screenshots/13_ring_dialog_de.png" alt="German ring dialogue" width="320">
   <img src="docs/screenshots/14_beach_story_de.png" alt="German beach story dialogue" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/pc-access-menu-de.png" alt="German PC access menu" width="320">
+  <img src="docs/screenshots/npc-dialogue-types-de.png" alt="German NPC dialogue explaining Pokémon types" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/npc-dialogue-survey-de.png" alt="German NPC trainer-survey dialogue" width="320">
+  <img src="docs/screenshots/settings-general-options-de.png" alt="German general options menu" width="320">
 </p>
 
 ## Installation

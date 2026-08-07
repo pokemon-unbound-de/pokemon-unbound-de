@@ -22,20 +22,6 @@ Before commit:
 
 ## Future Shotlist
 
-P1 public screenshot targets:
-
-- Battle
-- Bag
-- Party
-- Pokémon Center
-- Poké Mart
-- Mission/Quest Log
-- Town Map
-- ordinary NPC dialogue
-
-P2 public screenshot targets:
-
-- Save Screen
-- PC Storage
-- Settings
-- additional overworld examples
+The canonical, up-to-date list of wanted screenshots (with coverage status) lives in
+[`docs/screenshots/SHOTLIST.md`](screenshots/SHOTLIST.md). Please refer to that file rather than
+duplicating the targets here.

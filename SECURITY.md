@@ -2,7 +2,7 @@
 
 Please do not post tokens, credentials, private paths, or other sensitive information in public issues.
 
-Do not upload ROMs, saves, emulator states, BIOS files, generated patched ROMs, or commercial assets as reproduction files.
+Do not upload ROMs, saves, emulator states, BIOS files, generated patched ROMs, or commercial assets — not even to reproduce a bug. Describe the issue in text instead.
 
 For normal translation, terminology, screenshot, textbox, or rendering problems, use GitHub Issues.
 

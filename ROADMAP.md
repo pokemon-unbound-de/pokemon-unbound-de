@@ -17,7 +17,7 @@
 
 - Continue terminology and lore review.
 - Add textbox/width risk review for story batches.
-- Add more screenshot coverage for gameplay, menus, and everyday NPC dialogue.
+- Add more screenshot coverage for gameplay and menus (battle, bag, party, PC box view, town map); everyday NPC dialogue and basic settings menus are covered, more variants welcome.
 
 ## Public Repo Hardening
 
