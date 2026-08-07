@@ -54,9 +54,9 @@ If in doubt, open an issue before sending a pull request.
 
 Good starting points:
 
-- Screenshot QA: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/1
-- Terminology / lore: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/2
-- Rendering QA: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/3
+- Screenshot QA: https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/1
+- Terminology / lore: https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/2
+- Rendering QA: https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/3
 
 ## Translation PRs
 

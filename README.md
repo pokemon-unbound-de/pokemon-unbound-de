@@ -28,10 +28,10 @@ The work so far has been AI-assisted and manually reviewed in batches. Human QA 
 
 This project needs human review. The most useful contributions right now are:
 
-- [Screenshot QA](https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/1): check German wording in real in-game context and compare screenshots against expected phrasing.
-- [Terminology / Lore](https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/2): review official Pokémon terminology, names, and lore consistency.
-- [Rendering QA](https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/3): report textbox overflow, broken line breaks, clipping, or control-code issues.
-- [Patch-only Release Policy](https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/4): help shape a safe no-ROM release checklist for later.
+- [Screenshot QA](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/1): check German wording in real in-game context and compare screenshots against expected phrasing.
+- [Terminology / Lore](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/2): review official Pokémon terminology, names, and lore consistency.
+- [Rendering QA](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/3): report textbox overflow, broken line breaks, clipping, or control-code issues.
+- [Patch-only Release Policy](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/4): help shape a safe no-ROM release checklist for later.
 - Testing early-game and story-heavy scenes once a safe local setup exists.
 
 Not sure where to start? Reviewing one screenshot or reporting one wording issue is already useful.
