@@ -18,6 +18,18 @@ This repository documents the German localization process, contributor workflow,
 
 The work so far has been AI-assisted and manually reviewed in batches. Human QA is still essential: we especially need help with lore consistency, terminology, natural German wording, render issues, textbox fit, and in-game testing.
 
+## Help Wanted
+
+This project needs human review. The most useful contributions right now are:
+
+- checking German wording in real in-game context
+- reporting textbox overflow, broken line breaks, or rendering issues
+- reviewing official Pokemon terminology and lore consistency
+- comparing screenshots against expected German phrasing
+- testing early-game and story-heavy scenes
+
+Please do not upload ROMs, saves, states, BIOS files, or commercial assets.
+
 ## What This Repository Is Not
 
 This repository does not provide ROMs, BIOS files, save states, commercial assets, keys, credentials, or private files.
@@ -85,8 +97,8 @@ Pokemon and Pokemon Unbound are owned by their respective rights holders. This p
 
 ## Roadmap
 
-See ROADMAP.md once finalized.
+See ROADMAP.md for the current public roadmap.
 
 ## Credits / Contact
 
-Maintainer contact and credits should be added before publication.
+Please use GitHub Issues for translation reports, terminology/lore concerns, render problems, and contributor coordination.
