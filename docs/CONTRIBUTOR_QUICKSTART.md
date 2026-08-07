@@ -5,7 +5,7 @@ Useful ways to help:
 - Check German translation quality.
 - Review lore and terminology consistency.
 - Report textbox, render, screenshot, or linebreak issues.
-- Open pull requests against documented text, glossary, or tooling files only after reviewing repository safety rules.
+- Open pull requests against public documentation, issue templates, or reviewed public tooling only after reviewing repository safety rules.
 
 ## Simple QA
 

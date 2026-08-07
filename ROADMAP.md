@@ -2,27 +2,27 @@
 
 ## v0.1-alpha-de
 
-- Publish safe documentation and workflow files.
-- Add repository safety rules.
-- Add selected screenshots after public-material review.
+- Keep safe public documentation and workflow files current.
+- Maintain repository safety rules.
+- Expand curated screenshots after public-material review.
 - Document patch workflow without distributing ROMs.
 
-## Batch Continuation
+## Localization Progress
 
-- Recheck Batch83 master before Batch84 continuation.
-- Keep build ownership explicit.
-- Maintain readback and roundtrip discipline.
+- Continue German localization review in controlled review rounds.
+- Keep public documentation focused on contributor-safe QA.
+- Publish only public-safe status updates.
 
 ## QA
 
-- Continue terminology watchlist updates.
+- Continue terminology and lore review.
 - Add textbox/width risk review for story batches.
-- Keep Graphify as advisory and frozen after completed milestones.
+- Add more screenshot coverage for gameplay, menus, and everyday NPC dialogue.
 
 ## Public Repo Hardening
 
 - Review all docs for local path references.
-- Add issue templates.
-- Add SECURITY.md.
+- Keep issue templates and labels aligned.
+- Maintain SECURITY.md and legal/trust documentation.
 - Decide whether patch artifacts are allowed under the release policy.
 - Run staged-file-only safety scans before any push.

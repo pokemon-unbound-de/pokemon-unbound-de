@@ -2,15 +2,14 @@
 
 ## Unreleased
 
-- Prepared GitHub safety gate.
-- Added public documentation candidates.
-- Confirmed local Batch83 state: F41F25FED462C1281E70290BFC732346.
-- Confirmed latest payload already matches Batch83 payload.
-- Confirmed Graphify already current/frozen after Batch83.
-- Drafted repository plan, README, contributing guide, roadmap, issue templates, and screenshot folder guidance.
+- Improved public README clarity and contributor entry points.
+- Added repository safety and trust documentation.
+- Added curated screenshot documentation and a future screenshot shotlist.
+- Aligned issue templates with public labels.
+- Improved public discoverability metadata and social-preview material.
 
 ## v0.1-alpha-de
 
-- Planned initial public documentation release.
+- Published initial public documentation and screenshot set.
 - No ROM distribution.
 - Patch-release decision pending.

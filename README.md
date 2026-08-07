@@ -15,14 +15,8 @@ Alpha / work in progress.
 Current public status:
 
 - Documentation and QA workflow are public.
-- Curated screenshots are available for review.
+- 14 curated screenshots are available for review.
 - A patch-only release policy is not finalized yet.
-
-Internal checkpoint:
-
-- Latest internal batch: 83
-- Current internal build checksum: F41F25FED462C1281E70290BFC732346
-- Graphify: current/frozen after Batch83
 
 ## What This Repository Is
 
@@ -51,8 +45,8 @@ This repository does not provide ROMs, BIOS files, save states, commercial asset
 ## Features
 
 - German localization tracking
-- Batch-oriented QA workflow
-- Readback and roundtrip validation discipline
+- Public screenshot and wording QA workflow
+- Terminology, lore, and textbox review process
 - Terminology and style documentation
 - Contributor-facing issue and review process
 
@@ -117,4 +111,4 @@ See [ROADMAP.md](ROADMAP.md) for the current public roadmap.
 
 ## Credits / Contact
 
-Please use GitHub Issues for translation reports, terminology/lore concerns, render problems, and contributor coordination.
+Maintained by the project owner. Contributions and QA reports are welcome via GitHub Issues for translation reports, terminology/lore concerns, render problems, and contributor coordination.

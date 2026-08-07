@@ -21,12 +21,12 @@ Thanks for helping with the German localization.
 - documentation improvements
 - rendering/textbox reports
 - reproducible bug reports
-- reviewed public tooling/doc improvements
+- reviewed public documentation or tooling improvements
 
 ### Review First
 
 - translation source changes
-- glossary changes
+- terminology/glossary policy changes
 - tooling changes
 - engine-related changes
 - patch workflow changes
