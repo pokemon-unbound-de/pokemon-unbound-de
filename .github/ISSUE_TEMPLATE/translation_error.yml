@@ -1,0 +1,30 @@
+name: Translation error
+description: Report a German translation issue.
+title: "[Translation] "
+labels: ["translation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Location or pointer
+      description: Scene, pointer, file, or area if known.
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current German text
+  - type: textarea
+    id: expected_text
+    attributes:
+      label: Suggested correction
+  - type: textarea
+    id: context
+    attributes:
+      label: Source/context
+      description: Add English context or screenshot reference if safe.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+          required: true

@@ -1,0 +1,28 @@
+name: Terminology or lore
+description: Ask about a term, name, or lore consistency issue.
+title: "[Terminology] "
+labels: ["terminology", "lore"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: Term or name
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed wording
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+          required: true

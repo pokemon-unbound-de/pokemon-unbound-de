@@ -1,0 +1,25 @@
+name: Render or textbox bug
+description: Report layout, width, linebreak, or visual text issues.
+title: "[Render] "
+labels: ["render", "qa"]
+body:
+  - type: input
+    id: scene
+    attributes:
+      label: Scene or area
+  - type: textarea
+    id: issue
+    attributes:
+      label: What looks wrong?
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot reference
+      description: Link or attach only safe curated images.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+          required: true

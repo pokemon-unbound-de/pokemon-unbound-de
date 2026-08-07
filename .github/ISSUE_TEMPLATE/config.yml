@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Repository safety note
+    url: https://github.com/
+    about: Do not upload ROMs, saves, states, BIOS files, credentials, or private files.

@@ -1,0 +1,28 @@
+name: Engine or tooling bug
+description: Report a tooling, build, pointer, or validation issue without attaching forbidden files.
+title: "[Engine] "
+labels: ["technical"]
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Component
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+          required: true
