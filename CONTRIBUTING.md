@@ -10,6 +10,54 @@ Thanks for helping with the German localization.
 - Preserve control codes, placeholders, colors, and linebreak intent.
 - Do not invent lore or rename canon terms without review.
 
+## What can I contribute right now?
+
+### Safe / Welcome
+
+- screenshot QA
+- German wording suggestions
+- official Pokémon terminology corrections
+- lore consistency reports
+- documentation improvements
+- rendering/textbox reports
+- reproducible bug reports
+- reviewed public tooling/doc improvements
+
+### Review First
+
+- translation source changes
+- glossary changes
+- tooling changes
+- engine-related changes
+- patch workflow changes
+
+If in doubt, open an issue before sending a pull request.
+
+### Do Not Submit
+
+- ROM files
+- SAV/state files
+- BIOS files
+- commercial assets
+- generated patched ROMs
+- private/internal project reports
+- credentials/secrets
+- copyrighted assets not permitted for redistribution
+
+## First contribution in 5 minutes
+
+1. Open the screenshots in `docs/screenshots/`.
+2. Pick one scene.
+3. Check German wording, official terminology, or textbox fit.
+4. Open the matching QA issue.
+5. Report the exact screenshot and suggested correction.
+
+Good starting points:
+
+- Screenshot QA: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/1
+- Terminology / lore: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/2
+- Rendering QA: https://github.com/prm9j785cn-design/pokemon-unbound-de/issues/3
+
 ## Translation PRs
 
 Each PR should include:

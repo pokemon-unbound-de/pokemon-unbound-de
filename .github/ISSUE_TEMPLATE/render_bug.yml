@@ -1,7 +1,7 @@
 name: Render or textbox bug
 description: Report layout, width, linebreak, or visual text issues.
 title: "[Render] "
-labels: ["render", "qa"]
+labels: ["rendering", "qa"]
 body:
   - type: input
     id: scene

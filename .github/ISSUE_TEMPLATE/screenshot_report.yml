@@ -1,7 +1,7 @@
 name: Screenshot report
 description: Submit or discuss curated screenshots.
 title: "[Screenshot] "
-labels: ["screenshot", "qa"]
+labels: ["screenshots", "qa"]
 body:
   - type: input
     id: filename

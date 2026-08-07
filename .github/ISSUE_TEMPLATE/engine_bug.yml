@@ -1,7 +1,7 @@
 name: Engine or tooling bug
 description: Report a tooling, build, pointer, or validation issue without attaching forbidden files.
 title: "[Engine] "
-labels: ["technical"]
+labels: ["engine-safety", "qa"]
 body:
   - type: input
     id: component
