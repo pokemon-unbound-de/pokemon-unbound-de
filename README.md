@@ -32,7 +32,42 @@ This repository does not provide ROMs, BIOS files, save states, commercial asset
 
 ## Screenshots
 
-Screenshots are placeholders until separately reviewed. Only curated public PNGs should be added.
+Screenshots are from the local development build and are shown only to demonstrate German localization progress. No ROMs are included in this repository.
+
+<p align="center">
+  <img src="docs/screenshots/01_title_or_intro_de.png" alt="German title screen example" width="320">
+  <img src="docs/screenshots/02_early_dialog_de.png" alt="German dialogue choice example" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/03_character_select_de.png" alt="German character selection example" width="320">
+  <img src="docs/screenshots/04_name_entry_de.png" alt="German name entry interface" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/05_difficulty_de.png" alt="German difficulty setting message" width="320">
+  <img src="docs/screenshots/06_first_room_de.png" alt="Early in-game room example" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/07_story_arceus_bridge_de.png" alt="German story dialogue with Arceus" width="320">
+  <img src="docs/screenshots/08_public_notice_de.png" alt="German non-commercial notice" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/09_world_intro_de.png" alt="German world introduction text" width="320">
+  <img src="docs/screenshots/10_shadow_lab_dialog_de.png" alt="German Shadow lab dialogue" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/11_shadow_lab_order_de.png" alt="German Shadow lab order dialogue" width="320">
+  <img src="docs/screenshots/12_portal_dialog_de.png" alt="German portal dialogue" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/13_ring_dialog_de.png" alt="German ring dialogue" width="320">
+  <img src="docs/screenshots/14_beach_story_de.png" alt="German beach story dialogue" width="320">
+</p>
 
 ## Installation
 
