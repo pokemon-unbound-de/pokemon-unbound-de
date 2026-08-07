@@ -19,11 +19,11 @@ P1:
 - Poké Mart
 - Mission/Quest Log
 - Town Map
-- ordinary NPC dialogue
+- ordinary NPC dialogue — ✅ covered (batch75; more variants still welcome)
 
 P2:
 
 - Save Screen
-- PC Storage
-- Settings
+- PC Storage — ✅ covered (batch75)
+- Settings — ✅ covered (batch75)
 - additional overworld examples
