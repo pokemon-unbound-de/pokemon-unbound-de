@@ -1,0 +1,33 @@
+# Pokémon Unbound auf Deutsch (German Fan-Translation)
+
+> A community-driven German (Deutsch) localization of Pokémon Unbound, a Pokémon FireRed ROM hack built on the CFRU ecosystem. This repository is documentation, terminology, and human-QA coordination for the translation. It contains **no ROM, no patched ROM, and no public patch** — any future release will be patch-only (bring your own legal base ROM).
+
+Key facts:
+- Language: German (Deutsch) localization of an English ROM hack.
+- Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem.
+- Status: Alpha / work in progress; AI-assisted, human-reviewed in batches.
+- Distribution policy: patch-only, no ROMs or commercial assets are hosted or shared.
+- Not affiliated with or endorsed by the rights holders; unofficial fan project.
+
+## Docs
+
+- [README](README.md): project overview, status, screenshots, FAQ.
+- [Contributor Quickstart](docs/CONTRIBUTOR_QUICKSTART.md): how to help with QA and review.
+- [Contributing Guide](CONTRIBUTING.md): contribution rules and scope.
+- [Roadmap](ROADMAP.md): current public roadmap.
+- [Changelog](CHANGELOG.md): notable public documentation changes.
+- [Project Status](docs/PROJECT_STATUS.md): current public status detail.
+
+## Terminology & QA
+
+- [Screenshot Guide](docs/SCREENSHOT_GUIDE.md): how curated screenshots are captured and cropped.
+- [Screenshots](docs/screenshots/README.md): curated German in-game screenshots and shotlist.
+
+## Legal
+
+- [Licensing / IP notes](docs/LICENSING.md): licensing and intellectual-property notes.
+- [Legal Notice](docs/LEGAL_NOTICE.md): non-affiliation and no-ROM policy.
+
+## How to contribute
+
+- [Open Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues): screenshot QA, terminology/lore, rendering QA, release policy.

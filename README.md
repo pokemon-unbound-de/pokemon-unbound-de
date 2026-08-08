@@ -1,4 +1,4 @@
-# Pokémon Unbound DE
+# Pokémon Unbound auf Deutsch – German Patch (Fan-Übersetzung)
 
 A community-driven German (Deutsch) localization of Pokémon Unbound — a full translation with official Pokémon terminology, lore-aware wording, and hands-on in-game QA.
 
@@ -55,48 +55,48 @@ This repository does not provide ROMs, BIOS files, save states, commercial asset
 Screenshots are from the local development build and are shown only to demonstrate German localization progress. No ROMs are included in this repository.
 
 <p align="center">
-  <img src="docs/screenshots/01_title_or_intro_de.png" alt="German title screen example" width="320">
-  <img src="docs/screenshots/02_early_dialog_de.png" alt="German dialogue choice example" width="320">
+  <img src="docs/screenshots/01_title_or_intro_de.png" alt="Pokémon Unbound auf Deutsch – Titelbildschirm (German title screen)" width="320">
+  <img src="docs/screenshots/02_early_dialog_de.png" alt="Pokémon Unbound Deutsch – frühe Dialogauswahl (German dialogue choice)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/03_character_select_de.png" alt="German character selection example" width="320">
-  <img src="docs/screenshots/04_name_entry_de.png" alt="German name entry interface" width="320">
+  <img src="docs/screenshots/03_character_select_de.png" alt="Pokémon Unbound Deutsch – Charakterauswahl (German character selection)" width="320">
+  <img src="docs/screenshots/04_name_entry_de.png" alt="Pokémon Unbound Deutsch – Namenseingabe (German name entry)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/05_difficulty_de.png" alt="German difficulty setting message" width="320">
-  <img src="docs/screenshots/06_first_room_de.png" alt="Early in-game room example" width="320">
+  <img src="docs/screenshots/05_difficulty_de.png" alt="Pokémon Unbound Deutsch – Schwierigkeitsgrad-Auswahl (German difficulty setting)" width="320">
+  <img src="docs/screenshots/06_first_room_de.png" alt="Pokémon Unbound Deutsch – erstes Zimmer im Spiel (early in-game room)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/07_story_arceus_bridge_de.png" alt="German story dialogue with Arceus" width="320">
-  <img src="docs/screenshots/08_public_notice_de.png" alt="German non-commercial notice" width="320">
+  <img src="docs/screenshots/07_story_arceus_bridge_de.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Arceus (German story dialogue)" width="320">
+  <img src="docs/screenshots/08_public_notice_de.png" alt="Pokémon Unbound Deutsch – nicht-kommerzieller Hinweis (German non-commercial notice)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/09_world_intro_de.png" alt="German world introduction text" width="320">
-  <img src="docs/screenshots/10_shadow_lab_dialog_de.png" alt="German Shadow lab dialogue" width="320">
+  <img src="docs/screenshots/09_world_intro_de.png" alt="Pokémon Unbound Deutsch – Welteinführungstext (German world introduction)" width="320">
+  <img src="docs/screenshots/10_shadow_lab_dialog_de.png" alt="Pokémon Unbound Deutsch – Dialog im Schatten-Labor (German Shadow lab dialogue)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/11_shadow_lab_order_de.png" alt="German Shadow lab order dialogue" width="320">
-  <img src="docs/screenshots/12_portal_dialog_de.png" alt="German portal dialogue" width="320">
+  <img src="docs/screenshots/11_shadow_lab_order_de.png" alt="Pokémon Unbound Deutsch – Befehlsdialog im Schatten-Labor (German Shadow lab order)" width="320">
+  <img src="docs/screenshots/12_portal_dialog_de.png" alt="Pokémon Unbound Deutsch – Portal-Dialog (German portal dialogue)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/13_ring_dialog_de.png" alt="German ring dialogue" width="320">
-  <img src="docs/screenshots/14_beach_story_de.png" alt="German beach story dialogue" width="320">
+  <img src="docs/screenshots/13_ring_dialog_de.png" alt="Pokémon Unbound Deutsch – Ring-Dialog (German ring dialogue)" width="320">
+  <img src="docs/screenshots/14_beach_story_de.png" alt="Pokémon Unbound Deutsch – Strand-Story-Dialog (German beach story dialogue)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/pc-access-menu-de.png" alt="German PC access menu" width="320">
-  <img src="docs/screenshots/npc-dialogue-types-de.png" alt="German NPC dialogue explaining Pokémon types" width="320">
+  <img src="docs/screenshots/pc-access-menu-de.png" alt="Pokémon Unbound Deutsch – PC-Zugriffsmenü (German PC access menu)" width="320">
+  <img src="docs/screenshots/npc-dialogue-types-de.png" alt="Pokémon Unbound Deutsch – NPC erklärt Pokémon-Typen (German NPC dialogue on types)" width="320">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/npc-dialogue-survey-de.png" alt="German NPC trainer-survey dialogue" width="320">
-  <img src="docs/screenshots/settings-general-options-de.png" alt="German general options menu" width="320">
+  <img src="docs/screenshots/npc-dialogue-survey-de.png" alt="Pokémon Unbound Deutsch – NPC-Trainerumfrage-Dialog (German NPC trainer-survey)" width="320">
+  <img src="docs/screenshots/settings-general-options-de.png" alt="Pokémon Unbound Deutsch – allgemeines Optionsmenü (German general options menu)" width="320">
 </p>
 
 ## Installation
@@ -104,6 +104,23 @@ Screenshots are from the local development build and are shown only to demonstra
 No ROM is provided, and there is no public patch release yet.
 
 If a patch release is explicitly approved later, users must provide their own legal base ROM and apply the published patch locally. Checksums and patch instructions should be included with that release.
+
+## FAQ
+
+**Was ist das? / What is this?**
+Ein community-getriebenes Fan-Projekt, das Pokémon Unbound (ein Pokémon-FireRed-ROM-Hack auf CFRU-Basis) ins Deutsche übersetzt/lokalisiert — mit offizieller Pokémon-Terminologie, lore-treuer Formulierung und Ingame-QA. This repository is documentation and QA coordination for a German (Deutsch) Pokémon Unbound translation.
+
+**Gibt es einen Download / einen Patch? / Where is the download?**
+Aktuell nein. Dieses Repository enthält **keinen ROM und keinen öffentlichen Patch**. Falls später ein Patch freigegeben wird, erfolgt die Verteilung ausschließlich **patch-only** (kein ROM) — Nutzer bringen ihren eigenen legalen Basis-ROM mit und wenden den veröffentlichten Patch lokal an.
+
+**Welche Version wird unterstützt? / Which version is supported?**
+Pokémon Unbound auf Basis von Pokémon FireRed (BPRE) im CFRU-Ökosystem. Ein Patch würde gegen einen definierten Basis-ROM mit veröffentlichter Prüfsumme (MD5) erstellt, damit die Anwendung reproduzierbar ist.
+
+**Wie kann ich helfen? / How can I contribute?**
+Menschliche QA ist entscheidend: Screenshot-QA, Terminologie/Lore, natürliche deutsche Formulierung, Render-/Textbox-Probleme und Ingame-Tests. Siehe die offenen [Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues) — schon eine einzelne Formulierungsmeldung hilft.
+
+**Ist das legal? / Is this legal?**
+Dies ist eine inoffizielle Fan-Übersetzung, nicht mit den Rechteinhabern verbunden oder von ihnen unterstützt. Es werden **keine ROMs, BIOS-Dateien, Savestates oder kommerziellen Assets** verteilt. Pokémon und Pokémon Unbound gehören ihren jeweiligen Rechteinhabern.
 
 ## Contributing
 
