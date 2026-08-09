@@ -28,6 +28,14 @@ Key facts:
 - [Licensing / IP notes](docs/LICENSING.md): licensing and intellectual-property notes.
 - [Legal Notice](docs/LEGAL_NOTICE.md): non-affiliation and no-ROM policy.
 
+## FAQ
+
+- **Is there a download or patch? / Gibt es einen Download?** No. This repository hosts no ROM and no public patch. Any future release is patch-only: users provide their own legal base ROM and apply the published patch locally.
+- **Which version is supported? / Welche Version?** Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem. A patch would target a defined base ROM with a published MD5 checksum so application is reproducible.
+- **How can I help? / Wie kann ich helfen?** Human QA is the priority — screenshot QA, terminology/lore, natural German wording, and rendering/textbox checks. See the open Issues and Discussions below.
+- **Is this legal? / Ist das legal?** Unofficial fan translation, not affiliated with or endorsed by the rights holders. No ROMs, BIOS files, save states, or commercial assets are distributed.
+
 ## How to contribute
 
 - [Open Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues): screenshot QA, terminology/lore, rendering QA, release policy.
+- [Discussions](https://github.com/pokemon-unbound-de/pokemon-unbound-de/discussions): questions, wording feedback, and general project discussion.
