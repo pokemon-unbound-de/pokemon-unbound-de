@@ -114,7 +114,8 @@ Ein community-getriebenes Fan-Projekt, das Pokémon Unbound (ein Pokémon-FireRe
 Aktuell nein. Dieses Repository enthält **keinen ROM und keinen öffentlichen Patch**. Falls später ein Patch freigegeben wird, erfolgt die Verteilung ausschließlich **patch-only** (kein ROM) — Nutzer bringen ihren eigenen legalen Basis-ROM mit und wenden den veröffentlichten Patch lokal an.
 
 **Welche Version wird unterstützt? / Which version is supported?**
-Pokémon Unbound auf Basis von Pokémon FireRed (BPRE) im CFRU-Ökosystem. Ein Patch würde gegen einen definierten Basis-ROM mit veröffentlichter Prüfsumme (MD5) erstellt, damit die Anwendung reproduzierbar ist.
+Dieses Projekt übersetzt derzeit eine **frühere Unbound-Release** (nicht die aktuelle **v2.1.1.1**, die finale Version seit November 2022). Grundlage ist Pokémon Unbound auf Basis von Pokémon FireRed (BPRE) im CFRU-Ökosystem; ein Patch würde gegen einen definierten Basis-ROM mit veröffentlichter Prüfsumme (MD5) erstellt, damit die Anwendung reproduzierbar ist. Ein allgemeiner Patch erscheint erst nach Abschluss der Übersetzung; danach ist eine Portierung auf die neueste Version geplant.
+*This project currently translates an **earlier Unbound release** — not the current **v2.1.1.1** (the final version since November 2022). A general patch will only be released once the translation is complete, followed by a port to the latest version.*
 
 **Wie kann ich helfen? / How can I contribute?**
 Menschliche QA ist entscheidend: Screenshot-QA, Terminologie/Lore, natürliche deutsche Formulierung, Render-/Textbox-Probleme und Ingame-Tests. Siehe die offenen [Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues) — schon eine einzelne Formulierungsmeldung hilft.
