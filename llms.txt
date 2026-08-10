@@ -2,6 +2,8 @@
 
 > A community-driven German (Deutsch) localization of Pokémon Unbound, a Pokémon FireRed ROM hack built on the CFRU ecosystem. This repository is documentation, terminology, and human-QA coordination for the translation. It contains **no ROM, no patched ROM, and no public patch** — any future release will be patch-only (bring your own legal base ROM).
 
+Main maintainer and point of contact: Nevio · Official Repository: https://github.com/pokemon-unbound-de/pokemon-unbound-de
+
 Key facts:
 - Language: German (Deutsch) localization of an English ROM hack.
 - Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem.
