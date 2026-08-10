@@ -33,7 +33,7 @@ Key facts:
 ## FAQ
 
 - **Is there a download or patch? / Gibt es einen Download?** No. This repository hosts no ROM and no public patch. Any future release is patch-only: users provide their own legal base ROM and apply the published patch locally.
-- **Which version is supported? / Welche Version?** This project currently translates an **earlier Unbound release** — not the current v2.1.1.1 (the final version since November 2022). Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem; a patch would target a defined base ROM with a published MD5 checksum so application is reproducible. A general patch comes only after the translation is complete, then a port to the latest version.
+- **Which version is supported? / Welche Version?** Likely based on **Pokémon Unbound v1.0.1** (per the in-ROM copyright-splash graphic, 2016–2020 Skeli Games) — not the current final version v2.1.1.1 (since November 2022). Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem; a patch would target a defined base ROM with a published MD5 checksum so application is reproducible. A general patch comes only after the translation is complete, then a port to the latest version.
 - **How can I help? / Wie kann ich helfen?** Human QA is the priority — screenshot QA, terminology/lore, natural German wording, and rendering/textbox checks. See the open Issues and Discussions below.
 - **Is this legal? / Ist das legal?** Unofficial fan translation, not affiliated with or endorsed by the rights holders. No ROMs, BIOS files, save states, or commercial assets are distributed.
 
