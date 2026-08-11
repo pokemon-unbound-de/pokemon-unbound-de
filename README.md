@@ -99,6 +99,40 @@ Screenshots are from the local development build and are shown only to demonstra
   <img src="docs/screenshots/settings-general-options-de.png" alt="Pokémon Unbound Deutsch – allgemeines Optionsmenü (German general options menu)" width="320">
 </p>
 
+<p align="center">
+  <img src="docs/screenshots/npc-pc-tutorial-de.png" alt="Pokémon Unbound Deutsch – NPC erklärt das PC-Lagersystem (German PC storage tutorial)" width="320">
+  <img src="docs/screenshots/npc-chansey-field-de.png" alt="Pokémon Unbound Deutsch – NPC-Dialog über Chaneira im Feld (German NPC dialogue about Chansey)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/secret-base-items-menu-de.png" alt="Pokémon Unbound Deutsch – Geheimbasis-Items-Menü (German secret base items menu)" width="320">
+  <img src="docs/screenshots/start-menu-quest-bellinburg-de.png" alt="Pokémon Unbound Deutsch – Start-Menü mit Auftragstext (German start menu with quest objective)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/start-menu-warehouse-de.png" alt="Pokémon Unbound Deutsch – Start-Menü im Lagerhaus (German start menu)" width="320">
+  <img src="docs/screenshots/lockpick-prompt-de.png" alt="Pokémon Unbound Deutsch – Interaktions-Abfrage „Schloss aufbrechen?" (German interaction prompt)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/double-battle-menu-de.png" alt="Pokémon Unbound Deutsch – Doppelkampf-Menü (German double battle menu)" width="320">
+  <img src="docs/screenshots/battle-move-menu-de.png" alt="Pokémon Unbound Deutsch – Attacken-Menü im Kampf (German battle move menu)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/starter-selection-de.png" alt="Pokémon Unbound Deutsch – Starter-Auswahl (German starter selection)" width="320">
+  <img src="docs/screenshots/starter-joined-de.png" alt="Pokémon Unbound Deutsch – Pokémon schließt sich an (German Pokémon joins the team)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/prof-laerch-humor-de.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Prof. Lärch (German story dialogue)" width="320">
+  <img src="docs/screenshots/ace-choose-pokemon-de.png" alt="Pokémon Unbound Deutsch – Story-Szene vor der Starter-Wahl (German pre-starter story scene)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/mother-father-proud-de.png" alt="Pokémon Unbound Deutsch – emotionaler Story-Dialog mit der Mutter (German emotional story dialogue)" width="320">
+</p>
+
 ## Installation
 
 No ROM is provided, and there is no public patch release yet.

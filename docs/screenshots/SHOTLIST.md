@@ -1,9 +1,9 @@
 # Screenshot Shotlist
 
-> Stand: 2026-08-10. Öffentlich kuratierte PNGs: `docs/screenshots/` (18 Stück).
+> Stand: 2026-08-11. Öffentlich kuratierte PNGs: `docs/screenshots/` (31 Stück).
 > Weitere Rohbilder liegen vor, werden nach und nach kuratiert.
 
-## Aktuell gecovered (18 PNGs public)
+## Aktuell gecovered (31 PNGs public)
 
 | # | Datei | Szene | Status |
 |---|-------|------|--------|
@@ -25,6 +25,19 @@
 | 16 | `npc-dialogue-types-de.png` | NPC: Typen-Erklärung | ✅ |
 | 17 | `npc-dialogue-survey-de.png` | NPC: Trainer-Umfrage | ✅ |
 | 18 | `settings-general-options-de.png` | Einstellungen: Allgemein | ✅ |
+| 19 | `npc-pc-tutorial-de.png` | NPC: PC-Tutorial (Lagern) | ✅ |
+| 20 | `npc-chansey-field-de.png` | NPC: Chaneira im Feld | ✅ |
+| 21 | `secret-base-items-menu-de.png` | Geheimbasis: Basis-Items-Menü | ✅ |
+| 22 | `start-menu-quest-bellinburg-de.png` | Start-Menü + Quest (Bellinburg) | ✅ |
+| 23 | `start-menu-warehouse-de.png` | Start-Menü (Lagerhaus) | ✅ |
+| 24 | `lockpick-prompt-de.png` | Interaktion „Schloss aufbrechen?" | ✅ |
+| 25 | `double-battle-menu-de.png` | Doppelkampf-Menü | ✅ (HP-Bar noch EN) |
+| 26 | `battle-move-menu-de.png` | Kampf: Attacken-Menü | ✅ (HP-Bar noch EN) |
+| 27 | `starter-selection-de.png` | Starter-Wahl (Kaumalat) | ✅ |
+| 28 | `prof-laerch-humor-de.png` | Story: Prof. Lärch (Humor) | ✅ |
+| 29 | `mother-father-proud-de.png` | Story: Mutter/Vater | ✅ |
+| 30 | `starter-joined-de.png` | „Kaumalat schloss sich an!" | ✅ |
+| 31 | `ace-choose-pokemon-de.png` | Story: Ace (Starter-Prompt) | ✅ |
 
 ## P1 Targets (noch offen)
 
