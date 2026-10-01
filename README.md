@@ -18,6 +18,18 @@ Current public status:
 - A growing set of curated screenshots is available for review.
 - A patch-only release policy is not finalized yet.
 
+## Beta v0.1
+
+**Geplanter Release: 08.10.2026** – eine öffentliche Beta zum Testen, keine fertige Übersetzung.
+
+- **Umfang:** _[PLATZHALTER – wird am 06.10. ergänzt, z. B. „übersetzt bis …“]_
+- **Download:** _[PLATZHALTER – Link zur Release-Seite folgt am 06.10.]_
+- **Was du brauchst:** deine eigene, legal erworbene Basis-ROM. Wir verteilen nur einen `.bps`-Patch, keine ROM.
+- **So geht's:** [Patch-Anleitung](docs/PATCH_ANLEITUNG.md)
+- **Was ist neu:** [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md)
+
+Es ist eine Beta: Rechnet mit Textstellen auf Englisch, holprigen Formulierungen und Textboxen, die nicht ganz passen. Genau dabei hilft uns euer Feedback – Fehler gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=uebersetzungsfehler.yml).
+
 ## What This Repository Is
 
 This repository documents the German localization process, contributor workflow, terminology decisions, QA notes, and safe tooling around the project.
@@ -138,6 +150,8 @@ Screenshots are from the local development build and are shown only to demonstra
 No ROM is provided, and there is no public patch release yet.
 
 If a patch release is explicitly approved later, users must provide their own legal base ROM and apply the published patch locally. Checksums and patch instructions should be included with that release.
+
+Für die Beta v0.1: siehe [docs/PATCH_ANLEITUNG.md](docs/PATCH_ANLEITUNG.md).
 
 ## FAQ
 

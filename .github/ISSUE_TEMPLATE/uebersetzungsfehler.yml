@@ -1,0 +1,54 @@
+name: Übersetzungsfehler melden
+description: Falscher, holpriger oder fehlender deutscher Text im Spiel? Hier melden.
+title: "[Übersetzung] "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du hilfst! 💛 Eine Meldung pro Textstelle ist am übersichtlichsten.
+        **Bitte keine ROMs, gepatchten ROMs, Spielstände oder Savestates hochladen** – nur Screenshots.
+  - type: input
+    id: patch_version
+    attributes:
+      label: Patch-Version
+      description: Steht im Dateinamen bzw. auf der Release-Seite.
+      placeholder: z. B. v0.1-beta
+    validations:
+      required: true
+  - type: textarea
+    id: ort
+    attributes:
+      label: Ort im Spiel
+      description: Wo bist du gerade? Stadt/Route, Gebäude, Person, Menü oder Story-Abschnitt.
+      placeholder: z. B. Bellinburg, Pokémon-Center, Gespräch mit der Frau am Tresen
+    validations:
+      required: true
+  - type: textarea
+    id: falscher_text
+    attributes:
+      label: Falscher Text
+      description: Der Text so, wie er im Spiel steht (abtippen reicht).
+    validations:
+      required: true
+  - type: textarea
+    id: vorschlag
+    attributes:
+      label: Vorschlag (optional)
+      description: Wie sollte es deiner Meinung nach heißen? Gerne mit kurzer Begründung.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Bild einfach hier hineinziehen oder einfügen. Hilft uns enorm, die Stelle zu finden.
+    validations:
+      required: false
+  - type: checkboxes
+    id: sicherheit
+    attributes:
+      label: Kurzer Check
+      options:
+        - label: Ich habe keine ROMs, Spielstände, Savestates, BIOS-Dateien oder privaten Dateien angehängt.
+          required: true
