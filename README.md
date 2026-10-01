@@ -28,7 +28,7 @@ Current public status:
 - **So geht's:** [Patch-Anleitung](docs/PATCH_ANLEITUNG.md)
 - **Was ist neu:** [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md)
 
-Es ist eine Beta: Rechnet mit Textstellen auf Englisch, holprigen Formulierungen und Textboxen, die nicht ganz passen. Genau dabei hilft uns euer Feedback – Fehler gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=uebersetzungsfehler.yml).
+Es ist eine Beta: Rechnet mit Textstellen auf Englisch, holprigen Formulierungen und Textboxen, die nicht ganz passen. Genau dabei hilft uns euer Feedback – Fehler gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
 
 ## What This Repository Is
 

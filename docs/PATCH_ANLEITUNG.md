@@ -68,6 +68,6 @@ Meldet Flips einen Prüfsummenfehler („checksum mismatch“ o. ä.), ist es di
 
 - **Patch schlägt fehl / Prüfsummenfehler:** falsche Basis-ROM → MD5 prüfen (Schritt 2).
 - **Weißer/schwarzer Bildschirm:** meist ebenfalls falsche Basis-ROM oder eine bereits gepatchte Datei als Basis verwendet.
-- **Übersetzungsfehler gefunden?** Melde ihn gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=uebersetzungsfehler.yml).
+- **Übersetzungsfehler gefunden?** Melde ihn gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
 
 Bitte lade **niemals** ROMs, gepatchte ROMs, Spielstände oder Savestates in Issues oder im Discord hoch. Screenshots sind super!

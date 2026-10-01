@@ -33,8 +33,8 @@ Wir verteilen **keine ROMs**.
 
 ## Feedback
 
-Fehler gefunden? Am meisten hilft uns eine Meldung über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=uebersetzungsfehler.yml) – mit Ort im Spiel und Screenshot.
-Fragen und Austausch: Discord _[PLATZHALTER – Link]_.
+Fehler gefunden? Am meisten hilft uns eine Meldung über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml) – mit Ort im Spiel und Screenshot.
+Fragen und Austausch: [Discord](https://discord.gg/fSkhHppgcv).
 
 ## Danke
 
