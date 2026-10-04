@@ -185,6 +185,34 @@ Aus der aktuellen Beta-v0.1-Entwicklungsversion (früher Spielstand, keine Spoil
   <img src="docs/screenshots/story_s8_laerch_theorie.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Prof. Lärch (German story dialogue)" width="240">
 </p>
 
+**Unterwegs in Borrius**
+
+<p align="center">
+  <img src="docs/screenshots/beta-boot-fallhafen.png" alt="Pokémon Unbound Deutsch – Bootsfahrt nach Fallhafen (German dialogue choice)" width="320">
+  <img src="docs/screenshots/beta-lunarfeder.png" alt="Pokémon Unbound Deutsch – Lunarfeder-Szene (German story text)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-pruefung-wuerdig.png" alt="Pokémon Unbound Deutsch – Prüfungs-Dialog (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-fund-pikachium-z.png" alt="Pokémon Unbound Deutsch – Item-Fund mit Beschreibung (German item found popup)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-ms-marine-trainer.png" alt="Pokémon Unbound Deutsch – M.S. Marine (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-ms-marine-kapitaen.png" alt="Pokémon Unbound Deutsch – Kapitän der M.S. Marine (German NPC dialogue)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-algorithmus.png" alt="Pokémon Unbound Deutsch – NPC mit Algorithmus (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-story-jax.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Jax (German story dialogue)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-tm38-feuersturm.png" alt="Pokémon Unbound Deutsch – TM-Fund Feuersturm (German TM found message)" width="320">
+  <img src="docs/screenshots/beta-vulkan-maler.png" alt="Pokémon Unbound Deutsch – Maler am Vulkan (German NPC dialogue)" width="320">
+</p>
+
+
 ## Installation
 
 No ROM is provided. From **08.10.2026** the Beta v0.1 is available as a `.bps` patch (patch-only).
