@@ -23,7 +23,8 @@ Hallo zusammen! 👋 Das ist die erste öffentliche Beta der deutschen Fan-Über
 
 ## Bekannte Grenzen
 
-- Einige **Grafiken** zeigen noch Englisch, z. B. Typ-Symbole, „POWER/ACCURACY“ im Attacken-Bericht, einige Bericht- und PC-Labels.
+- Einige **Grafiken** zeigen noch Englisch, z. B. „POWER/ACCURACY“ im Attacken-Bericht und einige Bericht-Labels.
+- Im Pokédex werden **Größe und Gewicht** noch in englischen Einheiten (Fuß/Pfund) angezeigt.
 - Einzelne Formulierungen sind holprig oder nicht ganz lore-treu – genau hier brauchen wir euch.
 - Selten genutzte Funktionen aus dem FireRed-Unterbau (z. B. Link-/Drahtlos-Funktionen) sind weniger getestet.
 - Die Beta basiert vermutlich auf Unbound v1.0.1, nicht auf der aktuellen v2.1.1.1 (siehe README).
