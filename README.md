@@ -145,6 +145,39 @@ Screenshots are from the local development build and are shown only to demonstra
   <img src="docs/screenshots/mother-father-proud-de.png" alt="Pokémon Unbound Deutsch – emotionaler Story-Dialog mit der Mutter (German emotional story dialogue)" width="320">
 </p>
 
+### Beta v0.1 — Eindrücke
+
+Aus der aktuellen Beta-v0.1-Entwicklungsversion (früher Spielstand, keine Spoiler).
+
+<p align="center">
+  <img src="docs/screenshots/01_wildes_taubsi_erscheint.png" alt="Pokémon Unbound Deutsch – Wildes Taubsi erscheint (German wild encounter)" width="320">
+  <img src="docs/screenshots/03_was_soll_glumanda_tun.png" alt="Pokémon Unbound Deutsch – Kampfmenü „Was soll Glumanda tun?“ (German battle menu)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/04_glumanda_nutzt_kratzer.png" alt="Pokémon Unbound Deutsch – Glumanda nutzt Kratzer (German battle text)" width="320">
+  <img src="docs/screenshots/06_e_punkte.png" alt="Pokémon Unbound Deutsch – Erfahrungspunkte erhalten (German EXP message)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/07_dialog_individuelle_staerken.png" alt="Pokémon Unbound Deutsch – NPC erklärt Individuelle Stärken (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/09_fund_herzschuppe.png" alt="Pokémon Unbound Deutsch – Item-Fund Herzschuppe (German item found popup)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/13_optionen.png" alt="Pokémon Unbound Deutsch – Allgemeine Optionen (German options menu)" width="320">
+  <img src="docs/screenshots/14_trainerpass.png" alt="Pokémon Unbound Deutsch – Trainerpass (German trainer card)" width="320">
+</p>
+
+**Story**
+
+<p align="center">
+  <img src="docs/screenshots/story_s2_versagen.png" alt="Pokémon Unbound Deutsch – Story-Dialog „Versagen“ (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s5_lothar_polizei.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Lothar (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s6_lothar_erstarrte_welt.png" alt="Pokémon Unbound Deutsch – Story: „Eine erstarrte Welt.“ (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s8_laerch_theorie.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Prof. Lärch (German story dialogue)" width="240">
+</p>
+
 ## Installation
 
 No ROM is provided, and there is no public patch release yet.
