@@ -1,6 +1,8 @@
 # Pokémon Unbound auf Deutsch – German Patch (Fan-Übersetzung)
 
-A community-driven German (Deutsch) localization of Pokémon Unbound — a full translation with official Pokémon terminology, lore-aware wording, and hands-on in-game QA.
+A community-driven German (Deutsch) localization of Pokémon Unbound — with official Pokémon terminology, lore-aware wording, and hands-on in-game QA.
+
+> **Beta v0.1 erscheint am 08.10.2026.** Download, Patch-Anleitung und alle Infos: siehe unten. · **Discord:** https://discord.gg/fSkhHppgcv
 
 ## About
 
@@ -10,13 +12,30 @@ The public repository currently contains documentation, contribution guidelines,
 
 ## Status
 
-Alpha / work in progress.
+**Beta v0.1 – öffentliche Test-Version ab 08.10.2026.** Patch-only (keine ROM), zum Spielen, Testen und Mithelfen.
 
-Current public status:
+## Beta v0.1
 
-- Documentation and QA workflow are public.
-- A growing set of curated screenshots is available for review.
-- A patch-only release policy is not finalized yet.
+**Release: 08.10.2026** – eine öffentliche Beta zum Testen, **keine fertige Übersetzung**.
+
+- **Umfang:** rund 17.000 Texteinträge übersetzt, ca. 98 % des sichtbaren Spieltexts auf Deutsch (maschinell gemessen); Story, NPCs, Kämpfe, Menüs, Items, Attacken, Fähigkeiten, Missionsbuch, deutscher Titelbildschirm.
+- **Download:** erscheint am **08.10.** auf der Release-Seite.
+- **Was du brauchst:** deine eigene, legal erworbene Basis-ROM. Wir verteilen nur einen `.bps`-Patch, keine ROM.
+- **So geht's:** [Patch-Anleitung](docs/PATCH_ANLEITUNG.md)
+- **Was ist neu, wie wir gearbeitet haben, wie es weitergeht:** [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md)
+
+Es ist eine Beta: Rechnet mit einzelnen englischen Grafiken (z. B. Typ-Symbole), holprigen Formulierungen und Stellen, die noch nicht von Menschen gelesen wurden. Genau dabei hilft uns euer Feedback – Fehler gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml) oder im [Discord](https://discord.gg/fSkhHppgcv).
+
+## Release-Ankündigung
+
+Am **08.10.2026** erscheint die erste öffentliche Beta der deutschen Pokémon-Unbound-Übersetzung.
+
+- **Wie wir gearbeitet haben:** KI-gestützte Übersetzung in Wellen, abgeglichen mit einem Glossar offizieller Pokémon-Begriffe. Jede Welle muss durch automatische Prüfungen (Steuercodes/Namen, Textbreite am echten Bildschirm, Terminologie, Zeiger-Zuordnung, Namenstabellen). Ein Test-Bot im Emulator hat 368 Karten, rund 290 NPCs mit Trainerkämpfen, 200 Schilder sowie Tasche, Pokédex, PC und Missionsbuch durchlaufen. Jeder gefundene Fehler wurde als Fehlerklasse in eine neue automatische Prüfung übersetzt.
+- **Wie es weitergeht:** Menschen machen es menschlich. Über Community-Pakete (Englisch + KI-Deutsch nebeneinander), den Discord und Tests verbessern wir Formulierungen Schritt für Schritt.
+- **Warum GBA-Übersetzungen knifflig sind:** Texte werden über Zeiger gefunden; längere deutsche Texte müssen verschoben und alle Zeiger umgebogen werden. Dazu kommen feste Textbreiten und Texte, die als Grafik gezeichnet sind.
+- **Danke:** Skeli und dem Unbound-Team für Pokémon Unbound, NevioCore für Projektleitung und Tests, und der Community.
+
+Alle Details: [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md) · Mitmachen: https://discord.gg/fSkhHppgcv
 
 ## What This Repository Is
 
@@ -133,11 +152,74 @@ Screenshots are from the local development build and are shown only to demonstra
   <img src="docs/screenshots/mother-father-proud-de.png" alt="Pokémon Unbound Deutsch – emotionaler Story-Dialog mit der Mutter (German emotional story dialogue)" width="320">
 </p>
 
+### Beta v0.1 — Eindrücke
+
+Aus der aktuellen Beta-v0.1-Entwicklungsversion (früher Spielstand, keine Spoiler).
+
+<p align="center">
+  <img src="docs/screenshots/01_wildes_taubsi_erscheint.png" alt="Pokémon Unbound Deutsch – Wildes Taubsi erscheint (German wild encounter)" width="320">
+  <img src="docs/screenshots/03_was_soll_glumanda_tun.png" alt="Pokémon Unbound Deutsch – Kampfmenü „Was soll Glumanda tun?“ (German battle menu)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/04_glumanda_nutzt_kratzer.png" alt="Pokémon Unbound Deutsch – Glumanda nutzt Kratzer (German battle text)" width="320">
+  <img src="docs/screenshots/06_e_punkte.png" alt="Pokémon Unbound Deutsch – Erfahrungspunkte erhalten (German EXP message)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/07_dialog_individuelle_staerken.png" alt="Pokémon Unbound Deutsch – NPC erklärt Individuelle Stärken (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/09_fund_herzschuppe.png" alt="Pokémon Unbound Deutsch – Item-Fund Herzschuppe (German item found popup)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/13_optionen.png" alt="Pokémon Unbound Deutsch – Allgemeine Optionen (German options menu)" width="320">
+  <img src="docs/screenshots/14_trainerpass.png" alt="Pokémon Unbound Deutsch – Trainerpass (German trainer card)" width="320">
+</p>
+
+**Story**
+
+<p align="center">
+  <img src="docs/screenshots/story_s2_versagen.png" alt="Pokémon Unbound Deutsch – Story-Dialog „Versagen“ (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s5_lothar_polizei.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Lothar (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s6_lothar_erstarrte_welt.png" alt="Pokémon Unbound Deutsch – Story: „Eine erstarrte Welt.“ (German story dialogue)" width="240">
+  <img src="docs/screenshots/story_s8_laerch_theorie.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Prof. Lärch (German story dialogue)" width="240">
+</p>
+
+**Unterwegs in Borrius**
+
+<p align="center">
+  <img src="docs/screenshots/beta-boot-fallhafen.png" alt="Pokémon Unbound Deutsch – Bootsfahrt nach Fallhafen (German dialogue choice)" width="320">
+  <img src="docs/screenshots/beta-lunarfeder.png" alt="Pokémon Unbound Deutsch – Lunarfeder-Szene (German story text)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-pruefung-wuerdig.png" alt="Pokémon Unbound Deutsch – Prüfungs-Dialog (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-fund-pikachium-z.png" alt="Pokémon Unbound Deutsch – Item-Fund mit Beschreibung (German item found popup)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-ms-marine-trainer.png" alt="Pokémon Unbound Deutsch – M.S. Marine (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-ms-marine-kapitaen.png" alt="Pokémon Unbound Deutsch – Kapitän der M.S. Marine (German NPC dialogue)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-algorithmus.png" alt="Pokémon Unbound Deutsch – NPC mit Algorithmus (German NPC dialogue)" width="320">
+  <img src="docs/screenshots/beta-story-jax.png" alt="Pokémon Unbound Deutsch – Story-Dialog mit Jax (German story dialogue)" width="320">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/beta-tm38-feuersturm.png" alt="Pokémon Unbound Deutsch – TM-Fund Feuersturm (German TM found message)" width="320">
+  <img src="docs/screenshots/beta-vulkan-maler.png" alt="Pokémon Unbound Deutsch – Maler am Vulkan (German NPC dialogue)" width="320">
+</p>
+
+
 ## Installation
 
-No ROM is provided, and there is no public patch release yet.
+No ROM is provided. From **08.10.2026** the Beta v0.1 is available as a `.bps` patch (patch-only).
 
-If a patch release is explicitly approved later, users must provide their own legal base ROM and apply the published patch locally. Checksums and patch instructions should be included with that release.
+Users must provide their own legal base ROM and apply the published patch locally. Checksums and step-by-step instructions are in the patch guide.
+
+Für die Beta v0.1: siehe [docs/PATCH_ANLEITUNG.md](docs/PATCH_ANLEITUNG.md).
 
 ## FAQ
 
@@ -145,7 +227,7 @@ If a patch release is explicitly approved later, users must provide their own le
 Ein community-getriebenes Fan-Projekt, das Pokémon Unbound (ein Pokémon-FireRed-ROM-Hack auf CFRU-Basis) ins Deutsche übersetzt/lokalisiert — mit offizieller Pokémon-Terminologie, lore-treuer Formulierung und Ingame-QA. This repository is documentation and QA coordination for a German (Deutsch) Pokémon Unbound translation.
 
 **Gibt es einen Download / einen Patch? / Where is the download?**
-Aktuell nein. Dieses Repository enthält **keinen ROM und keinen öffentlichen Patch**. Falls später ein Patch freigegeben wird, erfolgt die Verteilung ausschließlich **patch-only** (kein ROM) — Nutzer bringen ihren eigenen legalen Basis-ROM mit und wenden den veröffentlichten Patch lokal an.
+Ab dem **08.10.2026** gibt es die Beta v0.1 als `.bps`-Patch auf der Release-Seite. Dieses Repository enthält **keine ROMs**: Ihr bringt eure eigene, legal erworbene Basis-ROM mit und wendet den Patch lokal an – siehe [Patch-Anleitung](docs/PATCH_ANLEITUNG.md).
 
 **Welche Version wird unterstützt? / Which version is supported?**
 Diese Übersetzung basiert vermutlich auf **Pokémon Unbound v1.0.1** (laut Copyright-Splash-Grafik im ROM, 2016–2020 Skeli Games) — **nicht** der aktuellen finalen Version **v2.1.1.1** (seit November 2022). Grundlage ist Pokémon Unbound auf Basis von Pokémon FireRed (BPRE) im CFRU-Ökosystem; ein Patch würde gegen einen definierten Basis-ROM mit veröffentlichter Prüfsumme (MD5) erstellt, damit die Anwendung reproduzierbar ist. Ein allgemeiner Patch erscheint erst nach Abschluss der Übersetzung; danach ist eine Portierung auf die neueste Version geplant.
