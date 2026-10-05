@@ -1,6 +1,6 @@
 # Patch-Anleitung – Pokémon Unbound auf Deutsch (Beta v0.1)
 
-**Credits:** Unbound © Skeli, zur Weiterentwicklung freigegeben; deutsche Version: NevioCore & Community.
+**Credits:** Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
 
 Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwendest. Dauert etwa fünf Minuten.
 
