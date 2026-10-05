@@ -5,7 +5,7 @@
 **Weg B (für Besitzer von Unbound EN v1.0.1):** MD5 der Basis `52192d7e7268245e2e30b7d1a802d33d` · Patch `pokemon_unbound_de_v0.1.bps`  
 Beide Wege ergeben exakt dieselbe deutsche ROM.
 
-**Credits:** Unbound © Skeli, zur Weiterentwicklung freigegeben; deutsche Version: NevioCore & Community.
+**Credits:** Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
 
 Hallo zusammen! 👋 Das ist die erste öffentliche Beta der deutschen Fan-Übersetzung von **Pokémon Unbound**. Sie ist zum Spielen, Testen und Mithelfen gedacht – **nicht** die fertige Übersetzung.
 
@@ -78,7 +78,7 @@ Eigene, legal erworbene Basis-ROM + `.bps`-Patch + Patch-Tool. **Hauptweg:** Pok
 
 ## Danke
 
-- **Skeli und das Unbound-Team** – für Pokémon Unbound selbst (Unbound © Skeli, zur Weiterentwicklung freigegeben).
+- **Skeli und das Unbound-Team** – für Pokémon Unbound selbst (Pokémon Unbound © Skeli).
 - **NevioCore** – Projektleitung, Tests, Entscheidungen.
 - **Die Community** – Tester, Reviewer und alle, die mithelfen, die Übersetzung menschlich zu machen.
 
