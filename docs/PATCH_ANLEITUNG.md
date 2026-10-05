@@ -1,5 +1,7 @@
 # Patch-Anleitung – Pokémon Unbound auf Deutsch (Beta v0.1)
 
+**Credits:** Unbound © Skeli, zur Weiterentwicklung freigegeben; deutsche Version: NevioCore & Community.
+
 Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwendest. Dauert etwa fünf Minuten.
 
 > **Wichtig:** Wir verteilen **keine ROMs**. Du brauchst deine **eigene, legal erworbene Basis-ROM**. Bitte frag weder hier noch im Discord nach ROMs oder Download-Links dafür – solche Anfragen und Links werden gelöscht.
@@ -8,17 +10,27 @@ Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwend
 
 | Was | Woher |
 | --- | --- |
-| Deutscher Patch (`.bps`) | Release-Seite: _[PLATZHALTER – Link folgt am 06.10.]_ |
-| Basis-ROM | deine eigene: _[PLATZHALTER – genaue Basis-ROM/Version, z. B. „Pokémon Unbound vX.Y.Z (englisch)“]_ |
+| Deutscher Patch (`.bps`) | Release-Seite (ab 08.10.) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
+| Basis-ROM | deine eigene: **Weg A (Hauptweg)** Pokémon FireRed (USA), Rev 0 – oder **Weg B** Pokémon Unbound (englisch) v1.0.1 |
 | Patch-Programm | eins der Tools unten |
+
+| Weg | Basis-ROM | Patch-Datei |
+| --- | --- | --- |
+| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_v0.1_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
+| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_v0.1.bps` |
+
+Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
 
 ## 2. Basis-ROM prüfen (MD5)
 
 Der Patch funktioniert nur mit **genau der richtigen** Basis-ROM. Prüfe deshalb vorher die MD5-Prüfsumme:
 
 ```
-Erwartete MD5 der Basis-ROM: [PLATZHALTER – MD5 folgt]
+Weg A – Pokémon FireRed (USA), Rev 0:   e26ee0d44e809351c8ce2d73c7400cdd
+Weg B – Pokémon Unbound (EN) v1.0.1:    52192d7e7268245e2e30b7d1a802d33d
 ```
+
+FireRed **Rev 1**, die europäische/deutsche „Feuerrote Edition“ oder eine bereits gepatchte ROM passen nicht.
 
 So bekommst du die MD5 deiner Datei:
 

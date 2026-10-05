@@ -1,7 +1,11 @@
 # Release Notes – Beta v0.1
 
 **Veröffentlichung:** 08.10.2026 · **Download:** erscheint am 08.10. auf der Release-Seite
-**Basis:** _[PLATZHALTER – genaue Basis-ROM/Version, wird bis 06.10. ergänzt]_ · **MD5 der Basis-ROM:** `[PLATZHALTER]` · **Patch-Datei:** _[PLATZHALTER].bps_
+**Weg A (Hauptweg):** Pokémon FireRed (USA, Rev 0) → Unbound v1.0.1 Deutsch · MD5 der Basis `e26ee0d44e809351c8ce2d73c7400cdd` · Patch `pokemon_unbound_de_v0.1_von_firered_usa.bps`  
+**Weg B (für Besitzer von Unbound EN v1.0.1):** MD5 der Basis `52192d7e7268245e2e30b7d1a802d33d` · Patch `pokemon_unbound_de_v0.1.bps`  
+Beide Wege ergeben exakt dieselbe deutsche ROM.
+
+**Credits:** Unbound © Skeli, zur Weiterentwicklung freigegeben; deutsche Version: NevioCore & Community.
 
 Hallo zusammen! 👋 Das ist die erste öffentliche Beta der deutschen Fan-Übersetzung von **Pokémon Unbound**. Sie ist zum Spielen, Testen und Mithelfen gedacht – **nicht** die fertige Übersetzung.
 
@@ -27,7 +31,7 @@ Hallo zusammen! 👋 Das ist die erste öffentliche Beta der deutschen Fan-Über
 - Im Pokédex werden **Größe und Gewicht** noch in englischen Einheiten (Fuß/Pfund) angezeigt.
 - Einzelne Formulierungen sind holprig oder nicht ganz lore-treu – genau hier brauchen wir euch.
 - Selten genutzte Funktionen aus dem FireRed-Unterbau (z. B. Link-/Drahtlos-Funktionen) sind weniger getestet.
-- Die Beta basiert vermutlich auf Unbound v1.0.1, nicht auf der aktuellen v2.1.1.1 (siehe README).
+- Die Beta basiert auf Unbound v1.0.1 (laut Titelbildschirm der Basis-ROM), nicht auf der aktuellen v2.1.1.1 (siehe README).
 
 ## Wie wir gearbeitet haben
 
@@ -65,7 +69,7 @@ Jede Verbesserung läuft durch dieselben automatischen Prüfungen und fließt in
 
 ## Installation
 
-Eigene, legal erworbene Basis-ROM + `.bps`-Patch + Patch-Tool. Schritt für Schritt: [Patch-Anleitung](PATCH_ANLEITUNG.md). Wir verteilen **keine ROMs**.
+Eigene, legal erworbene Basis-ROM + `.bps`-Patch + Patch-Tool. **Hauptweg:** Pokémon FireRed (USA) als Basis (Weg A) – der Patch enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist. Wer die englische Unbound-ROM v1.0.1 hat, nimmt Weg B. Schritt für Schritt: [Patch-Anleitung](PATCH_ANLEITUNG.md). Wir verteilen **keine ROMs**.
 
 ## Feedback & Community
 
@@ -74,7 +78,7 @@ Eigene, legal erworbene Basis-ROM + `.bps`-Patch + Patch-Tool. Schritt für Schr
 
 ## Danke
 
-- **Skeli und das Unbound-Team** – für Pokémon Unbound selbst.
+- **Skeli und das Unbound-Team** – für Pokémon Unbound selbst (Unbound © Skeli, zur Weiterentwicklung freigegeben).
 - **NevioCore** – Projektleitung, Tests, Entscheidungen.
 - **Die Community** – Tester, Reviewer und alle, die mithelfen, die Übersetzung menschlich zu machen.
 
