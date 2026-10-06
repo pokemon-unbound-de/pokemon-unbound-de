@@ -27,7 +27,8 @@ Hallo zusammen! 👋 Das ist die erste öffentliche Beta der deutschen Fan-Über
 
 ## Bekannte Grenzen
 
-- Einige **Grafiken** zeigen noch Englisch, z. B. „POWER/ACCURACY“ im Attacken-Bericht und einige Bericht-Labels.
+- Einzelne **englische Reste**: Typ „Fairy“ und Z-Attacken-Namen in der Kampf-Typtabelle, die Typliste beim „Kraftreserve“-NPC sowie 3 seltene Attacken ohne gesicherten deutschen Namen.
+- Manche Namen sind wegen **fester Zeichenlimits** im Spiel gekürzt (z. B. Typ „Unlicht“ als „Unlcht“/„Unlich“, 128 Attacken, 86 Pokédex-Kategorien). Die vollständige Liste (Kurzform · volle Form · Grund) liegt als `ABKUERZUNGEN.md` im Release.
 - Im Pokédex werden **Größe und Gewicht** noch in englischen Einheiten (Fuß/Pfund) angezeigt.
 - Einzelne Formulierungen sind holprig oder nicht ganz lore-treu – genau hier brauchen wir euch.
 - Selten genutzte Funktionen aus dem FireRed-Unterbau (z. B. Link-/Drahtlos-Funktionen) sind weniger getestet.
