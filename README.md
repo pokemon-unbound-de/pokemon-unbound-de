@@ -7,7 +7,7 @@
 *English below.*
 
 <p align="center">
-  <img src="docs/screenshots/01_title_or_intro_de.png" alt="Pokémon Unbound auf Deutsch – Titelbildschirm (German title screen)" width="320">
+  <img src="docs/screenshots/01_title_unbound_de.png" alt="Pokémon Unbound auf Deutsch – Titelbildschirm (German title screen)" width="320">
   <img src="docs/screenshots/04_glumanda_nutzt_kratzer.png" alt="Pokémon Unbound Deutsch – Glumanda nutzt Kratzer (German battle text)" width="320">
 </p>
 
