@@ -10,7 +10,7 @@ Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwend
 
 | Was | Woher |
 | --- | --- |
-| Deutscher Patch (`.bps`) | Release-Seite (ab 08.10.) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
+| Deutscher Patch (`.bps`) | [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
 | Basis-ROM | deine eigene: **Weg A (Hauptweg)** Pokémon FireRed (USA), Rev 0 – oder **Weg B** Pokémon Unbound (englisch) v1.0.1 |
 | Patch-Programm | eins der Tools unten |
 
