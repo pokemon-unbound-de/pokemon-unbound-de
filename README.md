@@ -45,6 +45,7 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 Du brauchst kein Vorwissen. Spiel einfach und sag uns, was dir auffällt: englischer Text, abgeschnittene Wörter, Text, der aus dem Kasten läuft, oder komische Formulierungen.
 
 - **Discord:** Kanal `#beta-bugs` – [jetzt beitreten](https://discord.gg/fSkhHppgcv)
+- **Reddit:** [r/PokemonUnboundDE](https://www.reddit.com/r/PokemonUnboundDE/) – Fragen, Funde, Screenshots
 - **GitHub:** [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml)
 
 Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
@@ -59,7 +60,7 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. A few things are still English (Fairy type and Z-moves in battle), and some names are shortened due to fixed character limits. Based on Unbound **v1.0.1**, not 2.x. v0.1.1 is in progress.
 
-**Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
+**Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
 ---
 
