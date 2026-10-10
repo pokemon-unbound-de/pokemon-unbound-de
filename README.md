@@ -2,7 +2,10 @@
 
 **🎉 Die Beta v0.1 ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
 
-👉 **[Download: Beta v0.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta)** · 📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** · 💬 **[Discord](https://discord.gg/fSkhHppgcv)**
+·  👉 **[Download: Beta v0.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta)** 
+·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
+·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
+·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
 
 *English below.*
 
