@@ -4,6 +4,12 @@ title: "[Translation] "
 labels: ["translation"]
 body:
   - type: input
+    id: patch_version
+    attributes:
+      label: Patch version
+      description: Shown in the patch file name or on the release page.
+      placeholder: e.g. v0.1-beta
+  - type: input
     id: location
     attributes:
       label: Location or pointer
@@ -26,5 +32,5 @@ body:
     attributes:
       label: Safety check
       options:
-        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+        - label: I did not attach ROMs, patched ROMs, emulator save states, BIOS files, credentials, or private files.
           required: true

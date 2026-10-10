@@ -20,5 +20,5 @@ body:
           required: true
         - label: The screenshot has no private overlays or local paths.
           required: true
-        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+        - label: I did not attach ROMs, patched ROMs, emulator save states, BIOS files, credentials, or private files.
           required: true
