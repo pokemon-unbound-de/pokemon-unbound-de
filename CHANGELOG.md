@@ -12,7 +12,7 @@ Neueste Version oben. Downloads: [Releases](https://github.com/pokemon-unbound-d
 Behebt die gemeldeten Fehler als **Fehlerklassen** (überall im Spiel, mit neuer automatischer Prüfung je Klasse):
 - **Namen:** Wermut, Wega, Alice, Frida einheitlich; Artnamen gegen PokéWiki geprüft (z. B. Krawell, Krarmor,
   Lauchzelot, Porenta); Trainer auf Routen tragen deutsche und internationale Namen.
-- **Geschlecht:** Trainerinnen tragen die weibliche Klassenform (z. B. Expertin, Skifahrerin, Pokémon-Trainerin);
+- **Geschlecht:** Trainerinnen tragen die weibliche Klassenform (z. B. Expertin, Skifahrerin, Forscherin);
   „er/sie“ statt „es“ für dich; Geschlechtswörter im Spiel deutsch.
 - **Englische Reste:** Nachkampftexte, Kampfmeldungen, Mehrfachauswahl, Kartenlabel, Fee-Typ, drei Attacken.
 - **Textkästen:** Item- und TM-Beschreibungen passen in den Kasten; Dialoge brechen früher um;
