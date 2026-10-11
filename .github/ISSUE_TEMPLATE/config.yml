@@ -5,4 +5,4 @@ contact_links:
     about: Fragen zum Patchen oder einfach quatschen? Komm in unseren Discord. Fehler bitte trotzdem hier als Issue melden.
   - name: Repository safety note
     url: https://github.com/pokemon-unbound-de/pokemon-unbound-de/blob/main/docs/LEGAL_NOTICE.md
-    about: Do not upload ROMs, saves, states, BIOS files, credentials, or private files.
+    about: Never upload ROMs, patched ROMs, emulator save states, BIOS files, or credentials. Battery saves (.sav, zipped) are fine.

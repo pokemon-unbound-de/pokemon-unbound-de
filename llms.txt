@@ -13,12 +13,14 @@ Key facts:
 
 ## Docs
 
-- [README](README.md): project overview, status, screenshots, FAQ.
+- [README](README.md): download, 3-step install, known beta limitations, screenshots (German/English).
 - [Contributor Quickstart](docs/CONTRIBUTOR_QUICKSTART.md): how to help with QA and review.
 - [Contributing Guide](CONTRIBUTING.md): contribution rules and scope.
 - [Roadmap](ROADMAP.md): current public roadmap.
-- [Changelog](CHANGELOG.md): notable public documentation changes.
+- [Changelog](CHANGELOG.md): release history (v0.1-alpha, v0.1-beta, v0.1.1 in progress).
 - [Project Status](docs/PROJECT_STATUS.md): current public status detail.
+- [Patch Guide](docs/PATCH_ANLEITUNG.md): applying the `.bps` patch, base ROM MD5 checksums.
+- [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md): scope, known limitations, how the translation was made.
 
 ## Terminology & QA
 
@@ -33,11 +35,12 @@ Key facts:
 ## FAQ
 
 - **Is there a download or patch? / Gibt es einen Download?** Yes – Beta v0.1 as a `.bps` patch on the release page (https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta). Base ROM: Pokémon FireRed (USA) Rev 0 or Pokémon Unbound (EN) v1.0.1; no ROMs are hosted. Guide: docs/PATCH_ANLEITUNG.md
-- **Which version is supported? / Welche Version?** Likely based on **Pokémon Unbound v1.0.1** (per the in-ROM copyright-splash graphic, 2016–2020 Skeli Games) — not the current final version v2.1.1.1 (since November 2022). Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem; the patch targets defined base ROMs with published MD5 checksums (MD5.txt on the release page). A port to a newer Unbound version is planned after the beta phase.
+- **Which version is supported? / Welche Version?** Based on **Pokémon Unbound v1.0.1** — not the current final version v2.1.1.1 (since November 2022); saves from 2.x are not compatible. Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem; the patch targets defined base ROMs with published MD5 checksums (MD5.txt on the release page). A port to a newer Unbound version is planned after the beta phase.
 - **How can I help? / Wie kann ich helfen?** Human QA is the priority — screenshot QA, terminology/lore, natural German wording, and rendering/textbox checks. See the open Issues and Discussions below.
 - **Is this legal? / Ist das legal?** Unofficial fan translation, not affiliated with or endorsed by the rights holders. No ROMs, BIOS files, save states, or commercial assets are distributed.
 
 ## How to contribute
 
-- [Open Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues): screenshot QA, terminology/lore, rendering QA, release policy.
+- [Report a translation error](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml) or join [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`).
+- [Open Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues): screenshot QA, terminology/lore, rendering QA.
 - [Discussions](https://github.com/pokemon-unbound-de/pokemon-unbound-de/discussions): questions, wording feedback, and general project discussion.

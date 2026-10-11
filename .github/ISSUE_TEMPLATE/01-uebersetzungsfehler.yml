@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Danke, dass du hilfst! 💛 Eine Meldung pro Textstelle ist am übersichtlichsten.
-        **Bitte keine ROMs, gepatchten ROMs, Spielstände oder Savestates hochladen** – nur Screenshots.
+        **Bitte keine ROMs, gepatchten ROMs oder Emulator-Savestates hochladen.** Screenshots sind super; ein Spielstand (`.sav`, als `.zip`) ist erlaubt, wenn er beim Nachstellen hilft.
   - type: input
     id: patch_version
     attributes:
@@ -50,5 +50,5 @@ body:
     attributes:
       label: Kurzer Check
       options:
-        - label: Ich habe keine ROMs, Spielstände, Savestates, BIOS-Dateien oder privaten Dateien angehängt.
+        - label: Ich habe keine ROMs, gepatchten ROMs, Emulator-Savestates, BIOS-Dateien oder privaten Dateien angehängt.
           required: true

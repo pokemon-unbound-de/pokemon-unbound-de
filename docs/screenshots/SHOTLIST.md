@@ -1,9 +1,11 @@
 # Screenshot Shotlist
 
-> Stand: 2026-08-11. Öffentlich kuratierte PNGs: `docs/screenshots/` (31 Stück).
+> Stand: 2026-10-08 (Beta v0.1). Öffentlich kuratierte PNGs: `docs/screenshots/` (54 Stück).
 > Weitere Rohbilder liegen vor, werden nach und nach kuratiert.
 
-## Aktuell gecovered (31 PNGs public)
+## Alpha-Screenshots (31 PNGs, Stand August 2026)
+
+Diese Bilder stammen aus Entwicklungsständen vor der Beta; einzelne Texte können sich seitdem geändert haben.
 
 | # | Datei | Szene | Status |
 |---|-------|------|--------|
@@ -39,11 +41,38 @@
 | 30 | `starter-joined-de.png` | „Kaumalat schloss sich an!" | ✅ |
 | 31 | `ace-choose-pokemon-de.png` | Story: Ace (Starter-Prompt) | ✅ |
 
+## Beta-Screenshots (23 PNGs, Oktober 2026)
+
+| # | Datei | Szene |
+|---|-------|------|
+| 32 | `01_title_unbound_de.png` | Titelbildschirm (Beta) |
+| 33 | `01_wildes_taubsi_erscheint.png` | Kampf: Wildes Taubsi erscheint |
+| 34 | `03_was_soll_glumanda_tun.png` | Kampfmenü „Was soll Glumanda tun?“ |
+| 35 | `04_glumanda_nutzt_kratzer.png` | Kampftext: Glumanda nutzt Kratzer |
+| 36 | `06_e_punkte.png` | Kampf: Erfahrungspunkte erhalten |
+| 37 | `07_dialog_individuelle_staerken.png` | NPC: Individuelle Stärken |
+| 38 | `09_fund_herzschuppe.png` | Item-Fund: Herzschuppe |
+| 39 | `13_optionen.png` | Allgemeine Optionen |
+| 40 | `14_trainerpass.png` | Trainerpass |
+| 41 | `story_s2_versagen.png` | Story: „Versagen“ |
+| 42 | `story_s5_lothar_polizei.png` | Story: Lothar |
+| 43 | `story_s6_lothar_erstarrte_welt.png` | Story: „Eine erstarrte Welt.“ |
+| 44 | `story_s8_laerch_theorie.png` | Story: Prof. Lärch |
+| 45 | `beta-boot-fallhafen.png` | Bootsfahrt nach Fallhafen |
+| 46 | `beta-lunarfeder.png` | Lunarfeder-Szene |
+| 47 | `beta-pruefung-wuerdig.png` | Prüfungs-Dialog |
+| 48 | `beta-fund-pikachium-z.png` | Item-Fund mit Beschreibung |
+| 49 | `beta-ms-marine-trainer.png` | M.S. Marine: Trainer |
+| 50 | `beta-ms-marine-kapitaen.png` | M.S. Marine: Kapitän |
+| 51 | `beta-algorithmus.png` | NPC: Algorithmus |
+| 52 | `beta-story-jax.png` | Story: Jax |
+| 53 | `beta-tm38-feuersturm.png` | TM-Fund: Feuersturm |
+| 54 | `beta-vulkan-maler.png` | Maler am Vulkan |
+
 ## P1 Targets (noch offen)
 
 | Target | Warum wichtig |
 |--------|---------------|
-| **Battle** | Kampf-HUD, Attacken, höchste Spieler-Sichtbarkeit |
 | **Bag** | Item-Nutzung, 375 Items übersetzt |
 | **Party** | Pokémon-Team-Übersicht |
 | **Pokémon Center** | Heilen, PC — jeder Spieler sieht das |

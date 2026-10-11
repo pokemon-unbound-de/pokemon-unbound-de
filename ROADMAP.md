@@ -1,28 +1,28 @@
 # Roadmap
 
-## v0.1-alpha-de
+## ✅ v0.1-beta (08.10.2026)
 
-- Keep safe public documentation and workflow files current.
-- Maintain repository safety rules.
-- Expand curated screenshots after public-material review.
-- Document patch workflow without distributing ROMs.
+Erste spielbare Beta als `.bps`-Patch, Basis Unbound v1.0.1. Details: [CHANGELOG](CHANGELOG.md).
 
-## Localization Progress
+## 🔧 v0.1.1 – in Arbeit
 
-- Continue German localization review in controlled review rounds.
-- Keep public documentation focused on contributor-safe QA.
-- Publish only public-safe status updates.
+- Letzte englische Reste: Fee-Typ und Z-Attacken im Kampf, Typliste beim Kraftreserve-NPC, 3 Attacken ohne gesicherten deutschen Namen.
+- Pokédex-Größe und -Gewicht in Metern/Kilogramm.
+- Fehler aus Community-Meldungen (Discord `#beta-bugs`, GitHub-Issues).
 
-## QA
+## Danach: Menschen machen es menschlich
 
-- Continue terminology and lore review.
-- Add textbox/width risk review for story batches.
-- Add more screenshot coverage for gameplay and menus (battle, bag, party, PC box view, town map); everyday NPC dialogue and basic settings menus are covered, more variants welcome.
+- **Gegenlesen** in kleinen Community-Paketen (Englisch und KI-Deutsch nebeneinander).
+- Terminologie und Lore weiter vereinheitlichen.
+- Weniger Abkürzungen, wo es die Zeichenlimits zulassen.
+- Mehr Screenshot-Abdeckung (Tasche, Team, Pokémon-Center, Supermarkt, Karte, Box-Ansicht).
 
-## Public Repo Hardening
+## Später
 
-- Review all docs for local path references.
-- Keep issue templates and labels aligned.
-- Maintain SECURITY.md and legal/trust documentation.
-- Decide whether patch artifacts are allowed under the release policy.
-- Run staged-file-only safety scans before any push.
+- Portierung auf eine neuere Unbound-Version (2.x) – erst nach der Beta-Phase.
+
+## Dauerhaft
+
+- Patch-only: keine ROMs, gepatchten ROMs, Savestates oder BIOS-Dateien im Repository oder Release.
+- Issue-Vorlagen, Labels und Doku aktuell halten.
+- Vor jedem Push nur gezielt Dateien stagen und auf private Pfade/Zugangsdaten prüfen.

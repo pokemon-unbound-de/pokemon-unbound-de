@@ -21,5 +21,5 @@ body:
     attributes:
       label: Safety check
       options:
-        - label: I did not attach ROMs, saves, states, BIOS files, credentials, or private files.
+        - label: I did not attach ROMs, patched ROMs, emulator save states, BIOS files, credentials, or private files.
           required: true

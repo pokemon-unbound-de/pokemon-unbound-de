@@ -2,7 +2,7 @@
 
 Only curated PNG screenshots belong here.
 
-- Do not upload ROMs, saves, states, BIOS files, emulator configs, or private files.
+- Do not commit ROMs, saves, emulator states, BIOS files, emulator configs, or private files.
 - Use short descriptive names such as `battle-dialogue-de.png` or `town-map-de.png`.
 - Avoid spoilers unless the screenshot is intentionally marked for that purpose.
 - Check every screenshot manually before commit for private paths, emulator overlays, and accidental personal information.
@@ -10,9 +10,11 @@ Only curated PNG screenshots belong here.
 
 ## Wanted Next
 
+Full list with coverage status: [SHOTLIST.md](SHOTLIST.md).
+
 P1:
 
-- Battle
+- Battle — ✅ covered (Beta, Oct 2026)
 - Bag
 - Party
 - Pokémon Center

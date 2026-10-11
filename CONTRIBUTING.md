@@ -4,7 +4,7 @@ Thanks for helping with the German localization.
 
 ## Ground Rules
 
-- Do not submit ROMs, BIOS files, saves, states, commercial assets, credentials, or private paths.
+- Do not submit ROMs, patched ROMs, BIOS files, saves, emulator states, commercial assets, credentials, or private paths to the repository.
 - Do not submit generated build outputs.
 - Keep changes scoped.
 - Preserve control codes, placeholders, colors, and linebreak intent.
@@ -46,6 +46,10 @@ If in doubt, open an issue before sending a pull request.
 
 ## First contribution in 5 minutes
 
+**Easiest:** play [Beta v0.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta) and report anything odd via [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`) or the [translation error form](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
+
+No setup? Review a screenshot instead:
+
 1. Open the screenshots in `docs/screenshots/`.
 2. Pick one scene.
 3. Check German wording, official terminology, or textbox fit.
@@ -78,7 +82,7 @@ Open issues for:
 - Render, textbox, screenshot, or linebreak problems
 - Tooling or documentation issues in curated public files
 
-Do not attach ROMs, saves, emulator states, BIOS files, credentials, or private files.
+Do not attach ROMs, patched ROMs, emulator save states, BIOS files, credentials, or private files. A battery save (`.sav`, zipped) is fine if it helps reproduce a bug.
 
 ## Technical PRs
 
