@@ -1,4 +1,4 @@
-# Patch-Anleitung – Pokémon Unbound auf Deutsch (Beta v0.1)
+# Patch-Anleitung – Pokémon Unbound auf Deutsch (Beta v0.1.2)
 
 **Credits:** Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
 
@@ -10,14 +10,14 @@ Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwend
 
 | Was | Woher |
 | --- | --- |
-| Deutscher Patch (`.bps`) | [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
+| Deutscher Patch (`.bps`) | [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.2) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
 | Basis-ROM | deine eigene: **Weg A (Hauptweg)** Pokémon FireRed (USA), Rev 0 – oder **Weg B** Pokémon Unbound (englisch) v1.0.1 |
 | Patch-Programm | eins der Tools unten |
 
 | Weg | Basis-ROM | Patch-Datei |
 | --- | --- | --- |
-| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_v0.1_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
-| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_v0.1.bps` |
+| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_v0.1.2_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
+| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_v0.1.2.bps` |
 
 Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
 
@@ -59,7 +59,7 @@ Funktioniert ohne Installation, auch auf iPhone/iPad und Android. Die Dateien we
 1. Floating IPS (Flips) herunterladen: <https://github.com/Alcaro/Flips/releases> und entpacken.
 2. `flips.exe` starten und **Apply Patch** klicken.
 3. Zuerst die `.bps`-Datei, dann deine Basis-ROM auswählen.
-4. Speicherort und Namen für die neue ROM wählen, z. B. `Pokemon_Unbound_DE_v0.1.gba`.
+4. Speicherort und Namen für die neue ROM wählen, z. B. `Pokemon_Unbound_DE_v0.1.2.gba`.
 
 Meldet Flips einen Prüfsummenfehler („checksum mismatch“ o. ä.), ist es die falsche Basis-ROM – siehe Schritt 2.
 
