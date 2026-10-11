@@ -1,15 +1,28 @@
-# Changelog
+# Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
-## Unreleased
+Neueste Version oben. Downloads: [Releases](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases) – je Version beide Patches
+(FireRed-Hauptweg + Unbound-EN), `MD5.txt` und Patch-Anleitung. Keine ROMs.
 
-- Improved public README clarity and contributor entry points.
-- Added repository safety and trust documentation.
-- Added curated screenshot documentation and a future screenshot shotlist.
-- Aligned issue templates with public labels.
-- Improved public discoverability metadata and social-preview material.
+## In Arbeit (nach v0.1.1)
+- Arenaleiterin/Thronfolgerin als eigene Trainerklasse (braucht Code-Anpassung an 9 Stellen → Port 2.1.1.1).
+- Storyfiguren-Namen: Vorschlagsliste zur Abstimmung (Hauptfiguren englisch lassen oder eindeutschen).
+- Port auf Unbound 2.1.1.1.
 
-## v0.1-alpha-de
+## v0.1.1 – Fix-Update (in Vorbereitung)
+Behebt die gemeldeten Fehler als **Fehlerklassen** (überall im Spiel, mit neuer automatischer Prüfung je Klasse):
+- **Namen:** Wermut, Wega, Alice, Frida einheitlich; Artnamen gegen PokéWiki geprüft (z. B. Krawell, Krarmor,
+  Lauchzelot, Porenta); Trainer auf Routen tragen deutsche und internationale Namen.
+- **Geschlecht:** Trainerinnen tragen die weibliche Klassenform (z. B. Expertin, Skifahrerin, Pokémon-Trainerin);
+  „er/sie“ statt „es“ für dich; Geschlechtswörter im Spiel deutsch.
+- **Englische Reste:** Nachkampftexte, Kampfmeldungen, Mehrfachauswahl, Kartenlabel, Fee-Typ, drei Attacken.
+- **Textkästen:** Item- und TM-Beschreibungen passen in den Kasten; Dialoge brechen früher um;
+  fehlendes Leerzeichen nach der A-Knopf-Glyphe.
+- **Offizielle Begriffe:** Kampfmeldungen und Trainerklassen nach dem offiziellen deutschen Wortlaut; „3× Trank“.
+Details folgen mit der Veröffentlichung.
 
-- Published initial public documentation and screenshot set.
-- No ROM distribution.
-- Patch-release decision pending.
+## v0.1 – Public Beta (08.10.2026)
+Erste öffentliche Beta: Story, Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und Missionsbuch auf Deutsch,
+deutscher Titelbildschirm und Menügrafiken. Basis Unbound v1.0.1. Details: [Release v0.1-beta](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta).
+
+## v0.1-alpha-de (August 2026)
+Erste öffentliche Dokumentation und Screenshots – kein Patch, keine ROM.
