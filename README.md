@@ -1,8 +1,8 @@
 # Pokémon Unbound auf Deutsch – German Patch (Fan-Übersetzung)
 
-**🎉 Die Beta v0.1 ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
+**🎉 Beta v0.1.2 ist da** (Hotfix, 11.10.2026)! Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
 
-·  👉 **[Download: Beta v0.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta)** 
+·  👉 **[Download: Beta v0.1.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.2)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
@@ -16,9 +16,9 @@
 
 ## In 3 Schritten spielen
 
-1. **Patch laden:** Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta) **eine** der beiden `.bps`-Dateien holen – passend zu deiner ROM:
-   - **Pokémon FireRed (USA), Rev 0** → `pokemon_unbound_de_v0.1_von_firered_usa.bps` *(empfohlen)*
-   - **Pokémon Unbound (englisch) v1.0.1** → `pokemon_unbound_de_v0.1.bps`
+1. **Patch laden:** Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.2) **eine** der beiden `.bps`-Dateien holen – passend zu deiner ROM:
+   - **Pokémon FireRed (USA), Rev 0** → `pokemon_unbound_de_v0.1.2_von_firered_usa.bps` *(empfohlen)*
+   - **Pokémon Unbound (englisch) v1.0.1** → `pokemon_unbound_de_v0.1.2.bps`
 2. **Patchen:** z. B. mit [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) direkt im Browser (geht auch am Handy).
 3. **Spielen** in deinem Emulator (z. B. mGBA, Delta, RetroArch).
 
@@ -32,13 +32,14 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 ## Es ist eine Beta – das wissen wir schon
 
-- Noch englisch: Fee-Typ („Fairy“) und Z-Attacken im Kampf, die Typliste beim Kraftreserve-NPC, 3 Attacken ohne sicheren deutschen Namen.
+- Noch englisch: Z-Attacken-Namen im Kampf.
+- Im Kampf-Intro steht bei Arenaleiterinnen noch die männliche Klassenform – kommt mit einer Code-Anpassung.
 - Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. „Unlcht“) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Pokédex-Größe und -Gewicht noch in Fuß/Pfund.
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
 
-**v0.1.1 ist schon in Arbeit.** Was sich ändert, steht im [CHANGELOG](CHANGELOG.md).
+Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md).
 
 ## Hilf mit – Fehler melden
 
@@ -54,11 +55,11 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 ## English
 
-**Beta v0.1 of the German fan translation of Pokémon Unbound is out!** Story, dialogue, battles, menus, items, moves and abilities are in German, using official Pokémon terminology.
+**Beta v0.1.2 of the German fan translation of Pokémon Unbound is out!** Story, dialogue, battles, menus, items, moves and abilities are in German, using official Pokémon terminology.
 
-**How to play:** download **one** `.bps` patch from the [release page](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta) that matches your own legal base ROM – **Pokémon FireRed (USA) Rev 0** (recommended) or **Pokémon Unbound (EN) v1.0.1** – and apply it, e.g. with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/). MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
+**How to play:** download **one** `.bps` patch from the [release page](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.2) that matches your own legal base ROM – **Pokémon FireRed (USA) Rev 0** (recommended) or **Pokémon Unbound (EN) v1.0.1** – and apply it, e.g. with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/). MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
-**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. A few things are still English (Fairy type and Z-moves in battle), and some names are shortened due to fixed character limits. Based on Unbound **v1.0.1**, not 2.x. v0.1.1 is in progress.
+**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. A few things are still English (Z-move names in battle), and some names are shortened due to fixed character limits. Based on Unbound **v1.0.1**, not 2.x. See the [CHANGELOG](CHANGELOG.md) for what changed.
 
 **Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
