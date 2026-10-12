@@ -3,10 +3,20 @@
 Neueste Version oben. Downloads: [Releases](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases) – je Version beide Patches
 (FireRed-Hauptweg + Unbound-EN), `MD5.txt` und Patch-Anleitung. Keine ROMs.
 
-## In Arbeit (v0.1.3 / Port 2.1.1.1)
-- Arenaleiterin/Thronfolgerin als eigene Trainerklasse (braucht Code-Anpassung an 9 Stellen → Port 2.1.1.1).
-- Storyfiguren-Namen: Vorschlagsliste zur Abstimmung (Hauptfiguren englisch lassen oder eindeutschen).
+## In Arbeit (v0.1.4 / Port 2.1.1.1)
+- Arenaleiterin/Thronfolgerin im Kampf-Intro; er/sie-Anrede an Stellen ohne Verzweigung im Original.
+- Attacken- und TM-Texte angleichen.
 - Port auf Unbound 2.1.1.1.
+
+## v0.1.3 (12.10.2026)
+- **Lesefluss:** neue Textbox nur noch dort, wo das Original eine beginnt – kein Neustart mitten im Satz mehr
+  (rund 270 Texte, vor allem späte Story).
+- **Shops/Preislisten deutsch** (fast 100 Zeilen: Spielhalle, BP-Tausch, Attacken-Lehrer, TM-Listen, Café), **Münzen**
+  statt „Coins“; Level-up-Fenster **Max. KP**.
+- **Wissenschaftsverein** statt „Science Society“; Regen ohne „Wolkenbruch“; Fundmeldung „… verstaut Trank im Würfel“;
+  Donnerkappe-Rüpel deutsch; offizieller Fluchtseil-Text.
+- **Storyfiguren:** Maulwurf, Stachel, Lilli, Timo.
+Details: [Release v0.1.3](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.3).
 
 ## v0.1.2 – Hotfix (11.10.2026)
 - **PC-Menü** wieder komplett deutsch (Regression aus v0.1.1): Pokémon nehmen / ablegen / bewegen, Items bewegen, Tschüss!
