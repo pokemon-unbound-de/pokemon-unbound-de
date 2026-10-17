@@ -3,6 +3,7 @@
 **🎉 Beta v0.1.4 ist da** (17.10.2026)! Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
 
 ·  👉 **[Download: Beta v0.1.4](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4)** 
+·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
@@ -19,7 +20,7 @@
 1. **Patch laden:** Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4) **eine** der beiden `.bps`-Dateien holen – passend zu deiner ROM:
    - **Pokémon FireRed (USA), Rev 0** → `pokemon_unbound_de_v0.1.4_von_firered_usa.bps` *(empfohlen)*
    - **Pokémon Unbound (englisch) v1.0.1** → `pokemon_unbound_de_v0.1.4.bps`
-2. **Patchen:** z. B. mit [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) direkt im Browser (geht auch am Handy).
+2. **Patchen:** am einfachsten auf unserer [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) (FireRed USA Rev 0, direkt im Browser, auch am Handy) – oder mit [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/).
 3. **Spielen** in deinem Emulator (z. B. mGBA, Delta, RetroArch).
 
 Klappt etwas nicht? Meist ist es die falsche Basis-ROM – die [Patch-Anleitung](docs/PATCH_ANLEITUNG.md) zeigt, wie du sie per MD5 prüfst.
@@ -57,7 +58,7 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **Beta v0.1.4 of the German fan translation of Pokémon Unbound is out!** Story, dialogue, battles, menus, items, moves and abilities are in German, using official Pokémon terminology.
 
-**How to play:** download **one** `.bps` patch from the [release page](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4) that matches your own legal base ROM – **Pokémon FireRed (USA) Rev 0** (recommended) or **Pokémon Unbound (EN) v1.0.1** – and apply it, e.g. with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/). MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
+**How to play:** download **one** `.bps` patch from the [release page](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4) that matches your own legal base ROM – **Pokémon FireRed (USA) Rev 0** (recommended) or **Pokémon Unbound (EN) v1.0.1** – and apply it, e.g. on our [patch page](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) (FireRed USA Rev 0, in your browser) or with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/). MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
 **It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. A few things are still English (Z-move names in battle), and some names are shortened due to fixed character limits. Based on Unbound **v1.0.1**, not 2.x. See the [CHANGELOG](CHANGELOG.md) for what changed.
 
