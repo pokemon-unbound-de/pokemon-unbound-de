@@ -3,10 +3,20 @@
 Neueste Version oben. Downloads: [Releases](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases) – je Version beide Patches
 (FireRed-Hauptweg + Unbound-EN), `MD5.txt` und Patch-Anleitung. Keine ROMs.
 
-## In Arbeit (v0.1.4 / Port 2.1.1.1)
-- Arenaleiterin/Thronfolgerin im Kampf-Intro; er/sie-Anrede an Stellen ohne Verzweigung im Original.
-- Attacken- und TM-Texte angleichen.
+## In Arbeit (v0.1.5 / Port 2.1.1.1)
+- Pokédex-Größe in Metern, Statuskürzel, Stockwerke, Schilder („Poké Markt“, „DAS ENDE“).
+- Gegenwart statt Vergangenheit in Kampf- und Systemmeldungen; Du/Sie in Ja/Nein-Fragen.
 - Port auf Unbound 2.1.1.1.
+
+## v0.1.4 (17.10.2026)
+Danke an **DMkiller** (Hinweis zu den Liga-Grafikfehlern) und **Leitplanke** (Pokédex-Code für Kilogramm)!
+- **Grafikfehler im Kampf bei Siegesstraße / Top Vier behoben** – als Fehlerklasse: 36 Speicherstellen, die das Spiel
+  für Kampfhintergründe liest, werden freigehalten; neue automatische Prüfung.
+- **Pokédex-Gewicht in Kilogramm** („11,0 kg“).
+- **Namen:** Moloch (statt „Big Mo“), Arabella, Wissenschafts-Syndikat, Mühlensippe – überall einheitlich.
+- **Wetter offiziell** (Regen, Sandsturm); Attackenseite und TM-Kasten mit demselben Text; „Moment …“ statt „Warte …“.
+- **Lesefluss:** neuer Satz nach Satzende beginnt eine neue Textbox (60 Texte).
+Details: [Release v0.1.4](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4).
 
 ## v0.1.3 (12.10.2026)
 - **Lesefluss:** neue Textbox nur noch dort, wo das Original eine beginnt – kein Neustart mitten im Satz mehr
