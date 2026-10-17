@@ -34,13 +34,13 @@ Deutsche Namen der Fan-Übersetzung mit dem englischen Original – für Wiki, G
 | Prof. Lärch | Prof. Log | Story-NPC |
 | Professor Lärch | Euler Log | Story-NPC |
 | Rory | Rory | Story-NPC |
-| Stachel *(vorläufig)* | Barbs | Story-NPC |
+| Stachel | Barbs | Story-NPC |
 | Wega | Vega | Story-NPC |
 | Wega | Véga | Story-NPC |
 | Zeph | Zeph | Story-NPC |
 | Arabella | Anabelle | Top Vier |
 | Elias | Elias | Top Vier |
-| Maulwurf *(vorläufig)* | Moleman | Top Vier |
+| Maulwurf | Moleman | Top Vier |
 | Penny | Penny | Top Vier |
 
 ## Orte (108)
