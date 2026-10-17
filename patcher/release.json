@@ -1,0 +1,13 @@
+{
+  "version": "v0.1.4",
+  "unboundVersion": "1.0.1",
+  "base": "Pokémon FireRed (USA), Rev 0",
+  "baseMd5": "e26ee0d44e809351c8ce2d73c7400cdd",
+  "baseCrc32": "dd88761c",
+  "outputMd5": "0afd7ff270cd44e29f1fde8bf2cfa467",
+  "outputCrc32": "90897064",
+  "patch": "patches/latest_firered_rev0.bps",
+  "patchSha256": "dadf38512ea9ba220a882a5816519f3e1f686893bba2f5be7158cf8d8ed2338e",
+  "checksumsAssetSha256": "52851ecddcbe82c42e1b4af5196b6d63b1ceb77c479c23479849840b2647f5c6",
+  "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4"
+}
