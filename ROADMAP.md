@@ -1,28 +1,28 @@
 # Roadmap
 
-## v0.1-alpha-de
+Stand: Oktober 2026. Aktuelle Version: siehe [neueste Beta](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest).
 
-- Keep safe public documentation and workflow files current.
-- Maintain repository safety rules.
-- Expand curated screenshots after public-material review.
-- Document patch workflow without distributing ROMs.
+## Linie 1.0.1 (Basis Pokémon Unbound v1.0.1)
 
-## Localization Progress
+1. **Beta-Updates (v0.1.x)** – laufend: gemeldete Fehler werden als ganze Fehlerklasse behoben, jede mit einer
+   automatischen Prüfung. Was sich geändert hat: [CHANGELOG](CHANGELOG.md).
+2. **Pre-Stable (v0.1.5)** – Gegenwart statt Vergangenheit in Kampf- und Systemmeldungen, Du/Sie in Ja/Nein-Fragen,
+   Pokédex-Größe in Metern, Schilder/Statuskürzel/Stockwerke (soweit Grafik und Beleg vorliegen).
+3. **Release Candidate → Stable 1.0** – wenn alle Kriterien erfüllt sind:
+   - keine offenen schweren Fehler (P0/P1),
+   - Test-Bot spielt Hauptstory, Top Vier und Nebenmissionen ohne englischen Rest oder übergelaufenen Text,
+   - alle automatischen Prüfungen grün,
+   - Credits, „DAS ENDE“ und Titelbild final,
+   - mindestens 7 Tage Community-Beta ohne neue schwere Meldung.
 
-- Continue German localization review in controlled review rounds.
-- Keep public documentation focused on contributor-safe QA.
-- Publish only public-safe status updates.
+## Port auf Pokémon Unbound 2.1.1.1
 
-## QA
+- **Vorschau:** Ende Oktober 2026.
+- **Beta:** erst nach dem Stable-Release der 1.0.1-Linie.
+- Spielstände der 1.0.1-Linie passen nicht zu 2.1.1.1 (eigenes Unbound-Spielstandformat).
 
-- Continue terminology and lore review.
-- Add textbox/width risk review for story batches.
-- Add more screenshot coverage for gameplay and menus (battle, bag, party, PC box view, town map); everyday NPC dialogue and basic settings menus are covered, more variants welcome.
+## Dauerhaft
 
-## Public Repo Hardening
-
-- Review all docs for local path references.
-- Keep issue templates and labels aligned.
-- Maintain SECURITY.md and legal/trust documentation.
-- Decide whether patch artifacts are allowed under the release policy.
-- Run staged-file-only safety scans before any push.
+- Nur Patches veröffentlichen – keine ROMs, Spielstände-Archive oder kommerziellen Assets.
+- Patch-Seite (Browser) und Release-Seite zeigen immer die neueste reguläre Version.
+- Mithilfe beim Gegenlesen, bei Begriffen und Screenshots: [CONTRIBUTING.md](CONTRIBUTING.md).

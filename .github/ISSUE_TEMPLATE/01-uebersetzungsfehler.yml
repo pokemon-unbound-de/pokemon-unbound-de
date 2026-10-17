@@ -7,13 +7,13 @@ body:
     attributes:
       value: |
         Danke, dass du hilfst! 💛 Eine Meldung pro Textstelle ist am übersichtlichsten.
-        **Bitte keine ROMs, gepatchten ROMs, Spielstände oder Savestates hochladen** – nur Screenshots.
+        **Bitte keine ROMs, gepatchten ROMs, Spielstände oder Savestates hochladen** – nur Screenshots. (Spielstände gern im Discord-Kanal `#spielstände`.)
   - type: input
     id: patch_version
     attributes:
       label: Patch-Version
       description: Steht im Dateinamen bzw. auf der Release-Seite.
-      placeholder: z. B. v0.1-beta
+      placeholder: z. B. v0.1.4
     validations:
       required: true
   - type: textarea
