@@ -1,0 +1,56 @@
+# Patch-Seite (GitHub Pages): spiegelt den FireRed-Patch des neuesten regulären Releases auf denselben Ursprung
+# (Release-Assets haben kein CORS), prüft SHA256/MD5/CRC und veröffentlicht patcher/ – ohne ROMs, ohne Zähler.
+name: Patchseite
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['patcher/**', '.github/workflows/patcher-pages.yml']
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: patcher-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.event_name != 'release' || !github.event.release.prerelease
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Sync latest public release
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if python patcher/sync_release.py --expect-version "${{ github.event.release.tag_name }}"; then exit 0; fi
+            sleep 10
+          done
+          exit 1
+      - name: Verify latest public release
+        run: python patcher/sync_release.py --check --expect-version "${{ github.event.release.tag_name }}"
+      - name: Package site without ROMs or QA files
+        run: |
+          if find patcher -type f \( -iname '*.gba' -o -iname '*.sav' -o -iname '*.ss0' \) | grep -q .; then
+            echo 'STOP: ROM/save found in patcher source'; exit 1
+          fi
+          mkdir -p "$RUNNER_TEMP/patcher-site"
+          cp patcher/index.html patcher/style.css patcher/app.js patcher/release.json patcher/stats_config.json patcher/ROMPATCHER_LICENSE.txt "$RUNNER_TEMP/patcher-site/"
+          cp -R patcher/rom-patcher-js patcher/patches "$RUNNER_TEMP/patcher-site/"
+          mkdir -p "$RUNNER_TEMP/patcher-site/assets"
+          cp patcher/assets/aklove_cutout.png "$RUNNER_TEMP/patcher-site/assets/"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/patcher-site
+      - uses: actions/deploy-pages@v4
+        id: deployment

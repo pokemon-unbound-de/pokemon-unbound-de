@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120f1b">
+  <title>Pokémon Unbound – Deutsche Version</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="rom-patcher-js/RomPatcher.webapp.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brandmark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="brand"><strong>POKÉMON UNBOUND</strong><small>DEUTSCHE VERSION</small></div>
+    <a class="release-link" id="release-link" href="https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases" target="_blank" rel="noopener noreferrer">Release ansehen <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="layout">
+    <div class="intro">
+      <p class="eyebrow">BORRIUS <span class="eyebrow-line"></span> DEUTSCHE VERSION <span id="version">Lade Version</span></p>
+      <h1>Borrius wartet.<br><span>Auf Deutsch.</span></h1>
+      <p class="intro-copy">Wähle deine eigene Pokémon-FireRed-ROM. Der deutsche Patch wird hier im Browser angewendet. Deine ROM wird nicht hochgeladen.</p>
+      <p class="version-meta">Basis: Pokémon Unbound <strong id="unbound-version">wird geprüft</strong></p>
+      <div class="step-strip" aria-label="Ablauf"><span><b>01</b> ROM wählen</span><span><b>02</b> Prüfen</span><span><b>03</b> Patchen</span></div>
+      <div class="lore-signal"><img src="assets/aklove_cutout.png" alt="Aklove aus Pokémon Unbound" width="154" height="154"></div>
+    </div>
+    <section class="tool" aria-label="ROM patchen">
+      <div class="tool-head"><h2>Patch erstellen</h2><span class="status-dot" id="status-dot"></span></div>
+      <div id="rom-patcher-container">
+        <div class="field-head"><label for="rom-patcher-input-file-rom">FireRed-ROM</label><span>.gba · Rev 0</span></div>
+        <div class="file-wrap"><input type="file" id="rom-patcher-input-file-rom" accept=".gba" disabled><div class="file-face"><span class="file-symbol" aria-hidden="true">+</span><strong id="file-label">Datei auswählen</strong><small id="file-subtitle">Pokémon FireRed (USA), Rev 0</small></div></div>
+        <div class="verify-line" id="verify-line"><span class="verify-icon" aria-hidden="true">●</span><span id="status" role="status" aria-live="polite">Patch wird vorbereitet …</span></div>
+        <div id="rom-patcher-rom-info" class="hidden"><span id="rom-patcher-span-crc32"></span><span id="rom-patcher-span-md5"></span><span id="rom-patcher-span-sha1"></span><span id="rom-patcher-span-rom-info"></span></div>
+        <div id="rom-patcher-row-file-patch" class="hidden"><label for="rom-patcher-select-patch">Patch</label><select id="rom-patcher-select-patch"></select></div>
+        <div id="rom-patcher-row-patch-description" class="hidden"><span id="rom-patcher-patch-description"></span></div>
+        <div id="rom-patcher-row-patch-requirements" class="hidden"><span id="rom-patcher-patch-requirements-type"></span><span id="rom-patcher-patch-requirements-value"></span></div>
+        <div id="rom-patcher-row-error-message" class="error-wrap"><span id="rom-patcher-error-message"></span></div>
+        <button id="rom-patcher-button-apply" type="button" disabled>Deutsche ROM erstellen <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="footnote">Du benötigst eine eigene legale Sicherung. Unterstützt wird nur die US-Version Rev 0, nicht Rev 1 oder die deutsche Feuerrote Edition.</p>
+      <p class="footnote" id="telemetry-note" hidden>Bei aktivierter Statistik zählen wir nur Downloadstarts pro Version. ROMs, Spielstände und Namen werden nicht übertragen.</p>
+    </section>
+  </main>
+  <footer><span>Pokémon Unbound © Skeli · Deutsche Lokalisierung: NevioCore · Unabhängige, nichtkommerzielle Fan-Übersetzung</span><nav aria-label="Projekt und Community"><a href="https://discord.gg/fSkhHppgcv" target="_blank" rel="noopener noreferrer">Discord ↗</a><a href="https://www.reddit.com/r/PokemonUnboundDE/" target="_blank" rel="noopener noreferrer">Reddit ↗</a><a href="https://unboundwiki.de/" target="_blank" rel="noopener noreferrer">Wiki ↗</a><a href="https://github.com/pokemon-unbound-de/pokemon-unbound-de" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank" rel="noopener noreferrer">Patcher ↗</a></nav></footer>
+</body>
+</html>
