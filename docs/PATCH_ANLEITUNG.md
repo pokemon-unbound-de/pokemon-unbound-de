@@ -1,8 +1,10 @@
-# Patch-Anleitung – Pokémon Unbound auf Deutsch (Beta v0.1.4)
+# Patch-Anleitung – Pokémon Unbound auf Deutsch
+
+[![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?label=Neueste%20Version)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
 **Credits:** Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
 
-Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwendest. Dauert etwa fünf Minuten.
+Hier erfährst du, wie du den deutschen Patch auf deine eigene ROM anwendest. **Am schnellsten geht es mit unserer [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Variante A) – sie nutzt immer die neueste Beta und prüft Basis-ROM und Ergebnis automatisch.
 
 > **Wichtig:** Wir verteilen **keine ROMs**. Du brauchst deine **eigene, legal erworbene Basis-ROM**. Bitte frag weder hier noch im Discord nach ROMs oder Download-Links dafür – solche Anfragen und Links werden gelöscht.
 
@@ -10,16 +12,16 @@ Hier erfährst du, wie du den deutschen `.bps`-Patch auf deine eigene ROM anwend
 
 | Was | Woher |
 | --- | --- |
-| Deutscher Patch (`.bps`) | [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.4) – **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
+| Deutscher Patch (`.bps`) | bei der [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) schon dabei – sonst [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest): **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
 | Basis-ROM | deine eigene: **Weg A (Hauptweg)** Pokémon FireRed (USA), Rev 0 – oder **Weg B** Pokémon Unbound (englisch) v1.0.1 |
-| Patch-Programm | eins der Tools unten |
+| Patch-Programm | Patch-Seite oder eins der Tools unten |
 
 | Weg | Basis-ROM | Patch-Datei |
 | --- | --- | --- |
-| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_v0.1.4_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
-| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_v0.1.4.bps` |
+| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_vX.Y.Z_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
+| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_vX.Y.Z.bps` |
 
-Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
+(`vX.Y.Z` = Versionsnummer der neuesten Beta.) Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
 
 ## 2. Basis-ROM prüfen (MD5)
 
@@ -34,6 +36,7 @@ FireRed **Rev 1**, die europäische/deutsche „Feuerrote Edition“ oder eine b
 
 So bekommst du die MD5 deiner Datei:
 
+- **Patch-Seite:** prüft die MD5 automatisch und lehnt falsche ROMs ab.
 - **Rom Patcher JS:** zeigt die MD5 direkt an, sobald du die ROM lädst.
 - **Windows** (PowerShell oder Eingabeaufforderung): `certutil -hashfile "DeineROM.gba" MD5`
 - **macOS** (Terminal): `md5 "DeineROM.gba"`
@@ -45,7 +48,15 @@ Stimmt der Wert nicht überein? Dann passt deine ROM nicht – der Patch wird se
 
 Such dir eine Variante aus. Am Ende hast du eine **neue** Datei – deine Original-ROM bleibt unverändert. Behalte sie trotzdem als Sicherung.
 
-### Variante A: Rom Patcher JS (Browser – PC, Handy, Tablet)
+### Variante A: Patch-Seite (Browser – PC, Handy, Tablet) – empfohlen
+
+Nur für **Weg A** (FireRed USA Rev 0). Die ROM wird lokal in deinem Browser verarbeitet, nichts wird hochgeladen.
+
+1. Öffne <https://pokemon-unbound-de.github.io/pokemon-unbound-de/>.
+2. **Datei auswählen** und deine FireRed (USA) Rev 0 wählen – die Seite prüft sie sofort.
+3. **Deutsche ROM erstellen** tippen. Die fertige ROM wird geprüft und heruntergeladen.
+
+### Variante B: Rom Patcher JS (Browser – auch für Weg B)
 
 Funktioniert ohne Installation, auch auf iPhone/iPad und Android. Die Dateien werden lokal in deinem Browser verarbeitet.
 
@@ -54,16 +65,16 @@ Funktioniert ohne Installation, auch auf iPhone/iPad und Android. Die Dateien we
 3. Bei **Patch file** die deutsche `.bps`-Datei auswählen.
 4. Auf **Apply patch** tippen – die gepatchte ROM wird heruntergeladen.
 
-### Variante B: Floating IPS (Windows-PC)
+### Variante C: Floating IPS (Windows-PC)
 
 1. Floating IPS (Flips) herunterladen: <https://github.com/Alcaro/Flips/releases> und entpacken.
 2. `flips.exe` starten und **Apply Patch** klicken.
 3. Zuerst die `.bps`-Datei, dann deine Basis-ROM auswählen.
-4. Speicherort und Namen für die neue ROM wählen, z. B. `Pokemon_Unbound_DE_v0.1.4.gba`.
+4. Speicherort und Namen für die neue ROM wählen, z. B. `Pokemon_Unbound_DE.gba`.
 
 Meldet Flips einen Prüfsummenfehler („checksum mismatch“ o. ä.), ist es die falsche Basis-ROM – siehe Schritt 2.
 
-### Variante C: UniPatcher (Android)
+### Variante D: UniPatcher (Android)
 
 1. UniPatcher aus dem Google Play Store installieren.
 2. Bei **Patch file** die `.bps`-Datei auswählen.
