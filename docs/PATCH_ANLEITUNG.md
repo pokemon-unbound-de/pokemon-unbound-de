@@ -4,93 +4,44 @@
 
 **Credits:** Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
 
-Hier erfährst du, wie du den deutschen Patch auf deine eigene ROM anwendest. **Am schnellsten geht es mit unserer [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Variante A) – sie nutzt immer die neueste Beta und prüft Basis-ROM und Ergebnis automatisch.
-
 > **Wichtig:** Wir verteilen **keine ROMs**. Du brauchst deine **eigene, legal erworbene Basis-ROM**. Bitte frag weder hier noch im Discord nach ROMs oder Download-Links dafür – solche Anfragen und Links werden gelöscht.
 
-## 1. Was du brauchst
+## 1. Hauptweg: Patch-Seite (Browser – PC, Handy, Tablet)
 
-| Was | Woher |
-| --- | --- |
-| Deutscher Patch (`.bps`) | bei der [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) schon dabei – sonst [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest): **einen** der beiden Patches, passend zu deiner Basis-ROM (Tabelle unten) |
-| Basis-ROM | deine eigene: **Weg A (Hauptweg)** Pokémon FireRed (USA), Rev 0 – oder **Weg B** Pokémon Unbound (englisch) v1.0.1 |
-| Patch-Programm | Patch-Seite oder eins der Tools unten |
+Öffne die **[Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)**, wähle deine eigene **Pokémon FireRed (USA), Rev 0** und tippe auf **Deutsche ROM erstellen**.
+Die Seite prüft deine ROM, wendet immer den Patch der **neuesten Beta** an und kontrolliert die fertige ROM per Prüfsumme, bevor sie heruntergeladen wird.
+Deine ROM wird dabei nur in deinem Browser verarbeitet und **nicht hochgeladen**.
 
-| Weg | Basis-ROM | Patch-Datei |
-| --- | --- | --- |
-| **A – Hauptweg** | Pokémon FireRed (USA), Rev 0 | `pokemon_unbound_de_vX.Y.Z_von_firered_usa.bps` (enthält Unbound v1.0.1, das offiziell nicht mehr erhältlich ist) |
-| B | Pokémon Unbound (englisch) v1.0.1 | `pokemon_unbound_de_vX.Y.Z.bps` |
+FireRed **Rev 1**, die europäische/deutsche „Feuerrote Edition“ oder eine bereits gepatchte ROM werden abgelehnt.
 
-(`vX.Y.Z` = Versionsnummer der neuesten Beta.) Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
+## 2. Alternativen (offline / ohne Browser oder mit Unbound-EN-ROM)
 
-## 2. Basis-ROM prüfen (MD5)
+Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) gibt es beide Patches (`vX.Y.Z` = Versionsnummer der neuesten Beta):
 
-Der Patch funktioniert nur mit **genau der richtigen** Basis-ROM. Prüfe deshalb vorher die MD5-Prüfsumme:
+| Weg | Basis-ROM | MD5 der Basis | Patch-Datei |
+| --- | --- | --- | --- |
+| **A** | Pokémon FireRed (USA), Rev 0 | `e26ee0d44e809351c8ce2d73c7400cdd` | `pokemon_unbound_de_vX.Y.Z_von_firered_usa.bps` (enthält Unbound v1.0.1) |
+| B | Pokémon Unbound (englisch) v1.0.1 | `52192d7e7268245e2e30b7d1a802d33d` | `pokemon_unbound_de_vX.Y.Z.bps` |
 
-```
-Weg A – Pokémon FireRed (USA), Rev 0:   e26ee0d44e809351c8ce2d73c7400cdd
-Weg B – Pokémon Unbound (EN) v1.0.1:    52192d7e7268245e2e30b7d1a802d33d
-```
+Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
+MD5 deiner Datei: Windows `certutil -hashfile "DeineROM.gba" MD5` · macOS `md5 "DeineROM.gba"` · Linux `md5sum "DeineROM.gba"`.
 
-FireRed **Rev 1**, die europäische/deutsche „Feuerrote Edition“ oder eine bereits gepatchte ROM passen nicht.
+- **[Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/)** (Browser, auch für Weg B): ROM wählen (zeigt die MD5), `.bps` wählen, *Apply patch*.
+- **[Floating IPS / Flips](https://github.com/Alcaro/Flips/releases)** (Windows, offline): *Apply Patch* → `.bps` → Basis-ROM → Ziel, z. B. `Pokemon_Unbound_DE_vX.Y.Z.gba`. Ein Prüfsummenfehler heißt: falsche Basis-ROM.
+- **UniPatcher** (Android, offline): Patch-Datei und ROM wählen, anwenden – die ROM landet im Ordner der Basis-ROM.
 
-So bekommst du die MD5 deiner Datei:
+## 3. Spielen und Spielstände
 
-- **Patch-Seite:** prüft die MD5 automatisch und lehnt falsche ROMs ab.
-- **Rom Patcher JS:** zeigt die MD5 direkt an, sobald du die ROM lädst.
-- **Windows** (PowerShell oder Eingabeaufforderung): `certutil -hashfile "DeineROM.gba" MD5`
-- **macOS** (Terminal): `md5 "DeineROM.gba"`
-- **Linux** (Terminal): `md5sum "DeineROM.gba"`
+Öffne die deutsche ROM in einem GBA-Emulator deiner Wahl (z. B. mGBA, Delta, RetroArch).
 
-Stimmt der Wert nicht überein? Dann passt deine ROM nicht – der Patch wird sehr wahrscheinlich fehlschlagen oder ein kaputtes Spiel erzeugen. Bitte keine „ähnliche“ ROM verwenden.
+- **Mach vor jedem Update eine Sicherungskopie deiner `.sav`-Datei.**
+- **Spielstände der deutschen Beta** laufen nach einem Update weiter (geprüft von v0.1 bis v0.1.4).
+- **Spielstände der englischen Unbound v1.0.1** sind meist kompatibel (gleiche Basis), aber ohne Gewähr.
+- **Spielstände von Unbound 2.x** passen **nicht**.
 
-## 3. Patch anwenden
+## 4. Probleme?
 
-Such dir eine Variante aus. Am Ende hast du eine **neue** Datei – deine Original-ROM bleibt unverändert. Behalte sie trotzdem als Sicherung.
+- **Patch schlägt fehl / Prüfsummenfehler / weißer Bildschirm:** fast immer die falsche Basis-ROM → MD5 prüfen (Tabelle oben) oder die Patch-Seite nutzen, die das automatisch tut.
+- **Übersetzungsfehler gefunden?** Erst die angehefteten „📌 Bekannten Fehler“ in `#beta-bugs` auf [Discord](https://discord.gg/fSkhHppgcv) ansehen, dann melden – dort oder über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
 
-### Variante A: Patch-Seite (Browser – PC, Handy, Tablet) – empfohlen
-
-Nur für **Weg A** (FireRed USA Rev 0). Die ROM wird lokal in deinem Browser verarbeitet, nichts wird hochgeladen.
-
-1. Öffne <https://pokemon-unbound-de.github.io/pokemon-unbound-de/>.
-2. **Datei auswählen** und deine FireRed (USA) Rev 0 wählen – die Seite prüft sie sofort.
-3. **Deutsche ROM erstellen** tippen. Die fertige ROM wird geprüft und heruntergeladen.
-
-### Variante B: Rom Patcher JS (Browser – auch für Weg B)
-
-Funktioniert ohne Installation, auch auf iPhone/iPad und Android. Die Dateien werden lokal in deinem Browser verarbeitet.
-
-1. Öffne <https://www.marcrobledo.com/RomPatcher.js/>.
-2. Bei **ROM file** deine Basis-ROM auswählen. Vergleiche die angezeigte **MD5** mit dem Wert oben.
-3. Bei **Patch file** die deutsche `.bps`-Datei auswählen.
-4. Auf **Apply patch** tippen – die gepatchte ROM wird heruntergeladen.
-
-### Variante C: Floating IPS (Windows-PC)
-
-1. Floating IPS (Flips) herunterladen: <https://github.com/Alcaro/Flips/releases> und entpacken.
-2. `flips.exe` starten und **Apply Patch** klicken.
-3. Zuerst die `.bps`-Datei, dann deine Basis-ROM auswählen.
-4. Speicherort und Namen für die neue ROM wählen, z. B. `Pokemon_Unbound_DE.gba`.
-
-Meldet Flips einen Prüfsummenfehler („checksum mismatch“ o. ä.), ist es die falsche Basis-ROM – siehe Schritt 2.
-
-### Variante D: UniPatcher (Android)
-
-1. UniPatcher aus dem Google Play Store installieren.
-2. Bei **Patch file** die `.bps`-Datei auswählen.
-3. Bei **ROM file** deine Basis-ROM auswählen.
-4. Unten auf den Button zum Anwenden tippen. Die gepatchte ROM landet standardmäßig im selben Ordner wie die Basis-ROM.
-
-## 4. Spielen
-
-Öffne die gepatchte ROM in einem GBA-Emulator deiner Wahl.
-
-**Spielstände:** Spielstände aus anderen Versionen (z. B. der englischen) sind nicht offiziell unterstützt. Für die Beta empfehlen wir ein neues Spiel. Mach vor jedem Update eine Sicherungskopie deiner `.sav`-Datei.
-
-## 5. Probleme?
-
-- **Patch schlägt fehl / Prüfsummenfehler:** falsche Basis-ROM → MD5 prüfen (Schritt 2).
-- **Weißer/schwarzer Bildschirm:** meist ebenfalls falsche Basis-ROM oder eine bereits gepatchte Datei als Basis verwendet.
-- **Übersetzungsfehler gefunden?** Melde ihn gerne über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
-
-Bitte lade **niemals** ROMs oder gepatchte ROMs in Issues oder im Discord hoch. **Spielstände (`.sav`) teilen ist erlaubt** – sie helfen uns, Fehler nachzustellen. Screenshots sind super!
+Bitte lade **niemals** ROMs oder gepatchte ROMs hoch – weder in Issues noch im Discord. **Spielstände (`.sav`) gern im Discord-Kanal `#spielstände`** – sie helfen uns, Fehler nachzustellen (in GitHub-Issues bitte keine Dateien außer Screenshots). Screenshots sind super!

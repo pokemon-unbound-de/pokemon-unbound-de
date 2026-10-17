@@ -35,15 +35,34 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 ## Es ist eine Beta – das wissen wir schon
 
-- Noch englisch: Z-Attacken-Namen im Kampf.
-- Im Kampf-Intro steht bei Arenaleiterinnen noch die männliche Klassenform – kommt mit einer Code-Anpassung.
-- Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. „Unlcht“) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
-- Pokédex-Größe noch in Fuß (Gewicht seit v0.1.4 in kg).
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
+- Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. „Unlcht“) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
 - **Port auf Unbound 2.1.1.1:** Vorschau Ende Oktober 2026, Beta erst nach dem Stable-Release (siehe [Roadmap](ROADMAP.md)).
 
+Offene Fehler, die wir schon kennen:
+
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 18.10.2026) -->
+- Pokédex-Größe noch in Fuß (Gewicht seit v0.1.4 in kg)
+- Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin)
+- EN-Reste in Menü-/Box-Labels: „Cancel“ (PC-Box beim Markieren), „Bag“ (Item …
+- UI-Überlauf/abgeschnitten: DexNav („Abbrechen“, eng), Items sortieren, …
+- Kampftext-Überlauf bei langen Variablen: Fähigkeitstausch (Feelinara; …
+- EN-Reste Kampf/NPC: „A critical hit on …“ (Doppel-/Einzelkampf), Rüpel „No, …
+- Pokémon-Namen EN (Hydropi, Geckabor u. a.)
+- Statuskürzel EN in Grafik/UI: FNT, SLP, PSN (PAR bleibt, = DE); BRN/FRZ u. a. …
+- Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global …
+- Du/Sie-Bruch in Ja/Nein-Fragen: Frage „Würdest du …?“, Nein-Zweig „Sie“ (NPC …
+- … und 20 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+<!-- BEKANNT:ENDE -->
+
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
+
+## Community & Wiki
+
+- **Wiki:** [unboundwiki.de](https://unboundwiki.de) – das deutsche Pokémon-Unbound-Wiki. Es wird von **Fletcher Mops**
+  und **Florian (Vegetarox)** gepflegt – danke!
+- **Discord:** [beitreten](https://discord.gg/fSkhHppgcv) · **Reddit:** [r/PokemonUnboundDE](https://www.reddit.com/r/PokemonUnboundDE/)
 
 ## Hilf mit – Fehler melden
 
@@ -63,7 +82,7 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **How to play:** open our [patch page](https://pokemon-unbound-de.github.io/pokemon-unbound-de/), select your own legal **Pokémon FireRed (USA) Rev 0** and create the German ROM right in your browser (latest beta, result is checksum-verified, your ROM is not uploaded). Alternatively, download **one** `.bps` patch from the [latest release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) – for **FireRed (USA) Rev 0** or **Pokémon Unbound (EN) v1.0.1** – and apply it with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) or Flips. MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
-**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. A few things are still English (Z-move names in battle), and some names are shortened due to fixed character limits. Based on Unbound **v1.0.1**, not 2.x; a port to 2.1.1.1 gets a preview in late October 2026 and a beta after the stable release. See the [CHANGELOG](CHANGELOG.md) for what changed.
+**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits, and the Pokédex still shows height in feet (weight is in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. Based on Unbound **v1.0.1**, not 2.x; a port to 2.1.1.1 gets a preview in late October 2026 and a beta after the stable release. See the [CHANGELOG](CHANGELOG.md) for what changed.
 
 **Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
@@ -89,6 +108,7 @@ Alle Screenshots stammen aus der deutschen Übersetzung. Hintergrund zur Arbeits
 ## Rechtliches / Legal
 
 Pokémon Unbound © Skeli. Deutsche Fan-Übersetzung: NevioCore & Community.
+Dank an **DMkiller** und **Leitplanke** für technische Hinweise (u. a. Liga-Grafikfehler, Pokédex-Code) sowie an alle Tester*innen.
 Pokémon and Pokémon Unbound are owned by their respective rights holders. This is an unofficial, non-commercial fan translation, not affiliated with or endorsed by them. No ROMs, BIOS files, save states or commercial assets are distributed. Details: [docs/LICENSING.md](docs/LICENSING.md) · [docs/LEGAL_NOTICE.md](docs/LEGAL_NOTICE.md)
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)

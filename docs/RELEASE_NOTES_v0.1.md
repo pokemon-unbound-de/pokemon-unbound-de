@@ -1,5 +1,7 @@
 # Release Notes – Beta v0.1
 
+_Historisches Dokument (Stand 08.10.2026). Aktueller Stand: [CHANGELOG](../CHANGELOG.md), [neueste Beta](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)._
+
 **Veröffentlichung:** 08.10.2026 · **Download:** [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1-beta)
 **Weg A (Hauptweg):** Pokémon FireRed (USA, Rev 0) → Unbound v1.0.1 Deutsch · MD5 der Basis `e26ee0d44e809351c8ce2d73c7400cdd` · Patch `pokemon_unbound_de_v0.1_von_firered_usa.bps`  
 **Weg B (für Besitzer von Unbound EN v1.0.1):** MD5 der Basis `52192d7e7268245e2e30b7d1a802d33d` · Patch `pokemon_unbound_de_v0.1.bps`  
