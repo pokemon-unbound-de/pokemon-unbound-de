@@ -62,6 +62,7 @@ Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Be
 
 - **Wiki:** [unboundwiki.de](https://unboundwiki.de) – das deutsche Pokémon-Unbound-Wiki. Es wird von **Fletcher Mops**
   und **Florian (Vegetarox)** gepflegt – danke!
+- **Namensverzeichnis** (Figuren, Orte, Trainerklassen, Begriffe – DE ↔ EN): [docs/NAMENSVERZEICHNIS.md](docs/NAMENSVERZEICHNIS.md)
 - **Discord:** [beitreten](https://discord.gg/fSkhHppgcv) · **Reddit:** [r/PokemonUnboundDE](https://www.reddit.com/r/PokemonUnboundDE/)
 
 ## Hilf mit – Fehler melden
