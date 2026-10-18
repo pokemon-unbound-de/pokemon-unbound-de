@@ -8,7 +8,7 @@ Unbound-Basis: 1.0.1
 
 Danke: Grafikfehler von **Nevio** gefunden, von **DMkiller** eingegrenzt.
 
-## Hotfix: Entschuldigung, Grafikfehler Top Vier jetzt vollständig behoben
+### Hotfix: Entschuldigung, Grafikfehler Top Vier jetzt vollständig behoben
 - **Kampfhintergründe Top Vier / Champ:** v0.1.4 hielt betroffene Grafikbereiche nur zum Teil frei – große
   Kampfgrafiken wurden dahinter trotzdem von Text überschrieben. Jetzt bleibt jeder Bereich, auf den das Spiel
   zeigt, komplett frei, auch Einträge in Grafiktabellen. Geprüft in Kämpfen gegen alle Top Vier, den Champ und drei
@@ -19,23 +19,23 @@ Danke: Grafikfehler von **Nevio** gefunden, von **DMkiller** eingegrenzt.
 - **Optionen:** Musiktitel laufen nicht mehr aus dem Feld (z. B. „Galar-Wildkampf“ statt „Kampf! Galar-Wild-P…“).
 - **DexNav:** „Wasser“; Tastenzeile „Merken / Zurück“ passt in die Zeile.
 
-## Kampftexte
+### Kampftexte
 - Gegnerische Pokémon heißen jetzt „Gegner Libelldra“ (wilde: „Wild-Pikachu“) – grammatisch überall richtig
   („Angriff von Gegner Libelldra sinkt“ statt „von Gegnerisches …“), und lange Sätze laufen nicht mehr aus der Box.
 - Kampftexte **teilweise** in der Gegenwart wie in den offiziellen Spielen („Maulwurf schickt Stalobor in den
   Kampf!“, „setzt … ein“, „ruft … zurück“) – der Rest folgt in v0.1.6.
 - „erhält spezielle … E.-Punkte“ (offizieller Wortlaut), „reagiert auf den Mega-Armreif von …“.
 
-## Außerdem
+### Außerdem
 - Trainerklassen vervollständigt (u. a. Team Aqua, Polizist, Lady, Spieler, Interviewer, Primapaar).
 - Schattenbasis durchgehend „Sie“, Zeph-Szene korrigiert, „Fordere die Arena von … heraus!“.
 - „Poké Markt“ einheitlich.
 
-## Neue automatische Prüfungen
+### Neue automatische Prüfungen
 - Grafikbereiche bis zum Ende freigehalten, Kampfhintergrund-Tabellen, wiederverwendeter Speicher, TM/VM-Kasten,
   englische Statuskürzel, Optionswerte gegen Feldbreite.
 
-## Bekannt / noch offen
+### Bekannt / noch offen
 - Top Vier: kurzes Pixeln beim Einblenden zu Kampfbeginn (#71d); Namensbox „Maulwurfmann“ statt „Maulwurf“ (#105).
 - Weitere Kampftexte noch in der Vergangenheit (v0.1.6).
 - TM-Box: das kleine „HM“-Symbol vor den VMs ist Grafik und folgt.
@@ -43,14 +43,6 @@ Danke: Grafikfehler von **Nevio** gefunden, von **DMkiller** eingegrenzt.
 - Pokédex A–Z nach deutschen Namen folgt in v0.1.6.
 - „Oberwelt-Musik“ bleibt, bis die Abstimmung entschieden ist.
 - Pokédex-Größe in Metern folgt.
-
-Neueste Version oben. Downloads: [Releases](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases) – je Version beide Patches
-(FireRed-Hauptweg + Unbound-EN), `MD5.txt` und Patch-Anleitung. Keine ROMs.
-
-## In Arbeit (v0.1.5 / Port 2.1.1.1)
-- Pokédex-Größe in Metern, Statuskürzel, Stockwerke, Schilder („Poké Markt“, „DAS ENDE“).
-- Gegenwart statt Vergangenheit in Kampf- und Systemmeldungen; Du/Sie in Ja/Nein-Fragen.
-- Port auf Unbound 2.1.1.1.
 
 ## v0.1.4 (17.10.2026)
 Danke an **DMkiller** (Hinweis zu den Liga-Grafikfehlern) und **Leitplanke** (Pokédex-Code für Kilogramm)!
