@@ -1,6 +1,6 @@
 # Pokémon Unbound auf Deutsch – German Patch (Fan-Übersetzung)
 
-[![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?label=Neueste%20Version)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
+[![Neueste Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpokemon-unbound-de.github.io%2Fpokemon-unbound-de%2Frelease.json&query=%24.version&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
 **Die Beta ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
 
@@ -53,7 +53,7 @@ Offene Fehler, die wir schon kennen:
 - EN-Reste Kampf/NPC: „A critical hit on …“ (Doppel-/Einzelkampf), Rüpel „No, …
 - Pokémon-Namen EN (Hydropi, Geckabor u. a.)
 - Statuskürzel EN in Grafik/UI: FNT, SLP, PSN (PAR bleibt, = DE); BRN/FRZ u. a. …
-- … und 25 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- … und 30 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
@@ -113,3 +113,9 @@ Dank an **DMkiller** und **Leitplanke** für technische Hinweise (u. a. Liga-Gra
 Pokémon and Pokémon Unbound are owned by their respective rights holders. This is an unofficial, non-commercial fan translation, not affiliated with or endorsed by them. No ROMs, BIOS files, save states or commercial assets are distributed. Details: [docs/LICENSING.md](docs/LICENSING.md) · [docs/LEGAL_NOTICE.md](docs/LEGAL_NOTICE.md)
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
+
+<!-- FEHLERLISTE:START (automatisch, Stand 18.10.2026) -->
+## Fehlerliste – für Interessierte & Mitentwickler
+
+Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
+<!-- FEHLERLISTE:ENDE -->
