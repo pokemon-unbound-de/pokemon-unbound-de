@@ -1,5 +1,45 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.6 (2026-10-19)
+
+**Build:** `554cadea…` · **Patches:** `pokemon_unbound_de_v0.1.6_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.6.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1
+
+Danke: **DMkiller** (Lesefluss, Eingrenzung), **Leitplanke** (Statuskürzel, Größe in m), **Fabian (Vegetarox)**,
+alle Tester – **luxaxy**, **fletchermops**, **scalyoh**, **amirez** und viele mehr – und die ganze Community.
+
+### Highlights
+- **Liga-Grafikfehler endgültig behoben (Ursache gefunden):** Beim Einbau der deutschen Texte wurden in den
+  komprimierten Kampfhintergründen einzelne Bytes verändert, die zufällig wie Textverweise aussahen – daher das
+  Pixeln beim Einblenden der Top Vier. Grafikdaten werden jetzt nie mehr angefasst; Bild für Bild geprüft gegen
+  das englische Original.
+- **Kampftexte in der Gegenwart** wie in den offiziellen Spielen („setzt … ein“, „ist besiegt“).
+- **Pokédex:** Größe in Metern („0,7 m“), Liste A–Z nach deutschen Namen.
+- **Statusprobleme deutsch:** Symbole SLF / GIF / BRT / GFR / PAR.
+- **Keine englischen Texte mehr** in Menüs und Dialogen (inkl. Quiz, Pension, Link-Raum).
+
+### Lesbarkeit
+- Lange Fähigkeits-, Item- und Attackennamen sprengen keine Kampftexte mehr (z. B. Fähigkeitstausch).
+- Neuer Satz = neue Textbox; keine Satzanfänge mehr mitten im Scrollen.
+- Missionsbuch: Status „Erfüllt / Offen / Inaktiv / Gefasst“ passt in die Spalte; Münzrahmen „Münzen:“; Karte „+Gehen“.
+- Attacken-Beschreibungen passen in den Kasten; Attackeninfo „K.O.“ / „---“.
+
+### Begriffe
+- Typ „Unlicht“ ausgeschrieben, Trainerklasse „Aqua-Vorstand“, Fähigkeit „Kloakensoße“, „Maulwurf“ statt „Maulwurfmann“.
+- Steuerleisten „Wahl“ statt „Pick“, VM-Symbol in der TM-Box, DexNav-Beschriftungen deutsch.
+- Attacke „Giftblick“ (statt abgeschnittenem „Schlangblick“), Münzkorb „Ein Korb für …“.
+- „zwei- bis“ wieder mit Trennstrich.
+- **Optionen:** neue Einstellung heißt „Städtemusik“; alle Musiktitel passen ins Feld.
+
+### Neue automatische Prüfungen
+- Grafikdaten unverändert (gegen Englisch), Worst-Case-Namen in allen Kampftexten, Menü-Spaltenbreiten,
+  englische Reste auch in Skript-Texten, Satzende/Textbox, Fähigkeitsnamen offiziell, Gegenwart in Kampftexten.
+
+### Bekannt / noch offen
+- Stockwerk-Anzeigen (B2F, 1F …), Abspann-Schild „DAS ENDE“, Markt-Schild – Grafik, folgt mit dem Port.
+- „Arenaleiterin“ im Kampf-Intro, Datum im deutschen Format – braucht Code, folgt mit dem Port.
+
 ## v0.1.5 (2026-10-18)
 
 **Build:** `581e6b39…` · **Patches:** `pokemon_unbound_de_v0.1.5_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.5.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`

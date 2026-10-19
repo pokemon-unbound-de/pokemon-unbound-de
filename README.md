@@ -42,18 +42,15 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 18.10.2026) -->
-- Intro-Einschub (Slide-in) Top Vier v0.1.5: pixelt erst rechts, dann links; …
-- Namensbox „Maulwurfmann“ ≠ Trainer „Maulwurf“ (Namensverzeichnis) + Text …
-- Pokédex-Größe noch in Fuß (Gewicht seit v0.1.4 in kg)
-- Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin)
-- EN-Reste in Menü-/Box-Labels: „Cancel“ (PC-Box beim Markieren), „Bag“ (Item …
-- UI-Überlauf/abgeschnitten: DexNav („Abbrechen“, eng), Items sortieren, …
-- Kampftext-Überlauf bei langen Variablen: Fähigkeitstausch (Feelinara; …
-- EN-Reste Kampf/NPC: „A critical hit on …“ (Doppel-/Einzelkampf), Rüpel „No, …
-- Pokémon-Namen EN (Hydropi, Geckabor u. a.)
-- Statuskürzel EN in Grafik/UI: FNT, SLP, PSN (PAR bleibt, = DE); BRN/FRZ u. a. …
-- … und 30 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 19.10.2026) -->
+- Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
+- Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
+- Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
+- Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
+- Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … *(folgt mit dem Port 2.1.1.1)*
+- Deutsche Tastatur (QWERTZ/Umlaute) in Namenseingabe *(folgt mit dem Port 2.1.1.1)*
+- „Poké Mart“ in Texten + Schild-Tileset („MARKT“) *(folgt mit dem Port 2.1.1.1)*
+- komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
@@ -114,8 +111,23 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 18.10.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 19.10.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
+
+<!-- MEILENSTEINE:START (automatisch, Stand 19.10.2026) -->
+## Meilensteine
+
+| Schritt | Stand |
+|---|---|
+| v0.1.6 Pre-Stable | ✔ veröffentlicht |
+| Testphase | 2 Wochen nach v0.1.6 |
+| Stable v1.0.0 | geplant ~07.11.2026 |
+| Port auf Unbound 2.1.1.1 | nach Stable |
+
+## Mitmachen
+
+Wir suchen weiter **Entwickler, Tester und Talente** (Grafik, Texte, ROM-Hacking). Komm auf unseren Discord: https://discord.gg/fSkhHppgcv
+<!-- MEILENSTEINE:ENDE -->
