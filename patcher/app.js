@@ -7,7 +7,6 @@ const ui = {
   verifyLine: document.getElementById('verify-line'),
   fileLabel: document.getElementById('file-label'),
   fileSubtitle: document.getElementById('file-subtitle'),
-  telemetryNote: document.getElementById('telemetry-note'),
   fileInput: document.getElementById('rom-patcher-input-file-rom'),
   apply: document.getElementById('rom-patcher-button-apply')
 };
@@ -18,21 +17,20 @@ function setStatus(message, kind = 'idle') {
   ui.verifyLine.dataset.kind = kind;
 }
 
-let statsEndpoint = null;
+const pendingEvents = [];
+let invalidBaseCounted = false;
 
-function reportDownloadStart(release) {
-  if (!statsEndpoint) return;
-  const body = JSON.stringify({ release: release.version, unbound: release.unboundVersion });
-  fetch(statsEndpoint, {
-    method: 'POST',
-    mode: 'cors',
-    credentials: 'omit',
-    referrerPolicy: 'no-referrer',
-    headers: { 'Content-Type': 'text/plain' },
-    body,
-    keepalive: true
-  }).catch(() => {});
+function trackEvent(name, version = '') {
+  const path = version ? `${name}-${version}` : name;
+  const event = { path, title: path, event: true, no_session: true, referrer: '' };
+  if (window.goatcounter?.count) window.goatcounter.count(event);
+  else pendingEvents.push(event);
 }
+
+window.flushGoatEvents = function () {
+  if (!window.goatcounter?.count) return;
+  for (const event of pendingEvents.splice(0)) window.goatcounter.count(event);
+};
 
 async function start() {
   try {
@@ -51,41 +49,41 @@ async function start() {
     if (latest.tag_name !== release.version) {
       throw new Error(`Neuer Release ${latest.tag_name} erkannt. Patch wird aktualisiert; bitte später erneut laden.`);
     }
-    try {
-      const statsResponse = await fetch('stats_config.json', { cache: 'no-store' });
-      if (statsResponse.ok) {
-        const stats = await statsResponse.json();
-        if (stats.enabled && /^https:\/\//.test(stats.endpoint || '')) {
-          statsEndpoint = stats.endpoint;
-          ui.telemetryNote.hidden = false;
-        }
-      }
-    } catch (_) {
-      statsEndpoint = null;
-    }
+    const directPatch = document.getElementById('bps-direct');
+    directPatch.href = `${release.patch}?sha=${release.patchSha256.slice(0, 12)}`;
+    directPatch.download = `Pokemon_Unbound_${release.unboundVersion}_DE_${release.version}.bps`;
+    directPatch.hidden = false;
+    directPatch.addEventListener('click', () => trackEvent('bps-direkt', release.version));
     RomPatcherWeb.initialize({
       language: 'de',
       requireValidation: true,
       allowDropFiles: false,
       onloadrom(romFile) {
+        invalidBaseCounted = false;
+        trackEvent('rom-gewaehlt');
         ui.fileLabel.textContent = romFile.fileName || ui.fileInput.files[0]?.name || 'ROM ausgewählt';
         ui.fileSubtitle.textContent = 'Basis wird geprüft';
         setStatus('Prüfsumme wird berechnet …');
       },
       onvalidaterom(_romFile, valid) {
+        if (!valid && !invalidBaseCounted) {
+          trackEvent('patch-fehler');
+          invalidBaseCounted = true;
+        }
         ui.fileSubtitle.textContent = valid ? 'FireRed Rev 0 erkannt' : 'Nicht unterstützte ROM';
         setStatus(valid ? 'Basis geprüft. Bereit zum Patchen.' : 'Falsche Basis: Bitte FireRed (USA), Rev 0 wählen.', valid ? 'good' : 'bad');
       },
       onpatch(romFile) {
         const hash = romFile.hashMD5().toLowerCase();
         if (hash !== release.outputMd5) {
+          trackEvent('patch-fehler');
           setStatus('Ergebnis weicht von der erwarteten Prüfsumme ab. Kein Download.', 'bad');
           throw new Error('Patch-Check fehlgeschlagen');
         }
         setStatus(`Fertig. Ergebnis geprüft (${release.version}).`, 'good');
       },
       ondownloadstart() {
-        reportDownloadStart(release);
+        trackEvent('patch-erfolg', release.version);
       }
     }, {
       file: `${release.patch}?sha=${release.patchSha256.slice(0, 12)}`,
