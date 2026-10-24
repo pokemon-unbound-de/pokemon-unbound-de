@@ -6,8 +6,9 @@ Stand: Oktober 2026. Aktuelle Version: siehe [neueste Beta](https://github.com/p
 
 1. **Beta-Updates (v0.1.x)** – laufend: gemeldete Fehler werden als ganze Fehlerklasse behoben, jede mit einer
    automatischen Prüfung. Was sich geändert hat: [CHANGELOG](CHANGELOG.md).
-2. **Pre-Stable (v0.1.5)** – Gegenwart statt Vergangenheit in Kampf- und Systemmeldungen, Du/Sie in Ja/Nein-Fragen,
-   Pokédex-Größe in Metern, Schilder/Statuskürzel/Stockwerke (soweit Grafik und Beleg vorliegen).
+2. **Pre-Stable (v0.1.6, veröffentlicht am 19.10.2026)** – Kampftexte in der Gegenwart, Pokédex-Größe in Metern,
+   Statuskürzel und DexNav-Beschriftungen auf Deutsch. Stockwerk-Anzeigen sowie Ende- und Markt-Schild bleiben offen;
+   Einzelheiten im [CHANGELOG](CHANGELOG.md).
 3. **Release Candidate → Stable 1.0** – wenn alle Kriterien erfüllt sind:
    - keine offenen schweren Fehler (P0/P1),
    - Test-Bot spielt Hauptstory, Top Vier und Nebenmissionen ohne englischen Rest oder übergelaufenen Text,
