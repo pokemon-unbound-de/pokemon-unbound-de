@@ -42,12 +42,15 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 19.10.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 24.10.2026) -->
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
+- Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
 - Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
 - Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
 - Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … *(folgt mit dem Port 2.1.1.1)*
+- Feature Port: Link-Kampf reparieren (FR-Routine beschädigt, laut Leitplanke … *(folgt mit dem Port 2.1.1.1)*
+- Port: ~68 Missionstexte in 2.1.1.1 noch EN (Leitplanke-Export „Missionen … *(folgt mit dem Port 2.1.1.1)*
 - Deutsche Tastatur (QWERTZ/Umlaute) in Namenseingabe *(folgt mit dem Port 2.1.1.1)*
 - „Poké Mart“ in Texten + Schild-Tileset („MARKT“) *(folgt mit dem Port 2.1.1.1)*
 - komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
@@ -111,20 +114,21 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 19.10.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 24.10.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 19.10.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 24.10.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
 |---|---|
-| v0.1.6 Pre-Stable | ✔ veröffentlicht |
-| Testphase | 2 Wochen nach v0.1.6 |
-| Stable v1.0.0 | geplant ~07.11.2026 |
+| v0.1.7 Pre-Stable | ✔ veröffentlicht |
+| Testphase | bis zu 4 Wochen ab v0.1.7 |
+| Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
+| Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |
 | Port auf Unbound 2.1.1.1 | nach Stable |
 
 ## Mitmachen
