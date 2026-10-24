@@ -1,5 +1,43 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.7 (2026-10-24)
+
+**Build:** `e96d7af7…` · **Patches:** `pokemon_unbound_de_v0.1.7_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1
+
+Danke: **DMkiller**, **Leitplanke** (Quiz-Methode, Grafiken KP/ERF), **Fabian (Vegetarox)**, **Maria**, **luxaxy**, **fletchermops**, alle Tester –
+**scalyoh**, **amirez** und viele mehr – und die ganze Community.
+
+### Behoben
+- **Kampftexte brechen nicht mehr direkt nach Namen um** („Fuegro / erhält …“, „Angriff von / Krawell“). Ursache:
+  v0.1.6 hat für jeden Platzhalter im Kampftext die Breite des längsten Fähigkeitsnamens angenommen und 101 Texte
+  daraufhin neu umbrochen. Jetzt wird mit den echten Breiten gerechnet, die Zeilen sind wieder voll wie in v0.1.5.
+- **Volltreffer** im Einzel- und Doppelkampf deutsch.
+- **Dynamax:** Kampfmeldung „Dyna-…“ / „Gigadyna-…“ statt „Max …“, „Dyna-Brand“ statt „Max Team Flare“ (Testpunkt: Attackenmenü im Dynamax-Zustand bitte prüfen).
+- **Items sortieren:** „Typ“, „Anzahl“, Frage „Wie sortieren?“ passt in das Fenster.
+- **Pokédex-Werte** überlappen nicht mehr (KP / Ang / Ver / Ini / SAn / SVe).
+- **Werte-Menü** „KP“ / „ERF“ statt „HP“ / „EXP“, PC-Box „TEAM-POKÉMON“.
+- **Fähigkeits-Einblendung** ohne englisches Apostroph („Garados“ statt „Garados'“).
+- **Starterauswahl** mit deutschen Namen (Bauz, Flamiau, Robball …), Trainer „Schläger“ statt „Goon“.
+- **Quiz-Haus übersetzt**, Antworten auf Deutsch (ohne Umlaute, z. B. „gruen“) – bitte meldet, ob die Eingabe klappt.
+- **Missionsbuch:** Status passt in die Spalte (Fertig / Offen / Neu), Beschreibungen passen in zwei Zeilen.
+- **Safari-Leiste** passt („Ende / Weiter / Skippen“); Ruhmeshalle „ZEIT“.
+- **Dialoge:** Gedankenstriche durch Punkt, Komma oder Doppelpunkt ersetzt, wo das Deutsche keinen braucht.
+
+### Testphase
+- Bis zu **4 Wochen**. **Stable v1.0.0** kommt, sobald **14 Tage lang kein Pflichtfehler** gemeldet wurde.
+- **Pflichtfehler:** englische Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafikfehler, Absturz/Speicherproblem.
+- **Erlaubt (kein Blocker):** Stil- und Begriffswünsche – die sammeln wir weiter.
+
+### Neue automatische Prüfungen
+- **Laufzeit-Textlog:** Der Test-Bot schreibt jeden tatsächlich angezeigten Text mit – englische Wörter und Texte,
+  die aus dem Fenster laufen, werden gemeldet.
+- Umbruch an Namen, englische Artnamen in Auswahllisten, leere Textstellen.
+
+### Noch offen (eigener Track)
+- **Pokédex-Einträge** im offiziellen Wortlaut der jeweiligen Edition (#117) – läuft als eigener Track, kein Fehler im Spielablauf.
+
 ## v0.1.6 (2026-10-19)
 
 **Build:** `554cadea…` · **Patches:** `pokemon_unbound_de_v0.1.6_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.6.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
