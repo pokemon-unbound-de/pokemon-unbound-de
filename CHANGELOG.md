@@ -1,5 +1,25 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.7.2 (2026-10-25)
+
+**Build:** `4c9fdd88…` · **Patches:** `pokemon_unbound_de_v0.1.7.2_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.2.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1
+
+### Behoben
+- **Ruhmeshalle / Schwierigkeitsgrad:** Nach dem Postgame stand „Niveau: LeichtNiveau: Nach Story“ (Fehler aus v0.1.7.1).
+  Jetzt einzeilig „Niveau: Leicht (Nach Story)“, vor dem Postgame „Niveau: Leicht“.
+- **Champ-Karte in der Ruhmeshalle:** „ZEIT“ statt „TIME“. v0.1.7.1 hatte eine andere Stelle erwischt – diesmal im Spiel
+  geprüft.
+
+### Neu im Test
+- Jeder Fix gilt erst mit **Laufzeitbild** aus dem Spiel. Fester Bot-Durchlauf „Liga-Sieg → Ruhmeshalle“ prüft beide
+  Stellen vor jedem Release.
+
+Danke: **DMkiller**, **Nevio**, **Leitplanke**, alle Tester und die ganze Community.
+
+Testphase und Stable-Kriterien wie in v0.1.7: Stable v1.0.0 nach 14 Tagen ohne Pflichtfehler.
+
 ## v0.1.7.1 (2026-10-25)
 
 **Build:** `816bada9…` · **Patches:** `pokemon_unbound_de_v0.1.7.1_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.1.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
