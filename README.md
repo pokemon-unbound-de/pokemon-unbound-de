@@ -2,10 +2,10 @@
 
 [![Neueste Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpokemon-unbound-de.github.io%2Fpokemon-unbound-de%2Frelease.json&query=%24.version&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-**Die Beta ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen.
+**Pre-Stable ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
 
 ·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
-·  👉 **[Download (neueste Beta)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)** 
+·  👉 **[Download (neueste Version)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
@@ -20,7 +20,7 @@
 ## In 3 Schritten spielen
 
 1. **[Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) öffnen** (geht auch am Handy) und deine eigene **Pokémon FireRed (USA), Rev 0** auswählen.
-2. **Deutsche ROM erstellen** – die Seite prüft deine ROM, patcht im Browser auf die neueste Beta und kontrolliert das Ergebnis. Deine ROM wird nicht hochgeladen.
+2. **Deutsche ROM erstellen** – die Seite prüft deine ROM, patcht im Browser auf die neueste Version und kontrolliert das Ergebnis. Deine ROM wird nicht hochgeladen.
 3. **Spielen** in deinem Emulator (z. B. mGBA, Delta, RetroArch).
 
 Andere Wege: Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) gibt es beide `.bps`-Dateien – für **FireRed (USA) Rev 0** (`…_von_firered_usa.bps`) und für **Pokémon Unbound (englisch) v1.0.1** (`pokemon_unbound_de_vX.Y.Z.bps`). Die kannst du z. B. mit [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) oder Flips anwenden.
@@ -33,12 +33,17 @@ Klappt etwas nicht? Meist ist es die falsche Basis-ROM – die [Patch-Anleitung]
 
 Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missionsbuch, dazu der Titelbildschirm, die Typ-Symbole, der Trainerpass und weitere Grafiken. Ein Test-Bot hat Intro, Wild- und Trainerkampf, Fang, Doppelkampf, Pokédex, Tasche, PC sowie Speichern und Laden im Emulator durchgespielt – ohne Hänger.
 
-## Es ist eine Beta – das wissen wir schon
+## Pre-Stable – Stand und Testphase
+
+- **Bis zum Champ durchspielbar** – komplett getestet von **NevioCore** und **DMkiller**.
+- **Testphase:** bis zu 4 Wochen. **Stable v1.0.0** kommt, sobald **14 Tage lang kein Pflichtfehler** gemeldet wurde.
+  - **Pflichtfehler:** englische Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafikfehler, Absturz/Speicherproblem.
+  - **Kein Blocker:** Stil- und Begriffswünsche – die sammeln wir trotzdem gern.
 
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
-- Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. „Unlcht“) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
+- Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. einzelne Item-Namen) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
-- **Port auf Unbound 2.1.1.1:** Vorschau Ende Oktober 2026, Beta erst nach dem Stable-Release (siehe [Roadmap](ROADMAP.md)).
+- **Port auf Unbound 2.1.1.1:** startet nach dem Stable; Tester-Vorschau voraussichtlich Ende November 2026 (siehe [Roadmap](ROADMAP.md)).
 
 Offene Fehler, die wir schon kennen:
 
