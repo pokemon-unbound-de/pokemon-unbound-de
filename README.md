@@ -130,7 +130,7 @@ Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKA
 
 | Schritt | Stand |
 |---|---|
-| v0.1.7.1 Pre-Stable (Hotfix) | ✔ veröffentlicht |
+| v0.1.7.2 Pre-Stable (Hotfix) | ✔ veröffentlicht |
 | Testphase | bis zu 4 Wochen ab v0.1.7 |
 | Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
 | Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |
