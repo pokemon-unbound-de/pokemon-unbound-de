@@ -37,7 +37,7 @@ async function start() {
     const response = await fetch('release.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`Release-Manifest: HTTP ${response.status}`);
     const release = await response.json();
-    if (!/^v\d+\.\d+(?:\.\d+)?$/.test(release.version) || !/^\d+(?:\.\d+){2,3}$/.test(release.unboundVersion) || !/^[a-f0-9]{32}$/.test(release.baseMd5)) {
+    if (!/^v\d+\.\d+(?:\.\d+){0,2}$/.test(release.version) || !/^\d+(?:\.\d+){2,3}$/.test(release.unboundVersion) || !/^[a-f0-9]{32}$/.test(release.baseMd5)) {
       throw new Error('Release-Manifest ungültig');
     }
     ui.version.textContent = release.version;
