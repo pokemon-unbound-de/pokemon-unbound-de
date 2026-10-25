@@ -71,7 +71,7 @@ def main():
     args = parser.parse_args()
     release = json.loads(fetch(API, binary=False))
     version = release["tag_name"]
-    if not re.fullmatch(r"v\d+\.\d+(?:\.\d+)?", version):
+    if not re.fullmatch(r"v\d+\.\d+(?:\.\d+){0,2}", version):   # auch Hotfix-Tags wie v0.1.7.1
         raise ValueError("unexpected release tag")
     if args.expect_version and version != args.expect_version:
         raise ValueError(f"GitHub latest is {version}, expected {args.expect_version}")
