@@ -1,5 +1,24 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.7.1 (2026-10-25)
+
+**Build:** `816bada9…` · **Patches:** `pokemon_unbound_de_v0.1.7.1_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.1.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1
+
+### Behoben
+- **Ruhmeshalle / Schwierigkeitsgrad:** „Niveau: Leicht / Schwer / Experte / Wahnsinn“ statt „Experte Niveau“ –
+  gleiche Namen wie im Optionsmenü.
+- **Champ-Bildschirm:** „ZEIT“ statt „TIME“ (seit v0.1.7 im Spiel, Zeiger geprüft).
+
+### Bestätigt
+- **Quiz-Haus funktioniert mit deutschen Antworten** (klein, ohne Umlaute, z. B. „rocara“, „gruen“). Die Fragen kommen
+  zufällig – im Test-Bot nimmt das Spiel die deutsche Antwort an und lehnt die alte englische ab.
+
+Danke: **DMkiller**, **Nevio**, **Leitplanke**, alle Tester und die ganze Community.
+
+Testphase und Stable-Kriterien wie in v0.1.7: Stable v1.0.0 nach 14 Tagen ohne Pflichtfehler.
+
 ## v0.1.7 (2026-10-24)
 
 **Build:** `e96d7af7…` · **Patches:** `pokemon_unbound_de_v0.1.7_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`

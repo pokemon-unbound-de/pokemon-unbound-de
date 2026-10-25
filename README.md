@@ -42,7 +42,7 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 24.10.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 25.10.2026) -->
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
@@ -114,18 +114,18 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 24.10.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 25.10.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 24.10.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 25.10.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
 |---|---|
-| v0.1.7 Pre-Stable | ✔ veröffentlicht |
+| v0.1.7.1 Pre-Stable (Hotfix) | ✔ veröffentlicht |
 | Testphase | bis zu 4 Wochen ab v0.1.7 |
 | Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
 | Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |
