@@ -1,0 +1,76 @@
+name: Fehler melden
+description: Absturz, Grafikfehler, englischer Text, abgeschnittener Text oder sonst etwas Seltsames im Spiel? Hier melden.
+title: "[Fehler] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Melden! 💛 Eine Meldung pro Fehler ist am übersichtlichsten.
+        **Bitte keine ROMs, gepatchten ROMs, Spielstände oder Savestates hochladen** – nur Screenshots.
+        Für reine Wortwahl-/Übersetzungsfragen gibt es die Vorlage „Übersetzungsfehler melden“.
+  - type: input
+    id: version
+    attributes:
+      label: Patch-Version
+      description: Steht auf der Patch-Seite bzw. im Dateinamen.
+      placeholder: z. B. v0.1.7.2
+    validations:
+      required: true
+  - type: dropdown
+    id: basis
+    attributes:
+      label: Spielversion
+      options:
+        - Unbound 1.0.1 (aktueller Patch)
+        - Unbound 2.1.1.1 (Port-Vorschau)
+        - Weiß ich nicht
+    validations:
+      required: true
+  - type: textarea
+    id: ort
+    attributes:
+      label: Ort im Spiel
+      description: Stadt/Route, Gebäude, Person, Menü oder Kampf – und was du gerade gemacht hast.
+      placeholder: z. B. Ruhmeshalle nach dem Liga-Sieg, Champ-Karte
+    validations:
+      required: true
+  - type: textarea
+    id: fehler
+    attributes:
+      label: Was ist passiert?
+      description: Was siehst du, und was hättest du erwartet?
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Bild hier hineinziehen (am besten direkt aus dem Emulator).
+    validations:
+      required: true
+  - type: dropdown
+    id: emulator
+    attributes:
+      label: Emulator
+      options:
+        - mGBA
+        - RetroArch (mGBA-Core)
+        - RetroArch (anderer Core)
+        - Pizza Boy / My Boy! (Android)
+        - Delta (iOS)
+        - Anderer
+    validations:
+      required: true
+  - type: input
+    id: emulator_sonst
+    attributes:
+      label: Emulator-Version / anderer Emulator
+      placeholder: z. B. mGBA 0.10.3
+  - type: checkboxes
+    id: sicherheit
+    attributes:
+      label: Hinweis
+      options:
+        - label: Ich habe keine ROMs, Spielstände oder Savestates angehängt.
+          required: true
