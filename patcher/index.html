@@ -7,6 +7,7 @@
   <title>Pokémon Unbound – Deutsche Version</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="rom-patcher-js/RomPatcher.webapp.js"></script>
+  <script defer src="rom_erkennung.js"></script>
   <script defer src="app.js"></script>
   <script data-goatcounter="https://neviocore.goatcounter.com/count" data-goatcounter-settings='{"no_events":true}' async src="https://gc.zgo.at/count.js" onload="window.flushGoatEvents?.()"></script>
 </head>
@@ -21,7 +22,7 @@
     <div class="intro">
       <p class="eyebrow">BORRIUS <span class="eyebrow-line"></span> DEUTSCHE VERSION <span id="version">Lade Version</span></p>
       <h1>Borrius wartet.<br><span>Auf Deutsch.</span></h1>
-      <p class="intro-copy">Wähle deine eigene Pokémon-FireRed-ROM. Der deutsche Patch wird hier im Browser angewendet. Deine ROM wird nicht hochgeladen.</p>
+      <p class="intro-copy">Wähle deine eigene Pokémon-FireRed-ROM (USA, Rev 0) – oder deine englische Unbound-ROM 1.0.1. Die Seite erkennt die Basis und nimmt automatisch den passenden Patch. Deine ROM wird nicht hochgeladen.</p>
       <p class="version-meta">Basis: Pokémon Unbound <strong id="unbound-version">wird geprüft</strong></p>
       <div class="step-strip" aria-label="Ablauf"><span><b>01</b> ROM wählen</span><span><b>02</b> Prüfen</span><span><b>03</b> Patchen</span></div>
       <div class="lore-signal"><img src="assets/aklove_cutout.png" alt="Aklove aus Pokémon Unbound" width="154" height="154"></div>
@@ -29,8 +30,8 @@
     <section class="tool" aria-label="ROM patchen">
       <div class="tool-head"><h2>Patch erstellen</h2><span class="status-dot" id="status-dot"></span></div>
       <div id="rom-patcher-container">
-        <div class="field-head"><label for="rom-patcher-input-file-rom">FireRed-ROM</label><span>.gba · Rev 0</span></div>
-        <div class="file-wrap"><input type="file" id="rom-patcher-input-file-rom" accept=".gba" disabled><div class="file-face"><span class="file-symbol" aria-hidden="true">+</span><strong id="file-label">Datei auswählen</strong><small id="file-subtitle">Pokémon FireRed (USA), Rev 0</small></div></div>
+        <div class="field-head"><label for="rom-patcher-input-file-rom">Deine ROM</label><span>.gba · FireRed USA Rev 0 oder Unbound EN 1.0.1</span></div>
+        <div class="file-wrap"><input type="file" id="rom-patcher-input-file-rom" accept=".gba" disabled><div class="file-face"><span class="file-symbol" aria-hidden="true">+</span><strong id="file-label">Datei auswählen</strong><small id="file-subtitle">FireRed (USA) Rev 0 oder Unbound EN 1.0.1</small></div></div>
         <div class="verify-line" id="verify-line"><span class="verify-icon" aria-hidden="true">●</span><span id="status" role="status" aria-live="polite">Patch wird vorbereitet …</span></div>
         <div id="rom-patcher-rom-info" class="hidden"><span id="rom-patcher-span-crc32"></span><span id="rom-patcher-span-md5"></span><span id="rom-patcher-span-sha1"></span><span id="rom-patcher-span-rom-info"></span></div>
         <div id="rom-patcher-row-file-patch" class="hidden"><label for="rom-patcher-select-patch">Patch</label><select id="rom-patcher-select-patch"></select></div>
@@ -38,9 +39,15 @@
         <div id="rom-patcher-row-patch-requirements" class="hidden"><span id="rom-patcher-patch-requirements-type"></span><span id="rom-patcher-patch-requirements-value"></span></div>
         <div id="rom-patcher-row-error-message" class="error-wrap"><span id="rom-patcher-error-message"></span></div>
         <button id="rom-patcher-button-apply" type="button" disabled>Deutsche ROM erstellen <span aria-hidden="true">→</span></button>
+        <div class="hilfe" id="hilfe" role="alert" hidden>
+          <strong id="hilfe-titel"></strong>
+          <p id="hilfe-text"></p>
+          <p class="hilfe-links"><a id="hilfe-mail" href="#">Hilfe per E-Mail</a> · <a href="https://discord.gg/fSkhHppgcv" target="_blank" rel="noopener noreferrer">Discord, Kanal #hilfe ↗</a></p>
+          <small>Die E-Mail öffnet sich in deinem Mailprogramm mit Fehlergrund, Prüfsumme (MD5) und Browser – du siehst alles vor dem Senden. Bitte keine ROM anhängen.</small>
+        </div>
       </div>
-      <p class="footnote">Du benötigst eine eigene legale Sicherung. Unterstützt wird nur die US-Version Rev 0, nicht Rev 1 oder die deutsche Feuerrote Edition.</p>
-      <p class="footnote">Anonyme Zählung ohne Cookies (GoatCounter): ROM-Wahl, Patch-Erfolg oder -Fehler und direkter BPS-Download. Keine ROM-Daten oder Dateinamen werden übertragen.</p>
+      <p class="footnote">Du benötigst eine eigene legale Sicherung: FireRed (USA) Rev 0 oder Pokémon Unbound (EN) 1.0.1. Nicht passend: FireRed Rev 1, die deutsche Feuerrote Edition, BlattGrün, Unbound 2.x oder eine schon gepatchte deutsche ROM.</p>
+      <p class="footnote">Anonyme Zählung ohne Cookies (GoatCounter): ROM-Wahl, Patch-Erfolg oder -Fehler (mit Fehlergrund, z. B. „Rev 1“) und direkter BPS-Download. Keine ROM-Daten oder Dateinamen werden übertragen.</p>
       <p class="footnote"><a id="bps-direct" href="#" hidden>Nur BPS-Patch direkt herunterladen</a></p>
     </section>
   </main>

@@ -1,0 +1,18 @@
+{
+ "_zweck": "Basis-Erkennung der Patch-Seite (tools/patcher_kennungen.py) – nur Prüfsummen, keine ROM-Daten",
+ "unbound2x": {
+  "9cad8e771940e7f7094d13911552cef0": "Unbound (EN) 2.1.1.1"
+ },
+ "bereits_gepatcht": {
+  "f8c03e43a52145d0e46a1f065cb32502": "Pokémon Unbound DE v0.1",
+  "1365c66b0a833e22be8e6ec4337d780e": "Pokémon Unbound DE v0.1.1",
+  "21666331e1f7e98a45bb8eb9f1d3bb10": "Pokémon Unbound DE v0.1.2",
+  "29d932f49e870c456e3013f030cde575": "Pokémon Unbound DE v0.1.3",
+  "0afd7ff270cd44e29f1fde8bf2cfa467": "Pokémon Unbound DE v0.1.4",
+  "581e6b39f0a8cf4104c32c58e165ef72": "Pokémon Unbound DE v0.1.5",
+  "554cadea4265428ca4818cfc45d1afbc": "Pokémon Unbound DE v0.1.6",
+  "e96d7af72c60d8991bccbd86ea3de3f5": "Pokémon Unbound DE v0.1.7",
+  "816bada9e28bf744c0a753202c7acdda": "Pokémon Unbound DE v0.1.7.1",
+  "4c9fdd88666bc86b572badfc1d1272c8": "Pokémon Unbound DE v0.1.7.2"
+ }
+}
