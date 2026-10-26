@@ -67,6 +67,12 @@ h1 span { color: var(--accent); }
 .error-wrap { color: var(--bad); font-size: 12px; min-height: 0; }
 .error-wrap:not(:empty) { margin-bottom: 10px; }
 .footnote { font-size: 11px; line-height: 1.5; color: var(--muted); margin: 19px 0 0; }
+.hilfe { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--bad); border-radius: 6px; background: rgba(240, 132, 133, 0.08); font-size: 13px; line-height: 1.5; }
+.hilfe[hidden] { display: none; }
+.hilfe strong { color: var(--bad); display: block; margin-bottom: 4px; }
+.hilfe p { margin: 0 0 8px; }
+.hilfe a { color: var(--accent); }
+.hilfe small { color: var(--muted); font-size: 11px; display: block; }
 .hidden { display: none !important; }
 footer { width: min(100%, 1320px); margin: 0 auto; display: flex; align-items: center; gap: 20px; border-top: 1px solid var(--line); padding: 22px 42px 25px; font-size: 11px; line-height: 1.4; color: var(--muted); }
 footer span { max-width: 520px; }

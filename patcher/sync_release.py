@@ -15,6 +15,10 @@ SITE = Path(__file__).resolve().parent
 API = "https://api.github.com/repos/pokemon-unbound-de/pokemon-unbound-de/releases/latest"
 BASE_MD5 = "e26ee0d44e809351c8ce2d73c7400cdd"
 BASE_CRC32 = 0xDD88761C
+# Weg B (Besitzer der englischen Unbound-ROM): Basis Unbound EN 1.0.1 – die Seite erkennt sie per MD5 und nimmt
+# automatisch diesen Patch (Fehlerquote 26.10.: 59 Fehler auf 71 Erfolge, u. a. falsche Basis)
+UNBOUND_MD5 = "52192d7e7268245e2e30b7d1a802d33d"
+UNBOUND_CRC32 = 0x95EA47FC
 
 
 def fetch(url, binary=True):
@@ -40,11 +44,11 @@ def unbound_version_in(release_body):
     return match.group(1)
 
 
-def verify_bps(data):
+def verify_bps(data, source_crc=BASE_CRC32):
     if len(data) < 16 or data[:4] != b"BPS1":
         raise ValueError("not a BPS patch")
     source, target, patch = struct.unpack_from("<III", data, len(data) - 12)
-    if source != BASE_CRC32 or zlib.crc32(data[:-4]) != patch:
+    if source != source_crc or zlib.crc32(data[:-4]) != patch:
         raise ValueError("BPS source or patch CRC mismatch")
     return target
 
@@ -56,10 +60,10 @@ def asset_sha256(asset):
     return digest.split(":", 1)[1]
 
 
-def cached_patch_matches(patch, expected_sha, expected_crc):
+def cached_patch_matches(patch, expected_sha, expected_crc, source_crc=BASE_CRC32):
     try:
         return (hashlib.sha256(patch).hexdigest() == expected_sha
-                and f"{verify_bps(patch):08x}" == expected_crc)
+                and f"{verify_bps(patch, source_crc):08x}" == expected_crc)
     except (ValueError, struct.error):
         return False
 
@@ -77,14 +81,17 @@ def main():
         raise ValueError(f"GitHub latest is {version}, expected {args.expect_version}")
     assets = {item["name"]: item for item in release["assets"]}
     patch_name = f"pokemon_unbound_de_{version}_von_firered_usa.bps"
-    if patch_name not in assets or "MD5.txt" not in assets:
-        raise ValueError("latest release lacks FireRed patch or MD5.txt")
+    unbound_name = f"pokemon_unbound_de_{version}.bps"
+    if patch_name not in assets or unbound_name not in assets or "MD5.txt" not in assets:
+        raise ValueError("latest release lacks FireRed patch, Unbound patch or MD5.txt")
     patch_sha = asset_sha256(assets[patch_name])
+    unbound_sha = asset_sha256(assets[unbound_name])
     checksums_sha = asset_sha256(assets["MD5.txt"])
     unbound_version = unbound_version_in(release.get("body") or "")
     manifest_path = SITE / "release.json"
     patch_path = SITE / "patches/latest_firered_rev0.bps"
-    if manifest_path.exists() and patch_path.exists():
+    unbound_path = SITE / "patches/latest_unbound_101.bps"
+    if manifest_path.exists() and patch_path.exists() and unbound_path.exists():
         local = json.loads(manifest_path.read_text(encoding="utf-8"))
         local_patch = patch_path.read_bytes()
         same = (local.get("version") == version and local.get("unboundVersion") == unbound_version
@@ -92,6 +99,8 @@ def main():
                 and local.get("baseMd5") == BASE_MD5 and local.get("baseCrc32") == f"{BASE_CRC32:08x}"
                 and local.get("releaseUrl") == release["html_url"]
                 and cached_patch_matches(local_patch, patch_sha, local.get("outputCrc32"))
+                and local.get("unboundPatchSha256") == unbound_sha and local.get("unboundBaseMd5") == UNBOUND_MD5
+                and cached_patch_matches(unbound_path.read_bytes(), unbound_sha, local.get("outputCrc32"), UNBOUND_CRC32)
                 and re.fullmatch(r"[a-f0-9]{32}", local.get("outputMd5", "")))
         if same:
             print(f"{'CHECK OK' if args.check else 'CURRENT'} {version}: BPS SHA256 {patch_sha}; no asset download")
@@ -109,10 +118,17 @@ def main():
     if md5_in(base_section) != BASE_MD5:
         raise ValueError("release base ROM changed")
     result_md5 = md5_in(result_section)
+    if "== Weg B:" not in notes or md5_in(notes.split("== Weg B:", 1)[1].split("== Ergebnis", 1)[0]) != UNBOUND_MD5:
+        raise ValueError("release Unbound base ROM changed")
     patch = fetch(assets[patch_name]["browser_download_url"])
     target_crc = verify_bps(patch)
     if hashlib.sha256(patch).hexdigest() != patch_sha:
         raise ValueError("release patch asset digest mismatch")
+    unbound_patch = fetch(assets[unbound_name]["browser_download_url"])
+    if verify_bps(unbound_patch, UNBOUND_CRC32) != target_crc:       # beide Wege -> dasselbe Ergebnis
+        raise ValueError("Unbound patch target differs from FireRed patch target")
+    if hashlib.sha256(unbound_patch).hexdigest() != unbound_sha:
+        raise ValueError("release Unbound patch asset digest mismatch")
     manifest = {
         "version": version,
         "unboundVersion": unbound_version,
@@ -123,13 +139,19 @@ def main():
         "outputCrc32": f"{target_crc:08x}",
         "patch": "patches/latest_firered_rev0.bps",
         "patchSha256": patch_sha,
+        "unboundBase": "Pokémon Unbound (EN) 1.0.1",
+        "unboundBaseMd5": UNBOUND_MD5,
+        "unboundBaseCrc32": f"{UNBOUND_CRC32:08x}",
+        "unboundPatch": "patches/latest_unbound_101.bps",
+        "unboundPatchSha256": unbound_sha,
         "checksumsAssetSha256": checksums_sha,
         "releaseUrl": release["html_url"],
     }
-    with tempfile.NamedTemporaryFile(dir=patch_path.parent, delete=False) as staged:
-        staged.write(patch)
-        staged_patch = staged.name
-    os.replace(staged_patch, patch_path)
+    for data, path in ((patch, patch_path), (unbound_patch, unbound_path)):
+        with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as staged:
+            staged.write(data)
+            staged_patch = staged.name
+        os.replace(staged_patch, path)
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=SITE, delete=False) as staged:
         json.dump(manifest, staged, ensure_ascii=False, indent=2)
         staged.write("\n")

@@ -44,7 +44,7 @@ jobs:
             echo 'STOP: ROM/save found in patcher source'; exit 1
           fi
           mkdir -p "$RUNNER_TEMP/patcher-site"
-          cp patcher/index.html patcher/style.css patcher/app.js patcher/release.json patcher/stats_config.json patcher/ROMPATCHER_LICENSE.txt "$RUNNER_TEMP/patcher-site/"
+          cp patcher/index.html patcher/style.css patcher/app.js patcher/rom_erkennung.js patcher/rom_kennungen.json patcher/release.json patcher/stats_config.json patcher/ROMPATCHER_LICENSE.txt "$RUNNER_TEMP/patcher-site/"
           cp -R patcher/rom-patcher-js patcher/patches "$RUNNER_TEMP/patcher-site/"
           mkdir -p "$RUNNER_TEMP/patcher-site/assets"
           cp patcher/assets/aklove_cutout.png "$RUNNER_TEMP/patcher-site/assets/"
