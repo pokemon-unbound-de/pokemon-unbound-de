@@ -6,19 +6,19 @@ Stand: Oktober 2026. Aktuelle Version: siehe [neueste Beta](https://github.com/p
 
 1. **Beta-Updates (v0.1.x)** – laufend: gemeldete Fehler werden als ganze Fehlerklasse behoben, jede mit einer
    automatischen Prüfung. Was sich geändert hat: [CHANGELOG](CHANGELOG.md).
-2. **Pre-Stable (v0.1.6, veröffentlicht am 19.10.2026)** – Kampftexte in der Gegenwart, Pokédex-Größe in Metern,
-   Statuskürzel und DexNav-Beschriftungen auf Deutsch. Stockwerk-Anzeigen sowie Ende- und Markt-Schild bleiben offen;
-   Einzelheiten im [CHANGELOG](CHANGELOG.md).
+2. **Pre-Stable (aktuell v0.1.7.2, seit v0.1.7 bis zum Champ durchspielbar)** – Testphase läuft; Einzelheiten im
+   [CHANGELOG](CHANGELOG.md).
 3. **Release Candidate → Stable 1.0** – wenn alle Kriterien erfüllt sind:
    - keine offenen schweren Fehler (P0/P1),
    - Test-Bot spielt Hauptstory, Top Vier und Nebenmissionen ohne englischen Rest oder übergelaufenen Text,
    - alle automatischen Prüfungen grün,
    - Credits, „DAS ENDE“ und Titelbild final,
-   - mindestens 7 Tage Community-Beta ohne neue schwere Meldung.
+   - mindestens 14 Tage Testphase ohne Pflichtfehler (wie im [README](README.md#meilensteine)).
 
 ## Port auf Pokémon Unbound 2.1.1.1
 
-- **Vorschau:** Ende Oktober 2026.
+- **Stand:** in Arbeit (interne Test-Builds); Fortschritt im [Issue #37](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/37).
+- **Tester-Vorschau:** voraussichtlich Ende November 2026.
 - **Beta:** erst nach dem Stable-Release der 1.0.1-Linie.
 - Spielstände der 1.0.1-Linie passen nicht zu 2.1.1.1 (eigenes Unbound-Spielstandformat).
 
