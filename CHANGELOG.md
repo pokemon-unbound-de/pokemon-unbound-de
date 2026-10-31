@@ -1,5 +1,26 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.7.3 (2026-10-31)
+
+**Build:** `ac1e29a0…` · **Patches:** `pokemon_unbound_de_v0.1.7.3_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.3.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1 · Dein Spielstand bleibt gültig.
+
+### Behoben
+- **Unsichtbare dritte Zeile:** In 26 Dialogboxen stand eine dritte Zeile, die das Spiel nicht anzeigt. Jetzt beginnt
+  dort eine neue Box – du liest alles.
+- **Englische Reste:** 21 Texte übersetzt, darunter Story-Szenen mit Lothar, ein Missionsziel, Kampfmeldungen
+  (Luftballon, Fähigkeiten), der Uhr-Prüfbildschirm und zwei Rollen im Abspann.
+- **Offizielle Namen:** Schw. Flöte, Hackattack, Seegesang, Umwandlung 2 · Menüpunkt „Szenen-Skip“.
+
+### Neu im Test
+- Zwei neue Prüfungen vor jedem Build: Texte, die nur durch eine Namensersetzung „deutsch“ aussahen, und englische
+  Texte außerhalb des Textkatalogs (Suche über das ganze ROM).
+
+Danke: **Nevio**, **DMkiller**, **Maria**, **Fabian**, alle Tester und die ganze Community.
+
+Testphase und Stable-Kriterien wie in v0.1.7: Stable v1.0.0 nach 14 Tagen ohne Pflichtfehler.
+
 ## v0.1.7.2 (2026-10-25)
 
 **Build:** `4c9fdd88…` · **Patches:** `pokemon_unbound_de_v0.1.7.2_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.7.2.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`

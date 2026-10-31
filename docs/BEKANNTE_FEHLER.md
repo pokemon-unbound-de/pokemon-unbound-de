@@ -1,6 +1,6 @@
 # Bekannte Fehler – Pokémon Unbound auf Deutsch
 
-Automatisch erzeugt aus der internen Fehlerliste (Stand 29.10.2026). Nicht von Hand bearbeiten.
+Automatisch erzeugt aus der internen Fehlerliste (Stand 31.10.2026). Nicht von Hand bearbeiten.
 Neue Fehler bitte mit Ort + Screenshot in `#beta-bugs` auf Discord melden.
 
 | Nr. | Problem | Status |
