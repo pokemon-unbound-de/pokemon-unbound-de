@@ -47,9 +47,10 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 31.10.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 01.11.2026) -->
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
+- Werkstatt K1 „Spielbegriff nicht gesperrt“ + K2 UI (Nevio 01.11., 6 Meldungen) *(eigener Track)*
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
 - Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
 - Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
@@ -57,8 +58,7 @@ Offene Fehler, die wir schon kennen:
 - EN-Rest „Autumn“ + uneinheitliche Ortsnamen (Fund aus Marias … *(folgt mit dem Port 2.1.1.1)*
 - Feature Port: Link-Kampf reparieren (FR-Routine beschädigt, laut Leitplanke … *(folgt mit dem Port 2.1.1.1)*
 - Port: ~68 Missionstexte in 2.1.1.1 noch EN (Leitplanke-Export „Missionen … *(folgt mit dem Port 2.1.1.1)*
-- Deutsche Tastatur (QWERTZ/Umlaute) in Namenseingabe *(folgt mit dem Port 2.1.1.1)*
-- … und 1 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- … und 2 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
@@ -88,7 +88,7 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **How to play:** open our [patch page](https://pokemon-unbound-de.github.io/pokemon-unbound-de/), select your own legal **Pokémon FireRed (USA) Rev 0** and create the German ROM right in your browser (latest beta, result is checksum-verified, your ROM is not uploaded). Alternatively, download **one** `.bps` patch from the [latest release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) – for **FireRed (USA) Rev 0** or **Pokémon Unbound (EN) v1.0.1** – and apply it with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) or Flips. MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
-**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. Based on Unbound **v1.0.1**, not 2.x; a port to 2.1.1.1 gets a preview in late October 2026 and a beta after the stable release. See the [CHANGELOG](CHANGELOG.md) for what changed.
+**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. Based on Unbound **v1.0.1**, not 2.x; a port to 2.1.1.1 gets a tester preview, expected in late November 2026, and a beta after the stable release. See the [CHANGELOG](CHANGELOG.md) for what changed.
 
 **Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
@@ -119,18 +119,18 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 31.10.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 01.11.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 31.10.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 01.11.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
 |---|---|
-| v0.1.7.2 Pre-Stable (Hotfix) | ✔ veröffentlicht |
+| v0.1.7.3 Pre-Stable | ✔ veröffentlicht |
 | Testphase | bis zu 4 Wochen ab v0.1.7 |
 | Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
 | Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |

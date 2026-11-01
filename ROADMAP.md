@@ -6,7 +6,7 @@ Stand: Oktober 2026. Aktuelle Version: siehe [neueste Beta](https://github.com/p
 
 1. **Beta-Updates (v0.1.x)** – laufend: gemeldete Fehler werden als ganze Fehlerklasse behoben, jede mit einer
    automatischen Prüfung. Was sich geändert hat: [CHANGELOG](CHANGELOG.md).
-2. **Pre-Stable (aktuell v0.1.7.2, seit v0.1.7 bis zum Champ durchspielbar)** – Testphase läuft; Einzelheiten im
+2. **Pre-Stable (aktuell v0.1.7.3, seit v0.1.7 bis zum Champ durchspielbar)** – Testphase läuft; Einzelheiten im
    [CHANGELOG](CHANGELOG.md).
 3. **Release Candidate → Stable 1.0** – wenn alle Kriterien erfüllt sind:
    - keine offenen schweren Fehler (P0/P1),
