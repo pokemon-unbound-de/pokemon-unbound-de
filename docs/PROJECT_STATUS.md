@@ -11,5 +11,5 @@
   einem Emulator-Test-Bot durchgespielt; menschliches Gegenlesen läuft.
 - **Bekannte Fehler:** angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf
   [Discord](https://discord.gg/fSkhHppgcv).
-- **Aktueller Meilenstein:** [Pre-Stable v0.1.6](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.6) (19.10.2026). Als Nächstes folgen Community-Testphase und Release Candidate; die Stable-Kriterien stehen in der [Roadmap](../ROADMAP.md).
-- **Port Unbound 2.1.1.1:** Vorschau Ende Oktober 2026, Beta erst nach dem Stable-Release.
+- **Aktueller Meilenstein:** [Pre-Stable v0.1.7.3](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.7.3) (31.10.2026). Als Nächstes folgen Community-Testphase und Release Candidate; die Stable-Kriterien stehen in der [Roadmap](../ROADMAP.md).
+- **Port Unbound 2.1.1.1:** Vorschau voraussichtlich Ende November 2026, Beta erst nach dem Stable-Release.

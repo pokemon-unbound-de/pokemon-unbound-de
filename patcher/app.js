@@ -24,6 +24,19 @@ function setStatus(message, kind = 'idle') {
 
 const pendingEvents = [];
 let fehlerGezaehlt = false;
+const FEHLER_KEY = 'patch-letzter-fehler';     // Tab-Sitzung: „Erfolg nach Fehlschlag“ zählen, auch nach Neuladen
+
+function fehlerMerken(grund) {
+  try { sessionStorage.setItem(FEHLER_KEY, grund); } catch (_) { /* Zählung ist optional */ }
+}
+
+function fehlerAbholen() {
+  try {
+    const grund = sessionStorage.getItem(FEHLER_KEY);
+    sessionStorage.removeItem(FEHLER_KEY);
+    return grund;
+  } catch (_) { return null; }
+}
 
 function trackEvent(name, version = '') {
   const path = version ? `${name}-${version}` : name;
@@ -124,6 +137,7 @@ async function start() {
         }
         if (!fehlerGezaehlt) {
           trackEvent('patch-fehler', info.grund);                 // nur der Grund, keine Dateidaten
+          fehlerMerken(info.grund);
           fehlerGezaehlt = true;
         }
         ui.fileSubtitle.textContent = 'Nicht unterstützte ROM';
@@ -134,6 +148,7 @@ async function start() {
         const hash = romFile.hashMD5().toLowerCase();
         if (hash !== release.outputMd5) {
           trackEvent('patch-fehler', 'ergebnis');
+          fehlerMerken('ergebnis');
           const info = { grund: 'ergebnis', titel: 'Ergebnis weicht ab',
             text: 'Die erzeugte ROM hat nicht die erwartete Prüfsumme. Es wurde nichts heruntergeladen.' };
           setStatus('Ergebnis weicht von der erwarteten Prüfsumme ab. Kein Download.', 'bad');
@@ -144,6 +159,8 @@ async function start() {
       },
       ondownloadstart() {
         trackEvent('patch-erfolg', release.version);
+        const vorher = fehlerAbholen();
+        if (vorher) trackEvent('patch-erfolg-nach-fehler', vorher);
       }
     }, patchFireRed);
     setStatus('Bereit. Bitte FireRed (USA) Rev 0 oder Unbound EN 1.0.1 wählen.');
