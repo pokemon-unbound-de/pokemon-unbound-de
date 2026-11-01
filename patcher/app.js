@@ -138,6 +138,10 @@ async function start() {
         if (!fehlerGezaehlt) {
           trackEvent('patch-fehler', info.grund);                 // nur der Grund, keine Dateidaten
           fehlerMerken(info.grund);
+          if (info.grund === 'unbekannt') {                       // Prüfsummen-Anfang, Größe, Spielcode: Erkennung erweitern
+            const code = RomErkennung.headerInfo(romFile._u8array).code.replace(/[^A-Z0-9]/g, '_') || 'kein';
+            trackEvent('rom-unbekannt', `${md5.slice(0, 8)}-${Math.round(romFile.fileSize / 1024)}k-${code}`);
+          }
           fehlerGezaehlt = true;
         }
         ui.fileSubtitle.textContent = 'Nicht unterstützte ROM';
