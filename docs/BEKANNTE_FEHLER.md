@@ -1,13 +1,15 @@
 # Bekannte Fehler – Pokémon Unbound auf Deutsch
 
-Automatisch erzeugt aus der internen Fehlerliste (Stand 01.11.2026). Nicht von Hand bearbeiten.
+Automatisch erzeugt aus der internen Fehlerliste (Stand 05.11.2026). Nicht von Hand bearbeiten.
 Neue Fehler bitte mit Ort + Screenshot in `#beta-bugs` auf Discord melden.
 
 | Nr. | Problem | Status |
 |---|---|---|
 | 72 | Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … | folgt mit Stable v1.0.0 |
 | 117 | Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) | eigener Track |
-| 142 | Werkstatt K1 „Spielbegriff nicht gesperrt“ + K2 UI (Nevio 01.11., 6 Meldungen) | eigener Track |
+| 142 | Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt | eigener Track |
+| 143 | Port: Kampf-Healthboxen zerrupft (Oberkante der Namen abgeschnitten, Level … | behoben, kommt mit dem nächsten Release |
+| 145 | Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes | offen (P3) |
 | 60 | Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … | folgt im Port (Unbound 2.x) |
 | 137 | EN-Rest „Autumn“ + uneinheitliche Ortsnamen (Fund aus Marias … | folgt im Port (Unbound 2.x) |
 | 17 | Datum DE-Format, Doppelfragen Speichern/Attacke lernen | folgt im Port (Unbound 2.x) |
