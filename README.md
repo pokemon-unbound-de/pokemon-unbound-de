@@ -52,13 +52,13 @@ Offene Fehler, die wir schon kennen:
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
 - Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt *(eigener Track)*
 - Port: Kampf-Healthboxen zerrupft (Oberkante der Namen abgeschnitten, Level … *(behoben, kommt mit dem nächsten Release)*
-- Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
 - Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
 - Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
 - Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … *(folgt mit dem Port 2.1.1.1)*
 - EN-Rest „Autumn“ + uneinheitliche Ortsnamen (Fund aus Marias … *(folgt mit dem Port 2.1.1.1)*
-- … und 4 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- Feature Port: Link-Kampf reparieren (FR-Routine beschädigt, laut Leitplanke … *(folgt mit dem Port 2.1.1.1)*
+- … und 3 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
