@@ -1,18 +1,18 @@
 {
-  "version": "v0.1.7.3",
+  "version": "v0.1.8",
   "unboundVersion": "1.0.1",
   "base": "Pokémon FireRed (USA), Rev 0",
   "baseMd5": "e26ee0d44e809351c8ce2d73c7400cdd",
   "baseCrc32": "dd88761c",
-  "outputMd5": "ac1e29a026391f1ddb394a3276f0864c",
-  "outputCrc32": "b3c574c9",
+  "outputMd5": "10916159a44548f0338615646f60cb2f",
+  "outputCrc32": "e106b8d3",
   "patch": "patches/latest_firered_rev0.bps",
-  "patchSha256": "66b39f2ab9031b66a4b2285bd3246c2f4fd02bf18bfe0f8cad4d55354940a400",
+  "patchSha256": "82b9bd33a5a5d062446b2ca1c4ce40baceba6fdc236767e1da72bae54b29fbf4",
   "unboundBase": "Pokémon Unbound (EN) 1.0.1",
   "unboundBaseMd5": "52192d7e7268245e2e30b7d1a802d33d",
   "unboundBaseCrc32": "95ea47fc",
   "unboundPatch": "patches/latest_unbound_101.bps",
-  "unboundPatchSha256": "ecd493f38e95d5cd915efa5d44f2d9ef023879fe724b93893c5ce121d8391601",
-  "checksumsAssetSha256": "cc5a60173327a19f7b9a30dc38336234daa37264581e2b74d939627a6e93409e",
-  "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.7.3"
+  "unboundPatchSha256": "cd3d304d22df325a5281e4c6d265484b04c20c56adfff6d69ba7e301816c3574",
+  "checksumsAssetSha256": "dee21d986d5aae317f97c3544cd355f45ea411862d601756e3b7754daa1a4994",
+  "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8"
 }
