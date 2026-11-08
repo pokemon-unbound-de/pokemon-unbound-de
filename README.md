@@ -10,7 +10,7 @@
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
 
-*English below.*
+*English in short:* a German fan translation of Pokémon Unbound, distributed as a patch only (no ROMs). Patch it in your browser with your own legal ROM. The text is AI-assisted and machine-checked, human review is ongoing. Full English section further below.
 
 <p align="center">
   <img src="docs/screenshots/01_title_unbound_de.png" alt="Pokémon Unbound auf Deutsch – Titelbildschirm (German title screen)" width="320">
@@ -110,6 +110,12 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 </p>
 
 Alle Screenshots stammen aus der deutschen Übersetzung. Hintergrund zur Arbeitsweise: [Release Notes v0.1](docs/RELEASE_NOTES_v0.1.md).
+
+## Technik: Praxisbericht und Pipeline „Glyphwerk“ (bald öffentlich)
+
+Beim Übersetzen eines großen GBA-ROM-Hacks stößt man auf immer dieselben Hürden: zu wenig Freispeicher, Zeiger mitten in Texten, Pixelbreiten, Puffer-Codes. Was bei uns funktioniert hat, mit Zahlen: **[docs/PRAXISBERICHT.md](docs/PRAXISBERICHT.md)** (*GBA ROM translation – lessons learned*) (für andere ROM-Hacker, ohne ROM-Daten und ohne Spieltext).
+
+Die dazugehörige Übersetzungs-Pipeline heißt **Glyphwerk** (GBA ROM Translation Pipeline: Textkodierung, Zeigerscan, Freispeicher, Prüfungen vor dem Build, Test-Bot, Patch-Werkzeug). Sie ist noch **privat** und wird nach der Beta öffentlich. *Glyphwerk, our GBA ROM translation pipeline, will be published after the beta.*
 
 ## Rechtliches / Legal
 
