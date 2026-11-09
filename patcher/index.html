@@ -30,7 +30,13 @@
     <section class="tool" aria-label="ROM patchen">
       <div class="tool-head"><h2>Patch erstellen</h2><span class="status-dot" id="status-dot"></span></div>
       <div id="rom-patcher-container">
-        <div class="field-head"><label for="rom-patcher-input-file-rom">Deine ROM</label><span>.gba · FireRed USA Rev 0 oder Unbound EN 1.0.1</span></div>
+        <fieldset class="ziel" id="ziel" hidden>
+          <legend>Welche Version?</legend>
+          <label><input type="radio" name="ziel" value="v101" checked> Unbound 1.0.1 DE <small>Pre-Stable</small></label>
+          <label><input type="radio" name="ziel" value="port"> Port Unbound 2.1.1 DE <small>Beta</small></label>
+        </fieldset>
+        <p class="port-hinweis" id="port-hinweis" hidden></p>
+        <div class="field-head"><label for="rom-patcher-input-file-rom">Deine ROM</label><span id="field-hint">.gba · FireRed USA Rev 0 oder Unbound EN 1.0.1</span></div>
         <div class="file-wrap"><input type="file" id="rom-patcher-input-file-rom" accept=".gba" disabled><div class="file-face"><span class="file-symbol" aria-hidden="true">+</span><strong id="file-label">Datei auswählen</strong><small id="file-subtitle">FireRed (USA) Rev 0 oder Unbound EN 1.0.1</small></div></div>
         <div class="verify-line" id="verify-line"><span class="verify-icon" aria-hidden="true">●</span><span id="status" role="status" aria-live="polite">Patch wird vorbereitet …</span></div>
         <div id="rom-patcher-rom-info" class="hidden"><span id="rom-patcher-span-crc32"></span><span id="rom-patcher-span-md5"></span><span id="rom-patcher-span-sha1"></span><span id="rom-patcher-span-rom-info"></span></div>
@@ -46,7 +52,7 @@
           <small>Die E-Mail öffnet sich in deinem Mailprogramm mit Fehlergrund, Prüfsumme (MD5) und Browser – du siehst alles vor dem Senden. Bitte keine ROM anhängen.</small>
         </div>
       </div>
-      <p class="footnote">Du benötigst eine eigene legale Sicherung: FireRed (USA) Rev 0 oder Pokémon Unbound (EN) 1.0.1. Nicht passend: FireRed Rev 1, die deutsche Feuerrote Edition, BlattGrün, Unbound 2.x oder eine schon gepatchte deutsche ROM.</p>
+      <p class="footnote" id="footnote-basis">Du benötigst eine eigene legale Sicherung: FireRed (USA) Rev 0 oder Pokémon Unbound (EN) 1.0.1. Nicht passend: FireRed Rev 1, die deutsche Feuerrote Edition, BlattGrün, Unbound 2.x oder eine schon gepatchte deutsche ROM.</p>
       <p class="footnote">Anonyme Zählung ohne Cookies (GoatCounter): ROM-Wahl, Patch-Erfolg oder -Fehler (mit Fehlergrund, z. B. „Rev 1“; bei unbekannter ROM auch Prüfsummen-Anfang, Dateigröße und Spielcode) und direkter BPS-Download. Keine ROM-Daten oder Dateinamen werden übertragen.</p>
       <p class="footnote"><a id="bps-direct" href="#" hidden>Nur BPS-Patch direkt herunterladen</a></p>
     </section>

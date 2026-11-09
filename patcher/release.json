@@ -14,5 +14,12 @@
   "unboundPatch": "patches/latest_unbound_101.bps",
   "unboundPatchSha256": "cd3d304d22df325a5281e4c6d265484b04c20c56adfff6d69ba7e301816c3574",
   "checksumsAssetSha256": "dee21d986d5aae317f97c3544cd355f45ea411862d601756e3b7754daa1a4994",
-  "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8"
+  "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8",
+  "port": {
+    "enabled": false,
+    "tag": "",
+    "baseMd5": "9cad8e771940e7f7094d13911552cef0",
+    "baseSha256": "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7",
+    "baseSize": 33554432
+  }
 }
