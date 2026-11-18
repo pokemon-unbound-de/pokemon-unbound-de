@@ -39,17 +39,17 @@ def pruefsummen(md5_un=S.PORT_UNBOUND_MD5, patch_fr=PATCH_FR):
 TAG = "port-v2.1.1.1-DE-0.1-beta"
 
 
-def api(sums, patch_fr=PATCH_FR):
+def api(sums, patch_fr=PATCH_FR, tag=TAG, prerelease=False):
     def asset(name, data):
         return {"name": name, "digest": "sha256:" + sha(data), "browser_download_url": "https://x/" + name}
-    return {"tag_name": TAG, "draft": False, "html_url": "https://github.com/x/releases/tag/" + TAG,
+    return {"tag_name": tag, "draft": False, "prerelease": prerelease, "html_url": "https://github.com/x/releases/tag/" + tag,
             "assets": [asset("PRUEFSUMMEN.txt", sums), asset("Unbound_DE_Port_x_von_FireRed.bps", patch_fr),
                        asset("Unbound_DE_Port_x_von_Unbound.bps", PATCH_UN)]}
 
 
-def mit_netz(sums, patch_fr=PATCH_FR, meta_fr=None):
+def mit_netz(sums, patch_fr=PATCH_FR, meta_fr=None, tag=TAG, prerelease=False):
     import json
-    meta = api(sums, meta_fr or patch_fr)
+    meta = api(sums, meta_fr or patch_fr, tag, prerelease)
     dateien = {"PRUEFSUMMEN.txt": sums, "Unbound_DE_Port_x_von_FireRed.bps": patch_fr, "Unbound_DE_Port_x_von_Unbound.bps": PATCH_UN}
 
     def fetch(url, binary=True):
@@ -103,5 +103,16 @@ mit_netz(pruefsummen(patch_fr=kaputt), patch_fr=kaputt)
 pruefe("FEHLER: BPS mit falscher Quell-CRC", wirft(lambda: S.port_patches(S.load_port_release(TAG))))
 mit_netz(pruefsummen(), patch_fr=PATCH_FR, meta_fr=kaputt)
 pruefe("FEHLER: Asset-Digest weicht von PRUEFSUMMEN.txt ab", wirft(lambda: S.load_port_release(TAG)))
+# 4) Gepinnter Beta-Tag
+beta_tag = "port-beta3b"
+mit_netz(pruefsummen(), tag=beta_tag)
+pruefe("FEHLER: Beta-Tag ohne Prerelease", wirft(lambda: S.load_port_release(beta_tag)))
+mit_netz(pruefsummen(), tag=beta_tag, prerelease=True)
+beta = S.load_port_release(beta_tag)
+pins = dict(block, outputSha256=beta["output_sha256"])
+pruefe("BETA: gepinntes Prerelease akzeptiert", S.port_block_an(beta, pins)["version"] == "2.1.1.1-beta3b")
+pruefe("FEHLER: Beta ohne Freigabe-Pin", wirft(lambda: S.port_block_an(beta)))
+pruefe("FEHLER: Beta mit anderem Ziel-SHA", wirft(lambda: S.port_block_an(beta, dict(pins, outputSha256="0"*64))))
+pruefe("FEHLER: Beta mit anderem BPS-SHA", wirft(lambda: S.port_block_an(beta, dict(pins, unboundPatchSha256="0"*64))))
 print("ROT: %d" % rot if rot else "GRUEN")
 sys.exit(1 if rot else 0)

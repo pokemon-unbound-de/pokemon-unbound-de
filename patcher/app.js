@@ -132,7 +132,7 @@ async function start() {
       ui.feldHinweis.textContent = '.gba · FireRed USA Rev 0, Unbound EN 1.0.1 oder 2.1.1.1';
       ui.basisHinweis.textContent = 'Du benötigst eine eigene legale Sicherung: FireRed (USA) Rev 0 oder Pokémon Unbound (EN) 1.0.1 – für die Port-Beta Pokémon Unbound (EN) 2.1.1.1 (genau diese Version). Nicht passend: FireRed Rev 1, die deutsche Feuerrote Edition, BlattGrün, andere Unbound-2.x-Versionen oder eine schon gepatchte deutsche ROM.';
     } else {
-      ui.portHinweis.textContent = 'Die offene Port-Beta für Unbound EN 2.1.1.1 ist ab 25.11. geplant und noch nicht freigegeben. Die passende Basis wird bereits erkannt – Infos auf Discord.';
+      ui.portHinweis.textContent = 'Der Patch für Unbound EN 2.1.1.1 ist hier noch nicht verfügbar. Die passende Basis wird bereits erkannt. Infos zum Start gibt es auf Discord.';
       ui.portHinweis.hidden = false;
     }
 

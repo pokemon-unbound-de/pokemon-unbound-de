@@ -34,7 +34,7 @@
     if (portBasis && md5 === portBasis) {                         // Unbound EN 2.1.1.1 = Basis des Ports
       if (portBereit(release)) return { grund: 'port' };
       return { grund: 'port_gesperrt', titel: 'Port-Beta noch nicht freigegeben', untertitel: 'Unbound EN 2.1.1.1 erkannt',
-        text: 'Das ist Unbound EN 2.1.1.1, die Basis für den Port. Die offene Port-Beta ist ab 25.11. geplant, aber noch nicht freigegeben. Infos zum Start auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
+        text: 'Das ist Unbound EN 2.1.1.1, die Basis für den Port. Der Beta-Patch ist hier noch nicht verfügbar. Infos zum Start gibt es auf Discord. Für die bisherige Version brauchst du Unbound EN 1.0.1 oder FireRed (USA) Rev 0.' };
     }
     const gepatcht = (kennungen.bereits_gepatcht || {})[md5];
     if (gepatcht) {
@@ -46,13 +46,13 @@
       return { grund: 'unbound2x', titel: `${zweix} erkannt`,
         text: portBereit(release)
           ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme. Der 1.0.1-Patch passt zu Unbound EN 1.0.1 oder FireRed (USA) Rev 0.'
-          : 'Der verfügbare Patch passt zu Unbound EN 1.0.1. Die offene Port-Beta für genau Unbound EN 2.1.1.1 ist ab 25.11. geplant. Infos auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
+          : 'Für den Port brauchst du genau Unbound EN 2.1.1.1. Der Beta-Patch ist hier noch nicht verfügbar. Für die bisherige Version brauchst du Unbound EN 1.0.1 oder FireRed (USA) Rev 0.' };
     }
     if (size > 16777216 && h.code === 'BPRE') {
       return { grund: 'unbound2x', titel: 'Nicht unterstützte Datei',
         text: 'Größe und Spielcode deuten auf eine veränderte FireRed-Datei hin; die Version lässt sich nicht sicher erkennen. Bitte FireRed (USA) Rev 0 oder Unbound EN 1.0.1 verwenden. ' + (portBereit(release)
           ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme.'
-          : 'Für genau Unbound EN 2.1.1.1 ist die offene Port-Beta ab 25.11. geplant – Infos auf Discord.') };
+          : 'Für genau Unbound EN 2.1.1.1 ist der Beta-Patch hier noch nicht verfügbar. Infos zum Start gibt es auf Discord.') };
     }
     if (h.code === 'BPRE' && h.rev === 1) {
       return { grund: 'rev1', titel: 'FireRed (USA) Rev 1 erkannt',
