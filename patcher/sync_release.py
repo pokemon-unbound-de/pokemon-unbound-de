@@ -69,23 +69,27 @@ def cached_patch_matches(patch, expected_sha, expected_crc, source_crc=BASE_CRC3
 
 
 # --- Port-Beta (Unbound 2.1.1.1 DE) ------------------------------------------------------------------------------
-# Optionaler Block "port" in release.json. Feature-Flag: "port.enabled" (Standard false). Der Port wird nur dann aus
-# einem eigenen GitHub-Release (Tag "port-v<Version>", Assets: PRUEFSUMMEN.txt + zwei BPS) gelesen und gespiegelt, wenn
-# das Flag in der eingecheckten release.json true ist. Ist es false, schreibt der Sync nur die Basis-Kennung (keine
-# Patches, kein Netzzugriff auf das Port-Release). Freischalten = PR, der "enabled" auf true und "tag" setzt.
+# Bei aktiviertem Port lädt der Sync das separate Release mit Prüfsummendatei und zwei BPS.
+# Für port-beta-Tags bindet das eingecheckte Manifest die Freigabe an den geprüften Kandidaten.
 PORT_API = "https://api.github.com/repos/pokemon-unbound-de/pokemon-unbound-de/releases/tags/"
-PORT_TAG = re.compile(r"port-v\d+(?:\.\d+){2,3}(?:-[A-Za-z0-9._]+)*")
+PORT_TAG = re.compile(r"port-(?:v\d+(?:\.\d+){2,3}(?:-[A-Za-z0-9._]+)*|beta[1-9][0-9]*[a-z]?)")
 PORT_UNBOUND_MD5 = "9cad8e771940e7f7094d13911552cef0"          # Unbound EN 2.1.1.1 (Basis des Ports)
 PORT_UNBOUND_SHA256 = "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7"
 PORT_UNBOUND_SIZE = 33554432
 PORT_FIRERED_PATH = "patches/port_firered_rev0.bps"
 PORT_UNBOUND_PATH = "patches/port_unbound_2111.bps"
+PORT_PIN_FIELDS = ("outputMd5", "outputCrc32", "outputSha256", "fireredPatchSha256", "unboundPatchSha256",
+                   "checksumsAssetSha256")
 
 
 def port_block_aus(local_port):
     tag = str(local_port.get("tag", ""))
-    return {"enabled": False, "tag": tag if PORT_TAG.fullmatch(tag) else "",
-            "baseMd5": PORT_UNBOUND_MD5, "baseSha256": PORT_UNBOUND_SHA256, "baseSize": PORT_UNBOUND_SIZE}
+    tag = tag if PORT_TAG.fullmatch(tag) else ""
+    block = {"enabled": False, "tag": tag, "baseMd5": PORT_UNBOUND_MD5,
+             "baseSha256": PORT_UNBOUND_SHA256, "baseSize": PORT_UNBOUND_SIZE}
+    if tag.startswith("port-beta"):
+        block.update({field: local_port[field] for field in PORT_PIN_FIELDS if field in local_port})
+    return block
 
 
 def sums_in(section):
@@ -114,6 +118,9 @@ def load_port_release(tag):
     release = json.loads(fetch(PORT_API + tag, binary=False))
     if release.get("tag_name") != tag or release.get("draft"):
         raise ValueError(f"port release {tag} not found or still a draft")
+    beta_tag = tag.startswith("port-beta")
+    if beta_tag and release.get("prerelease") is not True:
+        raise ValueError(f"port release {tag} must be a prerelease")
     assets = {item["name"]: item for item in release["assets"]}
     if "PRUEFSUMMEN.txt" not in assets:
         raise ValueError("port release lacks PRUEFSUMMEN.txt")
@@ -140,17 +147,27 @@ def load_port_release(tag):
         if asset_sha256(assets[name]) != sha:
             raise ValueError(f"port asset {name}: digest differs from PRUEFSUMMEN.txt")
         patches[key] = {"name": name, "sha256": sha, "url": assets[name]["browser_download_url"]}
-    return {"tag": tag, "version": tag[len("port-v"):], "url": release["html_url"], "checksums_sha": checksums_sha,
-            "base_crc32": sum_b["crc32"], "output_md5": sum_r["md5"], "output_crc32": sum_r["crc32"], "patches": patches}
+    if sum_r["size"] != PORT_UNBOUND_SIZE:
+        raise ValueError("unexpected port result size")
+    version = "2.1.1.1-" + tag[len("port-"):] if beta_tag else tag[len("port-v"):]
+    return {"tag": tag, "version": version, "url": release["html_url"], "checksums_sha": checksums_sha,
+            "base_crc32": sum_b["crc32"], "output_md5": sum_r["md5"], "output_crc32": sum_r["crc32"],
+            "output_sha256": sum_r["sha256"], "patches": patches}
 
 
-def port_block_an(info):
-    return {"enabled": True, "tag": info["tag"], "version": info["version"],
+def port_block_an(info, configured=None):
+    block = {"enabled": True, "tag": info["tag"], "version": info["version"],
             "baseMd5": PORT_UNBOUND_MD5, "baseSha256": PORT_UNBOUND_SHA256, "baseSize": PORT_UNBOUND_SIZE,
             "baseCrc32": info["base_crc32"], "outputMd5": info["output_md5"], "outputCrc32": info["output_crc32"],
             "fireredPatch": PORT_FIRERED_PATH, "fireredPatchSha256": info["patches"]["firered"]["sha256"],
             "unboundPatch": PORT_UNBOUND_PATH, "unboundPatchSha256": info["patches"]["unbound"]["sha256"],
             "checksumsAssetSha256": info["checksums_sha"], "releaseUrl": info["url"]}
+    if info["tag"].startswith("port-beta"):
+        block["outputSha256"] = info["output_sha256"]
+        for field in PORT_PIN_FIELDS:
+            if (configured or {}).get(field) != block[field]:
+                raise ValueError(f"port release {info['tag']} differs from approved manifest: {field}")
+    return block
 
 
 def port_cached(info):
@@ -204,7 +221,7 @@ def main():
     local = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     local_port = local.get("port") if isinstance(local.get("port"), dict) else {}
     port_info = load_port_release(str(local_port.get("tag", ""))) if local_port.get("enabled") is True else None
-    port_wanted = port_block_an(port_info) if port_info else port_block_aus(local_port)
+    port_wanted = port_block_an(port_info, local_port) if port_info else port_block_aus(local_port)
     if manifest_path.exists() and patch_path.exists() and unbound_path.exists():
         local_patch = patch_path.read_bytes()
         same = (local.get("version") == version and local.get("port") == port_wanted
