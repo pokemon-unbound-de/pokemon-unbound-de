@@ -34,7 +34,7 @@
     if (portBasis && md5 === portBasis) {                         // Unbound EN 2.1.1.1 = Basis des Ports
       if (portBereit(release)) return { grund: 'port' };
       return { grund: 'port_gesperrt', titel: 'Port-Beta noch nicht freigegeben', untertitel: 'Unbound EN 2.1.1.1 erkannt',
-        text: 'Das ist Unbound EN 2.1.1.1, die Basis für den Port. Die Port-Beta ist noch nicht freigegeben, deshalb gibt es dafür hier noch keinen Patch. Infos zum Start auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
+        text: 'Das ist Unbound EN 2.1.1.1, die Basis für den Port. Die offene Port-Beta ist ab 25.11. geplant, aber noch nicht freigegeben. Infos zum Start auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
     }
     const gepatcht = (kennungen.bereits_gepatcht || {})[md5];
     if (gepatcht) {
@@ -42,19 +42,25 @@
         text: `Das ist bereits ${gepatcht}. Für ein Update brauchst du wieder deine Original-ROM (FireRed USA Rev 0 oder Unbound EN 1.0.1) – deinen Spielstand (.sav) kannst du einfach weiterverwenden.` };
     }
     const zweix = (kennungen.unbound2x || {})[md5];
-    if (zweix || (size > 16777216 && h.code === 'BPRE')) {
-      return { grund: 'unbound2x', titel: zweix ? `${zweix} erkannt` : 'Andere Unbound-Version erkannt',
+    if (zweix) {
+      return { grund: 'unbound2x', titel: `${zweix} erkannt`,
         text: portBereit(release)
-          ? 'Der Port-Patch passt nur zu Unbound EN 2.1.1.1 (genau diese Version) – der andere Patch zu Unbound EN 1.0.1 oder FireRed (USA) Rev 0.'
-          : 'Der Patch passt zu Unbound 1.0.1. Der Port auf 2.1.1.1 ist in Arbeit – Infos auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
+          ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme. Der 1.0.1-Patch passt zu Unbound EN 1.0.1 oder FireRed (USA) Rev 0.'
+          : 'Der verfügbare Patch passt zu Unbound EN 1.0.1. Die offene Port-Beta für genau Unbound EN 2.1.1.1 ist ab 25.11. geplant. Infos auf Discord. Bis dahin: Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
+    }
+    if (size > 16777216 && h.code === 'BPRE') {
+      return { grund: 'unbound2x', titel: 'Nicht unterstützte Datei',
+        text: 'Größe und Spielcode deuten auf eine veränderte FireRed-Datei hin; die Version lässt sich nicht sicher erkennen. Bitte FireRed (USA) Rev 0 oder Unbound EN 1.0.1 verwenden. ' + (portBereit(release)
+          ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme.'
+          : 'Für genau Unbound EN 2.1.1.1 ist die offene Port-Beta ab 25.11. geplant – Infos auf Discord.') };
     }
     if (h.code === 'BPRE' && h.rev === 1) {
       return { grund: 'rev1', titel: 'FireRed (USA) Rev 1 erkannt',
         text: 'Das ist die spätere Revision 1. Der Patch braucht FireRed (USA) Rev 0 (MD5 e26ee0d4…).' };
     }
     if (h.code === 'BPRD') {
-      return { grund: 'de', titel: 'Feuerrote Edition (deutsch) erkannt',
-        text: 'Der Patch braucht die englische FireRed (USA) Rev 0 – die deutsche Feuerrote Edition passt nicht.' };
+      return { grund: 'de', titel: 'Möglicherweise deutsche Feuerrote Edition',
+        text: 'Der Spielcode deutet auf die deutsche Feuerrote Edition hin; diese Datei passt nicht. Der Patch benötigt die englische FireRed (USA) Rev 0 (1.0) oder Unbound EN 1.0.1.' };
     }
     if (h.code.startsWith('BPG')) {
       return { grund: 'leafgreen', titel: 'BlattGrün / LeafGreen erkannt',
