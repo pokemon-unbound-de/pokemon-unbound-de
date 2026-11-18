@@ -78,12 +78,18 @@ PORT_UNBOUND_SHA256 = "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7
 PORT_UNBOUND_SIZE = 33554432
 PORT_FIRERED_PATH = "patches/port_firered_rev0.bps"
 PORT_UNBOUND_PATH = "patches/port_unbound_2111.bps"
+PORT_PIN_FIELDS = ("outputMd5", "outputCrc32", "outputSha256", "fireredPatchSha256", "unboundPatchSha256",
+                   "checksumsAssetSha256")
 
 
 def port_block_aus(local_port):
     tag = str(local_port.get("tag", ""))
-    return {"enabled": False, "tag": tag if PORT_TAG.fullmatch(tag) else "",
-            "baseMd5": PORT_UNBOUND_MD5, "baseSha256": PORT_UNBOUND_SHA256, "baseSize": PORT_UNBOUND_SIZE}
+    tag = tag if PORT_TAG.fullmatch(tag) else ""
+    block = {"enabled": False, "tag": tag, "baseMd5": PORT_UNBOUND_MD5,
+             "baseSha256": PORT_UNBOUND_SHA256, "baseSize": PORT_UNBOUND_SIZE}
+    if tag.startswith("port-beta"):
+        block.update({field: local_port[field] for field in PORT_PIN_FIELDS if field in local_port})
+    return block
 
 
 def sums_in(section):
@@ -158,9 +164,7 @@ def port_block_an(info, configured=None):
             "checksumsAssetSha256": info["checksums_sha"], "releaseUrl": info["url"]}
     if info["tag"].startswith("port-beta"):
         block["outputSha256"] = info["output_sha256"]
-        fields = ("outputMd5", "outputCrc32", "outputSha256", "fireredPatchSha256", "unboundPatchSha256",
-                  "checksumsAssetSha256")
-        for field in fields:
+        for field in PORT_PIN_FIELDS:
             if (configured or {}).get(field) != block[field]:
                 raise ValueError(f"port release {info['tag']} differs from approved manifest: {field}")
     return block

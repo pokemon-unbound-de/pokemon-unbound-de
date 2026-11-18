@@ -31,6 +31,8 @@ assert.doesNotMatch(heuristic.titel, /Unbound/);
 const known = erkennen(fake, 2 * mb16, 'BPRE', release, { ...kennungen, unbound2x: { [fake]: 'Belegte Testversion' } });
 assert.equal(known.grund, 'unbound2x');
 assert.match(known.titel, /Belegte Testversion/);
+assert.match(known.text, /Für den Port passen genau Unbound EN 2\.1\.1\.1 oder FireRed \(USA\) Rev 0/);
+assert.match(heuristic.text, /Für den Port passen genau Unbound EN 2\.1\.1\.1 oder FireRed \(USA\) Rev 0/);
 assert.equal(erkennen(release.baseMd5, mb16, 'BPRE').grund, 'firered');
 assert.equal(erkennen(release.unboundBaseMd5, 2 * mb16, 'BPRE').grund, 'unbound101');
 assert.equal(erkennen(fake, mb16, 'BPRE').grund, 'unbekannt');

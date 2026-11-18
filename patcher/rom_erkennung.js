@@ -46,13 +46,13 @@
       return { grund: 'unbound2x', titel: `${zweix} erkannt`,
         text: portBereit(release)
           ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme. Der 1.0.1-Patch passt zu Unbound EN 1.0.1 oder FireRed (USA) Rev 0.'
-          : 'Für den Port brauchst du genau Unbound EN 2.1.1.1. Der Beta-Patch ist hier noch nicht verfügbar. Für die bisherige Version brauchst du Unbound EN 1.0.1 oder FireRed (USA) Rev 0.' };
+          : 'Für den Port passen genau Unbound EN 2.1.1.1 oder FireRed (USA) Rev 0. Der Beta-Patch ist hier noch nicht verfügbar. Für die bisherige Version kannst du Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
     }
     if (size > 16777216 && h.code === 'BPRE') {
       return { grund: 'unbound2x', titel: 'Nicht unterstützte Datei',
         text: 'Größe und Spielcode deuten auf eine veränderte FireRed-Datei hin; die Version lässt sich nicht sicher erkennen. Bitte FireRed (USA) Rev 0 oder Unbound EN 1.0.1 verwenden. ' + (portBereit(release)
           ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme.'
-          : 'Für genau Unbound EN 2.1.1.1 ist der Beta-Patch hier noch nicht verfügbar. Infos zum Start gibt es auf Discord.') };
+          : 'Für den Port passen genau Unbound EN 2.1.1.1 oder FireRed (USA) Rev 0. Der Beta-Patch ist hier noch nicht verfügbar. Infos zum Start gibt es auf Discord.') };
     }
     if (h.code === 'BPRE' && h.rev === 1) {
       return { grund: 'rev1', titel: 'FireRed (USA) Rev 1 erkannt',
