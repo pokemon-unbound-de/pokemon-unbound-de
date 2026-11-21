@@ -15,6 +15,8 @@ Sichere vor dem ersten Start deinen Spielstand, es ist eine Beta. Wie wir die Za
 
 ## Stable-Linie für Unbound 1.0.1
 
+Die Linie für **Unbound 1.0.1** wird gerade zur Stable-Version **v0.1.9** vorbereitet. Bis sie erscheint, ist **v0.1.8** die neueste Fassung. Die nächste Port-Beta **v2.0.0-beta.2** bringt die restlichen Texte für Unbound 2.1.1.1.
+
 **Pre-Stable ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
 
 ·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
