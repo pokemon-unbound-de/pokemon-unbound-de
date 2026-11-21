@@ -1,5 +1,23 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v0.1.9 (2026-11-21)
+
+**Build:** `dfd5b845…` · **Patches:** `pokemon_unbound_de_v0.1.9_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.9.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1 · Dein Spielstand bleibt gültig.
+
+### Behoben
+- Nach einem unterbrochenen Speichervorgang lässt sich das Spiel wieder starten. Änderungen aus dem abgebrochenen Speichervorgang können fehlen.
+- Kampfmeldungen verwenden auch mit langen Pokémon-Namen lesbare Umbrüche und passende Grammatik. Im Doppelkampf nennt Maulwurfs Meldung beide eingesetzten Pokémon.
+- Die Meldungen beim Verlernen und Erlernen von Attacken erscheinen auf Deutsch.
+- Bei der Frage „… wählen?“ klebt der Pokémon-Name nicht mehr am Wort.
+- „Würfel Corp.“ ist einheitlich benannt. Mehrere von Testern gemeldete Ruf-, Fang- und Dialogtexte wurden korrigiert.
+
+### Installation
+Für FireRed USA Rev 0 ist `pokemon_unbound_de_v0.1.9_von_firered_usa.bps` vorgesehen, für Unbound EN 1.0.1 `pokemon_unbound_de_v0.1.9.bps`. Die Basis und das gepatchte Ergebnis lassen sich mit `MD5.txt` prüfen. Am einfachsten patchst du im Browser: https://patch.pokemonunboundde.studio/
+
+Danke: **Nevio**, **DMkiller**, **Maria**, **Fabian**, alle Tester und die ganze Community.
+
 ## v0.1.8 (2026-11-08)
 
 **Build:** `10916159…` · **Patches:** `pokemon_unbound_de_v0.1.8_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.8.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`

@@ -1,6 +1,6 @@
 # Bekannte Fehler – Pokémon Unbound auf Deutsch
 
-Automatisch erzeugt aus der internen Fehlerliste (Stand 08.11.2026). Nicht von Hand bearbeiten.
+Automatisch erzeugt aus der internen Fehlerliste (Stand 21.11.2026). Nicht von Hand bearbeiten.
 Neue Fehler bitte mit Ort + Screenshot in `#beta-bugs` auf Discord melden.
 
 | Nr. | Problem | Status |
@@ -19,3 +19,19 @@ Neue Fehler bitte mit Ort + Screenshot in `#beta-bugs` auf Discord melden.
 | 133 | Port: ~68 Missionstexte in 2.1.1.1 noch EN (Leitplanke-Export „Missionen … | folgt im Port (Unbound 2.x) |
 | 47 | Deutsche Tastatur (QWERTZ/Umlaute) in Namenseingabe | folgt im Port (Unbound 2.x) |
 | 69 | „Poké Mart“ in Texten + Schild-Tileset („MARKT“) | folgt im Port (Unbound 2.x) |
+
+## Port auf Unbound 2.1.1.1 (offene Beta)
+
+Aus der Fehlerliste des Ports, automatisch erzeugt. Diese Punkte betreffen die Port-Beta für Unbound 2.1.1.1.
+
+| Nr. | Problem | Status |
+|---|---|---|
+| PORT-008 | EN-Rest Ei/Schl. Ei: Pokémon-Box | offen (P2) |
+| PORT-009 | EN-Reste bei Basis-Items: Würfel, Basis-Items | offen (P2) |
+| PORT-017 | Auswahl zeigt „No“ statt „Nein“: Mehrfachauswahl, z. B. Randomizer-Frage „Variante mit neu abgestimmten Werten“ | offen (P1) |
+| PORT-020 | Namen und Etiketten weichen von der 1.0-Version ab (Mom, Alt): Namensschild, Rivale, Schwierigkeit, Speicherbox-Label | offen (P1) |
+| PORT-021 | Namenseingabe: Tasten englisch (Grafik): Namenseingabe, Tastatur | offen (P2) |
+| PORT-045 | Nach Rückgabe des Pakets an Prof. Lärch: NPC erklärt Karte, das X zeigt immer das nächste Ziel (neu in 2.1.1, nicht in 1.0.1) | offen (P3) |
+| PORT-052 | Option "Speicherfrage: Ein" fragt vor Kaempfen und Story-Ereignissen nach dem Speichern | offen (P2) |
+| PORT-058 | Pokedex-Eintrag Nebulak: Text links abgeschnitten ("Mit gasartigem Koerper ...") | offen (P1) |
+| PORT-059 | Pokedex Seite 5/8 (Werte): "HP, Atk, Def, SpA, SpD, Spe" englisch (Nebulak) | offen (P1) |

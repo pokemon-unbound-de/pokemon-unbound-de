@@ -11,5 +11,5 @@
   einem Emulator-Test-Bot durchgespielt; menschliches Gegenlesen läuft.
 - **Bekannte Fehler:** angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf
   [Discord](https://discord.gg/fSkhHppgcv).
-- **Aktueller Meilenstein:** [Pre-Stable v0.1.8](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8) (08.11.2026). Als Nächstes folgen Community-Testphase und Release Candidate; die Stable-Kriterien stehen in der [Roadmap](../ROADMAP.md).
+- **Aktueller Meilenstein:** [Pre-Stable v0.1.9](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9) (21.11.2026). Als Nächstes folgen Community-Testphase und Release Candidate; die Stable-Kriterien stehen in der [Roadmap](../ROADMAP.md).
 - **Port Unbound 2.1.1.1:** Tester-Vorschau läuft (geschlossen), öffentliche Beta geplant für den 18.11.2026 (Ziel).
