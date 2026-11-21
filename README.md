@@ -2,6 +2,8 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
+> **Großes Update am Montag, 23.11.2026 (geplant):** Die Stable-Fassung für Unbound 1.0.1 (**v1.0.0**) und die nächste Port-Beta (**v2.0.0-beta.2**) mit den restlichen Texten für Unbound 2.1.1.1. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+
 ## Neu: Offene Beta für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.1)
 
 **Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da.** Rund **93 % der Spieltexte sind auf Deutsch**, der Rest folgt in **v2.0.0-beta.2**. Du findest also noch englische Reste, und genau die suchen wir.
@@ -15,12 +17,12 @@ Sichere vor dem ersten Start deinen Spielstand, es ist eine Beta. Wie wir die Za
 
 ## Stable-Linie für Unbound 1.0.1
 
-Die Linie für **Unbound 1.0.1** wird gerade zur Stable-Version **v0.1.9** vorbereitet. Bis sie erscheint, ist **v0.1.8** die neueste Fassung. Die nächste Port-Beta **v2.0.0-beta.2** bringt die restlichen Texte für Unbound 2.1.1.1.
+Für **Unbound 1.0.1** ist **v0.1.9** da, die Vorstufe der Stable-Fassung (sie behebt unter anderem den Neustart nach einem unterbrochenen Speichervorgang und lange Pokémon-Namen in Kampfmeldungen). Dein Spielstand bleibt gültig.
 
-**Pre-Stable ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
+Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
 
 ·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
-·  👉 **[Download (neueste Stable-Linie, Unbound 1.0.1)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8)** 
+·  👉 **[Download (neueste Stable-Linie, Unbound 1.0.1, v0.1.9)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
