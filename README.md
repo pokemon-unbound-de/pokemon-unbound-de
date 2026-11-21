@@ -47,7 +47,7 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 08.11.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 21.11.2026) -->
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
 - Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt *(eigener Track)*
@@ -125,22 +125,22 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 08.11.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 21.11.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 08.11.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 21.11.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
 |---|---|
-| v0.1.8 Pre-Stable | ✔ veröffentlicht |
+| v0.1.9 Pre-Stable | ✔ veröffentlicht |
 | Testphase | bis zu 4 Wochen ab v0.1.7 |
 | Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
 | Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |
-| Port auf Unbound 2.1.1.1 | in Arbeit (Issue #37) · Tester-Vorschau läuft (geschlossen) · öffentliche Beta geplant 18.11.2026 (Ziel) |
+| Port auf Unbound 2.1.1.1 | offene Beta v2.0.0-beta.1 seit 18.11.2026 (93 % der Texte auf Deutsch) · nächste Beta v2.0.0-beta.2 mit den restlichen Texten |
 
 ## Mitmachen
 
