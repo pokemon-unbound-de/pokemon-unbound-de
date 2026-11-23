@@ -168,18 +168,47 @@ async function start() {
       return null;
     }
 
-    function fehlerZeigen(info, md5) {
+    // GOLD-Liste I5 Nr. 1: erwartete Quell-CRC32 aus dem BPS neben der CRC32 der gewählten Datei (nur Anzeige, nichts wird gesendet).
+    // Der gerade geladene Patch wird aus dem Browser-Cache gelesen (Rom Patcher hat ihn eben geholt), seine Fußzeile ist die Quelle.
+    // Die übrigen Wege kommen aus release.json; der Deploy (sync_release.py, verify_bps) bricht ab, wenn sie nicht zur BPS-Fußzeile passen.
+    const WEG_VON_MODUS = { firered: 'firered', port_firered: 'firered', unbound: 'unbound', port_unbound: 'port' };
+    const WEG_NAME = { firered: 'FireRed Rev 0', unbound: 'Unbound EN 1.0.1', port: 'Unbound EN 2.1.1.1' };
+    const quellCrc = { firered: release.baseCrc32, unbound: patchUnbound ? release.unboundBaseCrc32 : null, port: port ? port.baseCrc32 : null };
+    const ausBps = {};
+    let pruefLauf = 0;
+
+    function pruefsummeZeigen(eigenCrc, md5) {
+      const erwartet = Object.keys(WEG_NAME).filter(w => quellCrc[w]).map(w => `${WEG_NAME[w]} ${quellCrc[w]}`);
+      ui.hilfePruefsumme.textContent = `Deine Datei: CRC32 ${eigenCrc || '–'} · MD5 ${md5.slice(0, 8)}… · Erwartet laut Patch (CRC32): ${erwartet.join(' · ')}`;
+      ui.hilfePruefsumme.hidden = false;
+    }
+
+    async function bpsQuelleLesen(m) {
+      const weg = WEG_VON_MODUS[m];
+      if (!PATCHES[m] || ausBps[weg]) return false;
+      try {
+        const antwort = await fetch(PATCHES[m].file, { cache: 'force-cache' });
+        if (!antwort.ok) return false;
+        const crc = RomErkennung.bpsQuellCrc(new Uint8Array(await antwort.arrayBuffer()));
+        if (!crc) return false;
+        if (crc !== quellCrc[weg]) console.warn(`Patch-Seite: Quell-CRC32 im BPS ${crc}, in release.json ${quellCrc[weg]}`);
+        quellCrc[weg] = crc;
+        ausBps[weg] = true;
+        return true;
+      } catch (_) { return false; }
+    }
+
+    function fehlerZeigen(info, md5, eigenCrc = '') {
       ui.fileSubtitle.textContent = info.untertitel || 'Nicht unterstützte ROM';
       setStatus(info.titel || 'Falsche Basis.', 'bad');
-      hilfeZeigen(Object.assign({ md5, version: release.version, browser: navigator.userAgent }, info));
+      hilfeZeigen(Object.assign({ md5, crc32: eigenCrc, version: release.version, browser: navigator.userAgent }, info));
       ui.hilfeAktion.hidden = !(port && info.aktion === 'zur_port_beta' && ziel !== 'port');
-      // GOLD-Liste I5 Nr. 1: eigene und erwartete Prüfsumme nebeneinander (nur Anzeige, nichts wird gesendet)
       if (md5) {
-        const erwartet = [`FireRed Rev 0 ${release.baseMd5.slice(0, 8)}…`];
-        if (release.unboundBaseMd5) erwartet.push(`Unbound EN 1.0.1 ${release.unboundBaseMd5.slice(0, 8)}…`);
-        if (port) erwartet.push(`Unbound EN 2.1.1.1 ${port.baseMd5.slice(0, 8)}…`);
-        ui.hilfePruefsumme.textContent = `Deine Datei: MD5 ${md5.slice(0, 8)}… · Passend wäre: ${erwartet.join(' · ')}`;
-        ui.hilfePruefsumme.hidden = false;
+        pruefsummeZeigen(eigenCrc, md5);
+        const lauf = ++pruefLauf;
+        bpsQuelleLesen(modus).then(neu => {
+          if (neu && lauf === pruefLauf && !ui.hilfe.hidden) pruefsummeZeigen(eigenCrc, md5);
+        });
       }
     }
 
@@ -271,7 +300,9 @@ async function start() {
           }
           fehlerGezaehlt = true;
         }
-        fehlerZeigen(fehlerInfo, md5);
+        let eigenCrc = '';
+        try { eigenCrc = (romFile.hashCRC32() >>> 0).toString(16).padStart(8, '0'); } catch (_) { /* Anzeige ist optional */ }
+        fehlerZeigen(fehlerInfo, md5, eigenCrc);
       },
       onpatch(romFile) {
         const hash = romFile.hashMD5().toLowerCase();

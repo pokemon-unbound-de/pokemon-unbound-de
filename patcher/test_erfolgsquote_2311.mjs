@@ -70,4 +70,20 @@ console.log('OK  exakte Prüfsumme schlägt Dateiendung'); n++;
 assert.doesNotMatch(E.erkenne(fake, MB16, datei(64, [], 'B<x>', 0), echt, kennungen).text, /[<>]/);
 console.log('OK  Spielcode im Text bereinigt'); n++;
 
+// GOLD-Liste I5 Nr. 1: Quell-CRC32 aus der BPS-Fußzeile (letzte 12 Byte: Quelle, Ziel, Patch; little endian)
+const bps = new Uint8Array(40);
+bps.set(bytes('BPS1'));
+bps.set([0x1C, 0x76, 0x88, 0xDD], 28);                     // Quelle dd88761c wie FireRed Rev 0
+assert.equal(E.bpsQuellCrc(bps), 'dd88761c');
+assert.equal(E.bpsQuellCrc(bps).length, 8);
+const klein = new Uint8Array(40); klein.set(bytes('BPS1')); klein.set([0x01, 0, 0, 0], 28);
+assert.equal(E.bpsQuellCrc(klein), '00000001');               // führende Nullen bleiben
+assert.equal(E.bpsQuellCrc(new Uint8Array(40)), null);        // ohne BPS1-Anfang: nichts anzeigen
+assert.equal(E.bpsQuellCrc(bytes('BPS1')), null);             // zu kurz
+console.log('OK  Quell-CRC32 aus der BPS-Fußzeile'); n++;
+const mailCrc = decodeURIComponent(E.hilfeMail('a@b.c', { grund: 'rev1', md5: fake, crc32: '0badf00d' }));
+assert.match(mailCrc, /CRC32 meiner ROM: 0badf00d/);
+assert.doesNotMatch(decodeURIComponent(E.hilfeMail('a@b.c', { grund: 'rev1', md5: fake })), /CRC32/);
+console.log('OK  Hilfe-Mail mit CRC32 nur, wenn bekannt'); n++;
+
 console.log(`GRUEN: ${n}/${n}`);

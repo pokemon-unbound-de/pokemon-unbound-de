@@ -153,18 +153,26 @@
       text: `Du brauchst ${basis}.` };
   }
 
+  /* BPS-Fußzeile: die letzten 12 Byte sind Quell-, Ziel- und Patch-CRC32 (little endian). -> Quell-CRC32 als 8 Hex oder null */
+  function bpsQuellCrc(u8) {
+    if (!u8 || u8.length < 16 || anfang(u8, 4) !== 'BPS1') return null;
+    const o = u8.length - 12;
+    return ((u8[o] | (u8[o + 1] << 8) | (u8[o + 2] << 16) | (u8[o + 3] << 24)) >>> 0).toString(16).padStart(8, '0');
+  }
+
   function hilfeMail(adresse, info) {
     const betreff = `Hilfe Patch-Seite – ${info.grund}`;
     const text = [
       'Hallo NevioCore-Team,', '', 'beim Patchen kommt bei mir eine Fehlermeldung.', '',
       `Fehlergrund: ${info.grund} (${info.titel || ''})`, `MD5 meiner ROM: ${info.md5 || 'unbekannt'}`,
+      ...(info.crc32 ? [`CRC32 meiner ROM: ${info.crc32}`] : []),
       `Patch-Version: ${info.version || ''}`, `Browser: ${info.browser || ''}`, '',
       '(Bitte keine ROM anhängen.)'
     ].join('\n');
     return `mailto:${adresse}?subject=${encodeURIComponent(betreff)}&body=${encodeURIComponent(text)}`;
   }
 
-  const api = { erkenne, headerInfo, hilfeMail, portBereit, dateiArt };
+  const api = { erkenne, headerInfo, hilfeMail, portBereit, dateiArt, bpsQuellCrc };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else global.RomErkennung = api;
 })(typeof window !== 'undefined' ? window : globalThis);
