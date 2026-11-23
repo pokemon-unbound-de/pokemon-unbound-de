@@ -1,25 +1,20 @@
 # Roadmap
 
-Stand: Oktober 2026. Aktuelle Version: siehe [neueste Beta](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest).
+Stand: November 2026. Aktuelle Version: siehe [Releases](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest).
 
 ## Linie 1.0.1 (Basis Pokémon Unbound v1.0.1)
 
-1. **Beta-Updates (v0.1.x)** – laufend: gemeldete Fehler werden als ganze Fehlerklasse behoben, jede mit einer
+1. **Beta-Updates (v0.1.x)**: gemeldete Fehler wurden als ganze Fehlerklasse behoben, jede mit einer
    automatischen Prüfung. Was sich geändert hat: [CHANGELOG](CHANGELOG.md).
-2. **Pre-Stable (aktuell v0.1.9, seit v0.1.7 bis zum Champ durchspielbar)** – Testphase läuft; Einzelheiten im
+2. **Stable (aktuell v1.0.0, bis zum Champ durchspielbar, mit deutschen Credits im Abspann)**: Einzelheiten im
    [CHANGELOG](CHANGELOG.md).
-3. **Release Candidate → Stable 1.0** – wenn alle Kriterien erfüllt sind:
-   - keine offenen schweren Fehler (P0/P1),
-   - Test-Bot spielt Hauptstory, Top Vier und Nebenmissionen ohne englischen Rest oder übergelaufenen Text,
-   - alle automatischen Prüfungen grün,
-   - Credits, „DAS ENDE“ und Titelbild final,
-   - mindestens 14 Tage Testphase ohne Pflichtfehler (wie im [README](README.md#meilensteine)).
+3. **Danach:** Fehler, die ihr meldet, beheben wir weiter in Updates der 1.0.x-Linie. Stil- und Begriffswünsche
+   sammeln wir für spätere Versionen.
 
 ## Port auf Pokémon Unbound 2.1.1.1
 
-- **Stand:** in Arbeit (interne Test-Builds); Fortschritt im [Issue #37](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/37).
-- **Tester-Vorschau:** läuft (geschlossen, nur für Tester; der Patch wird nicht veröffentlicht).
-- **Beta:** öffentliche Port-Beta geplant für den 18.11.2026 (Ziel, abhängig von den Prüfungen); das Stable der 1.0.1-Linie folgt frühestens nach 14 Tagen ohne Pflichtfehler.
+- **Stand:** offene Beta **v2.0.0-beta.2** (Pre-release), Fortschritt im [Issue #37](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/37). Wie der Port gebaut wird: [docs/PORT_BAU.md](docs/PORT_BAU.md).
+- **Als Nächstes:** weitere Betas mit den Fehlern aus euren Meldungen und den letzten englischen Texten, danach eine Stable-Fassung für 2.1.1.1.
 - Spielstände der 1.0.1-Linie passen nicht zu 2.1.1.1 (eigenes Unbound-Spielstandformat).
 
 ## Dauerhaft

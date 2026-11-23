@@ -1,6 +1,6 @@
 # Project Status
 
-**Status: öffentliche Beta** (seit 08.10.2026) – aktuelle Version:
+**Status: Stable v1.0.0 für Unbound 1.0.1, offene Beta für Unbound 2.1.1.1** (öffentlich seit 08.10.2026) – aktuelle Version:
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?label=Neueste%20Version)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
 - **Spielbar:** Story, Dialoge, Kämpfe, Menüs, Items, Attacken und Fähigkeiten sind deutsch. Basis ist Pokémon Unbound
@@ -11,5 +11,5 @@
   einem Emulator-Test-Bot durchgespielt; menschliches Gegenlesen läuft.
 - **Bekannte Fehler:** angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf
   [Discord](https://discord.gg/fSkhHppgcv).
-- **Aktueller Meilenstein:** [Pre-Stable v0.1.9](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9) (21.11.2026). Als Nächstes folgen Community-Testphase und Release Candidate; die Stable-Kriterien stehen in der [Roadmap](../ROADMAP.md).
-- **Port Unbound 2.1.1.1:** Tester-Vorschau läuft (geschlossen), öffentliche Beta geplant für den 18.11.2026 (Ziel).
+- **Aktueller Meilenstein:** [Pre-Stable v0.1.9](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9) (21.11.2026). Wie es weitergeht, steht in der [Roadmap](../ROADMAP.md).
+- **Port Unbound 2.1.1.1:** offene Beta v2.0.0-beta.2 (Pre-release), Patchen im Browser mit Auswahl „Port Unbound 2.1.1“.

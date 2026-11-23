@@ -2,14 +2,13 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-> **Großes Update diese Woche (geplant Mittwoch, 25.11.2026):** die Stable-Fassung für Unbound 1.0.1 (**v1.0.0**, mit Credits im Spiel), die nächste Port-Beta (**v2.0.0-beta.2**) mit den restlichen Texten für Unbound 2.1.1.1 und unser Übersetzungswerkzeug **Glyphwerk**. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+> **Das große Update ist da:** **v1.0.0**, die Stable-Fassung für Unbound 1.0.1 mit deutschen Credits im Abspann, und **v2.0.0-beta.2**, die neue Beta für Unbound 2.1.1.1. <<GLYPHWERK: Dazu ist unser Übersetzungswerkzeug [Glyphwerk](<<LINK>>) jetzt offen auf GitHub. (Satz streichen, wenn Glyphwerk nicht mit online geht)>> Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+## Neu: Beta 2 für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.2)
 
-## Neu: Offene Beta für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.1)
-
-**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da.** Rund **93 % der Spieltexte sind auf Deutsch**, der Rest folgt in **v2.0.0-beta.2**. Du findest also noch englische Reste, und genau die suchen wir.
+**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** <<ZAHL I5: Rund NN % der Spieltexte sind auf Deutsch.>> Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
 
 ·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
-·  📦 **[Release v2.0.0-beta.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-beta3b)** (beide `.bps`-Dateien und Prüfsummen)
+·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/<<TAG I1>>)** (beide `.bps`-Dateien und Prüfsummen)
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden in `#port-feedback`)
 ·  🛠️ **[Wie wir den Port gebaut haben](docs/PORT_BAU.md)**
 
@@ -17,12 +16,12 @@ Sichere vor dem ersten Start deinen Spielstand, es ist eine Beta. Wie wir die Za
 
 ## Stable-Linie für Unbound 1.0.1
 
-Für **Unbound 1.0.1** ist **v0.1.9** da, die Vorstufe der Stable-Fassung (sie behebt unter anderem den Neustart nach einem unterbrochenen Speichervorgang und lange Pokémon-Namen in Kampfmeldungen). Dein Spielstand bleibt gültig.
+**Stable v1.0.0 ist da.** Für **Unbound 1.0.1** ist die Übersetzung fertig: deutsche Credits im Abspann und „DAS ENDE“, dazu alle Korrekturen aus v0.1.9 (unter anderem der Neustart nach einem unterbrochenen Speichervorgang und lange Pokémon-Namen in Kampfmeldungen). Dein Spielstand bleibt gültig.
 
 Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
 
 ·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
-·  👉 **[Download (neueste Stable-Linie, Unbound 1.0.1, v0.1.9)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9)** 
+·  👉 **[Download (neueste Stable-Linie, Unbound 1.0.1, v1.0.0)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v1.0.0)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
@@ -50,17 +49,15 @@ Klappt etwas nicht? Meist ist es die falsche Basis-ROM – die [Patch-Anleitung]
 
 Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missionsbuch, dazu der Titelbildschirm, die Typ-Symbole, der Trainerpass und weitere Grafiken. Ein Test-Bot hat Intro, Wild- und Trainerkampf, Fang, Doppelkampf, Pokédex, Tasche, PC sowie Speichern und Laden im Emulator durchgespielt – ohne Hänger.
 
-## Pre-Stable – Stand und Testphase
+## Stable v1.0.0 – Stand
 
-- **Bis zum Champ durchspielbar** – komplett getestet von **NevioCore** und **DMkiller**.
-- **Testphase:** bis zu 4 Wochen. **Stable v1.0.0** kommt, sobald **14 Tage lang kein Pflichtfehler** gemeldet wurde.
-  - **Pflichtfehler:** englische Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafikfehler, Absturz/Speicherproblem.
-  - **Kein Blocker:** Stil- und Begriffswünsche – die sammeln wir trotzdem gern.
+- **Bis zum Champ durchspielbar** – komplett getestet von **NevioCore** und **DMkiller**, mit deutschen Credits im Abspann für alle, die mitgeholfen haben.
+- **Fehler gefunden?** Melde sie auf dem [Discord](https://discord.gg/fSkhHppgcv). Wir beheben sie weiter in Updates. Wichtig sind uns vor allem englische Reste, Text, der aus dem Fenster läuft, Grammatik und Umlaute, Grafikfehler und Absturz- oder Speicherprobleme. Stil- und Begriffswünsche sammeln wir gern für spätere Versionen.
 
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
 - Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. einzelne Item-Namen) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
-- **Port auf Unbound 2.1.1.1:** Seit dem 18.11.2026 gibt es die offene Beta **v2.0.0-beta.1** (siehe oben), siehe auch [Roadmap](ROADMAP.md). Die Basis dieser Stable-Linie bleibt Unbound 1.0.1.
+- **Port auf Unbound 2.1.1.1:** Seit dem 18.11.2026 gibt es eine offene Beta, jetzt in der Fassung **v2.0.0-beta.2** (siehe oben), siehe auch [Roadmap](ROADMAP.md). Die Basis dieser Stable-Linie bleibt Unbound 1.0.1.
 
 Offene Fehler, die wir schon kennen:
 
