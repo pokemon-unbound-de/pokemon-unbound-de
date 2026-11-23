@@ -14,6 +14,7 @@ const ui = {
   hilfeText: document.getElementById('hilfe-text'),
   hilfeMail: document.getElementById('hilfe-mail'),
   hilfeAktion: document.getElementById('hilfe-aktion'),
+  hilfePruefsumme: document.getElementById('hilfe-pruefsumme'),
   ziel: document.getElementById('ziel'),
   portHinweis: document.getElementById('port-hinweis'),
   feldHinweis: document.getElementById('field-hint'),
@@ -62,6 +63,7 @@ function hilfeZeigen(info) {
   ui.hilfeText.textContent = info.text;
   ui.hilfeMail.href = RomErkennung.hilfeMail(HILFE_ADRESSE, info);
   ui.hilfeAktion.hidden = true;                  // nur fehlerZeigen blendet den Knopf bei Bedarf ein
+  ui.hilfePruefsumme.hidden = true;
   ui.hilfe.hidden = false;
 }
 
@@ -171,6 +173,14 @@ async function start() {
       setStatus(info.titel || 'Falsche Basis.', 'bad');
       hilfeZeigen(Object.assign({ md5, version: release.version, browser: navigator.userAgent }, info));
       ui.hilfeAktion.hidden = !(port && info.aktion === 'zur_port_beta' && ziel !== 'port');
+      // GOLD-Liste I5 Nr. 1: eigene und erwartete Prüfsumme nebeneinander (nur Anzeige, nichts wird gesendet)
+      if (md5) {
+        const erwartet = [`FireRed Rev 0 ${release.baseMd5.slice(0, 8)}…`];
+        if (release.unboundBaseMd5) erwartet.push(`Unbound EN 1.0.1 ${release.unboundBaseMd5.slice(0, 8)}…`);
+        if (port) erwartet.push(`Unbound EN 2.1.1.1 ${port.baseMd5.slice(0, 8)}…`);
+        ui.hilfePruefsumme.textContent = `Deine Datei: MD5 ${md5.slice(0, 8)}… · Passend wäre: ${erwartet.join(' · ')}`;
+        ui.hilfePruefsumme.hidden = false;
+      }
     }
 
     function patchWaehlen(neu) {
