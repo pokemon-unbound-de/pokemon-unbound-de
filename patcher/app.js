@@ -13,12 +13,15 @@ const ui = {
   hilfeTitel: document.getElementById('hilfe-titel'),
   hilfeText: document.getElementById('hilfe-text'),
   hilfeMail: document.getElementById('hilfe-mail'),
+  hilfeAktion: document.getElementById('hilfe-aktion'),
   ziel: document.getElementById('ziel'),
   portHinweis: document.getElementById('port-hinweis'),
   feldHinweis: document.getElementById('field-hint'),
   basisHinweis: document.getElementById('footnote-basis')
 };
 const HILFE_ADRESSE = 'neviocore@pokemonunboundde.studio';
+// Gründe ohne exakte Prüfsumme: dafür Prüfsummen-Anfang, Größe und Spielcode zählen (Top 5 in der Wochenstatistik)
+const LERN_GRUENDE = ['unbekannt', 'keine_gba', 'anderes_spiel', 'firered_veraendert', 'firered_sprache', 'unbound2x'];
 
 function setStatus(message, kind = 'idle') {
   ui.status.textContent = message;
@@ -58,6 +61,7 @@ function hilfeZeigen(info) {
   ui.hilfeTitel.textContent = info.titel;
   ui.hilfeText.textContent = info.text;
   ui.hilfeMail.href = RomErkennung.hilfeMail(HILFE_ADRESSE, info);
+  ui.hilfeAktion.hidden = true;                  // nur fehlerZeigen blendet den Knopf bei Bedarf ein
   ui.hilfe.hidden = false;
 }
 
@@ -166,6 +170,7 @@ async function start() {
       ui.fileSubtitle.textContent = info.untertitel || 'Nicht unterstützte ROM';
       setStatus(info.titel || 'Falsche Basis.', 'bad');
       hilfeZeigen(Object.assign({ md5, version: release.version, browser: navigator.userAgent }, info));
+      ui.hilfeAktion.hidden = !(port && info.aktion === 'zur_port_beta' && ziel !== 'port');
     }
 
     function patchWaehlen(neu) {
@@ -206,6 +211,8 @@ async function start() {
       for (const radio of ui.ziel.querySelectorAll('input[name=ziel]')) {
         radio.addEventListener('change', () => zielGeaendert(radio.value));
       }
+      // Unbound 2.x erkannt: ein Klick stellt oben auf „Port-Beta“ um (eigene Entscheidung der Person, nichts automatisch)
+      ui.hilfeAktion.addEventListener('click', () => zielGeaendert('port'));
     }
     RomPatcherWeb.initialize({
       language: 'de',
@@ -232,7 +239,9 @@ async function start() {
           return;
         }
         const md5 = romFile.hashMD5().toLowerCase();
-        const info = RomErkennung.erkenne(md5, romFile.fileSize, romFile._u8array, release, kennungen);
+        // Dateiname nur lokal für die Endung (.sav, .bps, .7z …), er wird nicht gezählt oder gesendet
+        const dateiname = romFile.fileName || ui.fileInput.files[0]?.name || '';
+        const info = RomErkennung.erkenne(md5, romFile.fileSize, romFile._u8array, release, kennungen, dateiname);
         romGrund = info.grund;
         if (info.grund === 'port') zielSetzen('port');          // 2.1.1.1 passt nur zum Port: Auswahl folgt der ROM
         // automatisch den passenden Patch nehmen (Unbound EN 1.0.1 / FireRed Rev 0 / Port); höchstens ein Wechsel je ROM
@@ -246,7 +255,7 @@ async function start() {
         if (!fehlerGezaehlt) {
           trackEvent('patch-fehler', fehlerInfo.grund);           // nur der Grund, keine Dateidaten
           fehlerMerken(fehlerInfo.grund);
-          if (info.grund === 'unbekannt') {                       // Prüfsummen-Anfang, Größe, Spielcode: Erkennung erweitern
+          if (LERN_GRUENDE.includes(info.grund)) {                // Prüfsummen-Anfang, Größe, Spielcode: Erkennung erweitern
             const code = RomErkennung.headerInfo(romFile._u8array).code.replace(/[^A-Z0-9]/g, '_') || 'kein';
             trackEvent('rom-unbekannt', `${md5.slice(0, 8)}-${Math.round(romFile.fileSize / 1024)}k-${code}`);
           }

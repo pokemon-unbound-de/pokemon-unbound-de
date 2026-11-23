@@ -16,9 +16,10 @@ const releaseAn = Object.assign({}, release, { port: portAn });
 const releaseUnvollstaendig = Object.assign({}, release, { port: Object.assign({}, portAn, { outputMd5: '' }) });
 const releaseOhnePort = { baseMd5: release.baseMd5, unboundBaseMd5: release.unboundBaseMd5 };    // altes Manifest ohne Block
 
-function kopf(code, rev) {          // simulierter GBA-Header (nur Spielcode + Revision belegt)
+function kopf(code, rev) {          // simulierter GBA-Header (Spielcode, Revision und fester Wert 0x96 an 0xB2)
   const u8 = new Uint8Array(0xC0);
   for (let i = 0; i < 4; i++) u8[0xAC + i] = code.charCodeAt(i);
+  u8[0xB2] = 0x96;
   u8[0xBC] = rev;
   return u8;
 }
@@ -40,8 +41,8 @@ const faelle = [
   ['Unbound andere Version (Port AN)', '4'.repeat(32), MB32, kopf('BPRE', 0), 'unbound2x', releaseAn],
   ['FireRed USA Rev 0 (Port AN)', release.baseMd5, MB16, kopf('BPRE', 0), 'firered', releaseAn],
   ['Unbound EN 1.0.1 (Port AN)', release.unboundBaseMd5, MB32, kopf('BPRE', 0), 'unbound101', releaseAn],
-  ['Emerald', '5'.repeat(32), MB16, kopf('BPEE', 0), 'unbekannt'],
-  ['Datei ohne Header', '6'.repeat(32), 100, new Uint8Array(100), 'unbekannt'],
+  ['Emerald', '5'.repeat(32), MB16, kopf('BPEE', 0), 'anderes_spiel'],
+  ['Datei ohne Header', '6'.repeat(32), 100, new Uint8Array(100), 'keine_gba'],
   ...gepatcht.map(m => ['bereits gepatcht ' + kennungen.bereits_gepatcht[m], m, MB32, kopf('BPRE', 0), 'bereits_gepatcht'])
 ];
 let rot = 0;
