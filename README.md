@@ -2,10 +2,27 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-**Pre-Stable ist da!** Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
+> **Großes Update am Mittwoch, 25.11.2026 (geplant):** die Stable-Fassung für Unbound 1.0.1 (**v1.0.0**, mit Credits im Spiel), die nächste Port-Beta (**v2.0.0-beta.2**) mit den restlichen Texten für Unbound 2.1.1.1 und unser Übersetzungswerkzeug **Glyphwerk**. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+
+## Neu: Offene Beta für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.1)
+
+**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da.** Rund **93 % der Spieltexte sind auf Deutsch**, der Rest folgt in **v2.0.0-beta.2**. Du findest also noch englische Reste, und genau die suchen wir.
+
+·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
+·  📦 **[Release v2.0.0-beta.1](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-beta3b)** (beide `.bps`-Dateien und Prüfsummen)
+·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden in `#port-feedback`)
+·  🛠️ **[Wie wir den Port gebaut haben](docs/PORT_BAU.md)**
+
+Sichere vor dem ersten Start deinen Spielstand, es ist eine Beta. Wie wir die Zahlen gemessen haben, steht [hier](docs/PORT_BAU.md#was-die-zahlen-bedeuten).
+
+## Stable-Linie für Unbound 1.0.1
+
+Für **Unbound 1.0.1** ist **v0.1.9** da, die Vorstufe der Stable-Fassung (sie behebt unter anderem den Neustart nach einem unterbrochenen Speichervorgang und lange Pokémon-Namen in Kampfmeldungen). Dein Spielstand bleibt gültig.
+
+Spiel Pokémon Unbound auf Deutsch – mit den offiziellen deutschen Pokémon-Begriffen, **bis zum Champ durchspielbar**.
 
 ·  🧩 **[Im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** 
-·  👉 **[Download (neueste Version)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)** 
+·  👉 **[Download (neueste Stable-Linie, Unbound 1.0.1, v0.1.9)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.9)** 
 ·  📖 **[Patch-Anleitung](docs/PATCH_ANLEITUNG.md)** 
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** 
 ·  🇩🇪 **[Reddit](https://www.reddit.com/r/PokemonUnboundDE/)**
@@ -43,7 +60,7 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
 - Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. einzelne Item-Namen) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
-- **Port auf Unbound 2.1.1.1:** Die Tester-Vorschau läuft (geschlossen, nur für Tester, der Patch wird nicht veröffentlicht). Die öffentliche Port-Beta ist für den **18.11.2026** geplant (Ziel, kein Versprechen), siehe [Roadmap](ROADMAP.md). Die Basis dieser Version bleibt Unbound 1.0.1.
+- **Port auf Unbound 2.1.1.1:** Seit dem 18.11.2026 gibt es die offene Beta **v2.0.0-beta.1** (siehe oben), siehe auch [Roadmap](ROADMAP.md). Die Basis dieser Stable-Linie bleibt Unbound 1.0.1.
 
 Offene Fehler, die wir schon kennen:
 
@@ -88,7 +105,7 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **How to play:** open our [patch page](https://pokemon-unbound-de.github.io/pokemon-unbound-de/), select your own legal **Pokémon FireRed (USA) Rev 0** and create the German ROM right in your browser (latest beta, result is checksum-verified, your ROM is not uploaded). Alternatively, download **one** `.bps` patch from the [latest release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) – for **FireRed (USA) Rev 0** or **Pokémon Unbound (EN) v1.0.1** – and apply it with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) or Flips. MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
-**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. Based on Unbound **v1.0.1**, not 2.x; a port to 2.1.1.1 gets a tester preview, expected in late November 2026, and a beta after the stable release. See the [CHANGELOG](CHANGELOG.md) for what changed.
+**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. This stable line is based on Unbound **v1.0.1**. **New: the open beta for Unbound 2.1.1.1 (v2.0.0-beta.1) is out.** About 93 % of the game text is in German; the rest follows in v2.0.0-beta.2. Patch it in the [browser](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) (choose "Port Unbound 2.1.1") with your own legal Unbound 2.1.1.1 (EN) or FireRed (USA) Rev 0 ROM, or take a `.bps` from the [release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-beta3b). Back up your save first. How it was built: [docs/PORT_BAU.md](docs/PORT_BAU.md). See the [CHANGELOG](CHANGELOG.md) for what changed.
 
 **Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
