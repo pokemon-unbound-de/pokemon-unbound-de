@@ -23,7 +23,7 @@ Die Textboxen haben feste Pixelbreiten, die Schrift ist proportional. Zeichen zu
 - Fenster und Seiten, die nur durch Spielen erreichbar sind, prüfen Tester.
 
 ## 5. Bot-Infrastruktur
-Ein Test-Bot spielt das Spiel im Emulator: Intro, Wild- und Trainerkampf, Fangen, Menüs, Speichern und Laden bis zur vierten Arena, ohne Cheats und ohne Spielstände zu manipulieren. Er protokolliert alle gedruckten Texte und meldet englische Reste. Mehrere automatische Wächter prüfen, dass kein Lauf unbemerkt hängt oder unverändert wiederholt wird. Was der Bot nicht erreicht (Nebenaufgaben, späte Story, Menüs mit Absicht), bekommen Tester als feste Aufgaben.
+Ein Test-Bot spielt das Spiel im Emulator: Intro, Wild- und Trainerkampf, Fangen, Menüs, Speichern und Laden, von einem neuen Spiel bisher bis zum dritten Orden, ohne Cheats und ohne Spielstände zu manipulieren. Er erkundet die Spielwelt planvoll (Go-Explore, ohne KI) und lernt aus gescheiterten Läufen neue Regeln. Er protokolliert alle gedruckten Texte und meldet englische Reste. Mehrere automatische Wächter prüfen, dass kein Lauf unbemerkt hängt oder unverändert wiederholt wird. Was der Bot nicht erreicht (Nebenaufgaben, späte Story, Menüs mit Absicht), bekommen Tester als feste Aufgaben.
 
 ## 6. Fehlerklassen statt Einzelfixes
 Jede Meldung gilt als **global**, bis klar ist, dass sie lokal ist. Wir suchen die Klasse mit einem Skript über das ganze Spiel, bauen den Fix und ein Gate dazu und belegen vorher/nachher mit Zahlen. Beispiele aus dem Port:
