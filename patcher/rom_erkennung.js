@@ -67,7 +67,7 @@
       case 'unbound101': return `Das ist Unbound 1.0.1 englisch, passend: ${v}.`;
       case 'port': return `Das ist Unbound 2.1.1.1 englisch, passend: ${pv ? 'Port-Beta ' + pv : 'die Port-Beta (noch nicht freigegeben)'}.`;
       case 'port_gesperrt': return 'Das ist Unbound 2.1.1.1 englisch, passend: die Port-Beta, die hier noch nicht freigegeben ist.';
-      case 'bereits_gepatcht': return `Das ist schon ${info.version_de || 'eine deutsche Version'}, ${info.aktuell ? 'du musst nichts patchen' : keiner}.`;
+      case 'bereits_gepatcht': return `Das ist schon ${info.version_de || 'eine deutsche Version'}, ${info.aktuell ? 'die neueste Version' : keiner}.`;
       case 'unbound2x': return `Das ist ${info.name_2x || 'eine unbekannte 32-MB-Datei auf FireRed-Basis (meist eine andere Unbound-Version oder eine ältere deutsche ROM)'}, ${keiner}.`;
       case 'rev1': return `Das ist FireRed (USA) Rev 1, ${keiner}.`;
       case 'de': return `Das ist die deutsche Feuerrote Edition, ${keiner}.`;
@@ -136,12 +136,12 @@
     if (release.outputMd5 && md5 === release.outputMd5.toLowerCase()) {
       return { grund: 'bereits_gepatcht', version_de: `Pokémon Unbound DE ${release.version}`, aktuell: true,
         titel: 'Das ist schon die aktuelle deutsche Version', untertitel: `Pokémon Unbound DE ${release.version} erkannt`,
-        text: `Diese ROM ist bereits Pokémon Unbound DE ${release.version}, die neueste Version. Du musst nichts patchen: spiel einfach weiter.` };
+        text: 'Du musst nichts patchen: spiel einfach weiter.' };
     }
     if (port.outputMd5 && md5 === port.outputMd5.toLowerCase()) {
       return { grund: 'bereits_gepatcht', version_de: `die deutsche Port-Beta ${port.version || ''}`.trim(), aktuell: true,
         titel: 'Das ist schon die aktuelle Port-Beta', untertitel: 'Port-Beta DE erkannt',
-        text: `Diese ROM ist bereits die deutsche Port-Beta ${port.version || ''}. Du musst nichts patchen: spiel einfach weiter.` };
+        text: 'Du musst nichts patchen: spiel einfach weiter.' };
     }
     const gepatcht = (kennungen.bereits_gepatcht || {})[md5];
     if (gepatcht) {
