@@ -47,7 +47,7 @@ fall('schon v1.0.0', E.erkenne(live.outputMd5, MB32, datei(64, [], 'BPRE'), live
   /^Das ist schon Pokémon Unbound DE v1\.0\.0, du musst nichts patchen\.$/);
 fall('schon Port-Beta 2.0.0-beta.2', E.erkenne(live.port.outputMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
   /^Das ist schon die deutsche Port-Beta 2\.0\.0-beta\.2, du musst nichts patchen\.$/);
-const alt = Object.keys(kennungen.bereits_gepatcht)[0];
+const alt = Object.keys(kennungen.bereits_gepatcht).find(k => kennungen.bereits_gepatcht[k] === 'Pokémon Unbound DE v0.1');
 fall('schon ältere DE-Version', E.erkenne(alt, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
   /^Das ist schon Pokémon Unbound DE v0\.1, passend: keine unserer Versionen\.$/);
 
