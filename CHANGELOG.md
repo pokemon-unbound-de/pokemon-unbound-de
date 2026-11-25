@@ -1,5 +1,73 @@
 # Pokémon Unbound auf Deutsch – Änderungsprotokoll
 
+## v1.0.0 (2026-11-25)
+
+**Build:** `155aba19258e1f7ccd00264961b643ee` (SHA-256 `6b37597a1223bd12e4224c7cdb7adfec65c1df0f2a07485be31d98822ba3e455`) · **Patches:** `pokemon_unbound_de_v1.0.0_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v1.0.0.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
+
+Unbound-Basis: 1.0.1 · Dein Spielstand bleibt gültig. Bis zum Champ durchspielbar, mit den offiziellen deutschen Pokémon-Begriffen.
+
+### Neu in v1.0.0
+- Deutsche **Credits im Abspann** und „DAS ENDE“: Alle, die mitgeholfen haben, stehen jetzt im Spiel.
+- Die Meldung zur Mega-Entwicklung erscheint auf Deutsch.
+- Orts- und Itemnamen sind einheitlich benannt.
+- Menütexte, die zu breit für ihr Fenster waren, wurden gekürzt, zum Beispiel „Welche Attacke auffüllen?“.
+
+### Schon in v0.1.9 (zur Erinnerung)
+- Nach einem unterbrochenen Speichervorgang lässt sich das Spiel wieder starten. Änderungen aus dem abgebrochenen Speichervorgang können fehlen.
+- Kampfmeldungen verwenden auch mit langen Pokémon-Namen lesbare Umbrüche und passende Grammatik. Im Doppelkampf nennt Maulwurfs Meldung beide eingesetzten Pokémon.
+- Die Meldungen beim Verlernen und Erlernen von Attacken erscheinen auf Deutsch. Bei „… wählen?“ klebt der Pokémon-Name nicht mehr am Wort. „Würfel Corp.“ ist einheitlich benannt.
+
+### Installation
+Am einfachsten im Browser: https://pokemon-unbound-de.github.io/pokemon-unbound-de/. Oder die `.bps` aus diesem Release mit einem Patcher deiner Wahl auf deine eigene ROM anwenden und mit `MD5.txt` prüfen. **Keine ROMs hier.** Spielstände von 1.0.1 und 2.1.1.1 sind untereinander nicht kompatibel.
+
+### Hilfe und Fehler
+Discord: https://discord.gg/fSkhHppgcv · Fehlerliste: [docs/BEKANNTE_FEHLER.md](https://github.com/pokemon-unbound-de/pokemon-unbound-de/blob/main/docs/BEKANNTE_FEHLER.md)
+
+### Credits
+
+Pokémon Unbound ist das Originalprojekt von Skeli und Team. KI-Werkzeuge unterstützten das Übersetzungs- und Prüfteam.
+
+### Team
+- **Nevio** – Hauptlokalisator und Entwickler der Edition
+- **Maria** – Prüftools und Kanonliste entwickelt
+- **Vegetarox** – Dialogwerkstatt entwickelt und Oberfläche gestaltet
+
+### Tests und Meldungen
+- **Amirez** – Rivalenton und Grafikfehler gemeldet
+- **Aritel** – Postgame-Spielstand zum Nachtesten bereitgestellt
+- **BaneJoker (Felix)** – Englische Passagen nach Kampf gemeldet
+- **koterbrechen** – Kampfansagen und Siegprämien lektoriert
+- **DMkiller** – Spielstände geliefert und Portfehler gemeldet
+- **Eneru** – Spielstände und Kampftextvorschläge geliefert
+- **erwaxfizzle** – Englische Level-up-Werte mit Bild gemeldet
+- **Exilsaarländer** – Werkstattkarten geprüft und verbessert
+- **Fletcher Mops** – Menüs, Grafiken und Dialoge getestet
+- **Katsuno221** – Kompatibilität auf K40 Max geprüft
+- **Luca** – Lesefluss und Wortwahl geprüft
+- **ScalyOH** – Gemischte Kampftexte und Ei-Texte gemeldet
+- **Zottel // xILuucky** – Speicherstandproblem auf Pizza Boy gemeldet
+- **Zwiebeleis** – Deutsche Beta auf Anbernic getestet
+
+### Grafik
+- **𝕃𝕖𝕚𝕥𝕡𝕝𝕒𝕟𝕜𝕖** – Deutsche Grafiken und Tilemaps geliefert
+- **Misa** – NSE-Grafikbearbeitung und Zusammenarbeit angeregt
+
+### Werkzeuge
+- **Antony (gba_translator)** – Sprite-Inventar und Bearbeitungsworkflow bereitgestellt
+- **Complete FireRed Upgrade (CFRU)** – FireRed-Engine und Kampfsystem bereitgestellt
+- **pret/pokefirered** – FireRed-Dekompilierung als technische Referenz
+- **Floating IPS (Flips)** – BPS-Patches erzeugt und geprüft
+- **Marc Robledo (Rom Patcher JS)** – BPS-Patcher für den Browser
+- **mGBA-Team** – Emulator für automatisierte Laufzeitprüfungen
+
+### Dank
+- **Skeli und Team** – Originalspiel Pokémon Unbound entwickelt
+- **PokéWiki** – Deutsche Pokémon-Terminologie als Referenz
+- **Bulbapedia** – Pokémon-Begriffe und Mechaniken nachgeschlagen
+- **Temu Joker** – Cheat-Liste für das Projekt vorgeschlagen
+
+Danke an alle Tester und die ganze Community.
+
 ## v0.1.9 (2026-11-21)
 
 **Build:** `dfd5b845…` · **Patches:** `pokemon_unbound_de_v0.1.9_von_firered_usa.bps` (Hauptweg, FireRed USA Rev 0) oder `pokemon_unbound_de_v0.1.9.bps` (Unbound EN v1.0.1) · Prüfsummen: `MD5.txt`
