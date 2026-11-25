@@ -2,10 +2,11 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-> **Das große Update ist da:** **v1.0.0**, die Stable-Fassung für Unbound 1.0.1 mit deutschen Credits im Abspann, und **v2.0.0-beta.2**, die neue Beta für Unbound 2.1.1.1. <<GLYPHWERK: Dazu ist unser Übersetzungswerkzeug [Glyphwerk](<<LINK>>) jetzt offen auf GitHub. (Satz streichen, wenn Glyphwerk nicht mit online geht)>> Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+> **Das große Update ist da:** **v1.0.0**, die Stable-Fassung für Unbound 1.0.1 mit deutschen Credits im Abspann, und **v2.0.0-beta.2**, die neue Beta für Unbound 2.1.1.1. <<GLYPHWERK: Dazu ist unser Übersetzungswerkzeug [Glyphwerk](https://github.com/pokemon-unbound-de/glyphwerk) jetzt offen auf GitHub. (Satz streichen, wenn Glyphwerk nicht mit online geht)>> Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+
 ## Neu: Beta 2 für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.2)
 
-**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** <<ZAHL I5: Rund NN % der Spieltexte sind auf Deutsch.>> Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
+**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** Rund **93 % der Spieltexte** sind auf Deutsch. Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
 
 ·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
 ·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/<<TAG I1>>)** (beide `.bps`-Dateien und Prüfsummen)
