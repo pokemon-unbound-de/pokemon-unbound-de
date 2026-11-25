@@ -17,20 +17,20 @@
   "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v0.1.8",
   "port": {
     "enabled": true,
-    "tag": "port-beta3b",
-    "version": "2.1.1.1-beta3b",
+    "tag": "port-v2.0.0-beta.2",
+    "version": "2.0.0-beta.2",
     "baseMd5": "9cad8e771940e7f7094d13911552cef0",
     "baseSha256": "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7",
     "baseSize": 33554432,
     "baseCrc32": "4b3d4957",
-    "outputMd5": "29758b848624300621c9949725bfd65a",
-    "outputCrc32": "e822c79a",
+    "outputMd5": "d87d4ba5e24f592f976434abab6d03ee",
+    "outputCrc32": "bc890a7e",
     "fireredPatch": "patches/port_firered_rev0.bps",
-    "fireredPatchSha256": "541a2dfa291a99868593661d7d691a4ae0271252804d36ee314b01e03306b36c",
+    "fireredPatchSha256": "c350feebca575b436b025d898ab62e0844171a24a4ca4c274d61e778bb84a943",
     "unboundPatch": "patches/port_unbound_2111.bps",
-    "unboundPatchSha256": "94a6006075f9732d02b3677f406bca87edb2a3d67fc922baeb61f65e4363945b",
-    "checksumsAssetSha256": "8d923228444b1e40f0a965f4756371b6dbd87298a3ed0f9ff25449ecc8797990",
-    "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-beta3b",
-    "outputSha256": "e8232b0c9264c1d553c8bd916dfa3a7296d360d672219a42f97808f9da2c36bb"
+    "unboundPatchSha256": "85afa32faedff89ff01978ff23d84057a7922e370606d44d1743d4677bbaa983",
+    "checksumsAssetSha256": "4b80e858de06338c7897d03f8598a86e5cb1f4fbeeda11f991d5c441b042b1a3",
+    "releaseUrl": "https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.2",
+    "outputSha256": "9f150f4bc8489390fad3c9f76984f48b049b8b633c5cc864d5c0b6ef59ba8fdb"
   }
 }
