@@ -9,7 +9,7 @@
 **Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** Rund **93 % der geprüften Textstellen** haben eine deutsche Vorlage. Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
 
 ·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
-·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v2.0.0-beta.2)** (beide `.bps`-Dateien und Prüfsummen)
+·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.2)** (beide `.bps`-Dateien und Prüfsummen)
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden in `#port-feedback`)
 ·  🛠️ **[Wie wir den Port gebaut haben](docs/PORT_BAU.md)**
 

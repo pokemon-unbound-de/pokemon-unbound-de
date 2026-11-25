@@ -2,7 +2,7 @@
 
 *How we built the German port for Pokémon Unbound 2.1.1.1: in short (EN): we patch in place instead of shortening texts, protect every pointer with a map and block lists, measure text widths in pixels, render the result in an emulator and write every fixed bug down as a class with a test.* Keine ROM-Daten, kein Spieltext. Allgemeine Lehren aus der 1.0.1-Linie stehen im [Praxisbericht](PRAXISBERICHT.md).
 
-**Stand:** offene Beta [v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v2.0.0-beta.2). Die Zahlen unten stammen aus der Messung zur ersten Beta, die neue Messung trägt I5 ein.
+**Stand:** offene Beta [v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.2). Die Zahlen unten stammen aus der Messung zur ersten Beta, die neue Messung folgt.
 
 ## 1. In place statt radikaler Kürzung
 Deutsche Texte sind etwa ein Achtel länger als englische. Der Port kürzt deshalb nicht pauschal, sondern geht in dieser Reihenfolge vor: Ein Text bleibt an seinem Originalplatz, wenn er hineinpasst. Passt er nicht, wird er in verifizierten freien Speicher verschoben und alle Zeiger werden umgebogen. Gekürzt wird nur, wenn nichts anderes bleibt, und dann nach festen, belegten Abkürzungen. Das hält Namen und Menüs so nah am Deutschen wie möglich und spart Platz, den die Hotfixes später brauchen.
