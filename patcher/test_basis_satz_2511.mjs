@@ -51,6 +51,9 @@ const alt = Object.keys(kennungen.bereits_gepatcht)[0];
 fall('schon ältere DE-Version', E.erkenne(alt, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
   /^Das ist schon Pokémon Unbound DE v0\.1, passend: keine unserer Versionen\.$/);
 
+fall('schon Port-Beta 3b (öffentlich, alt)', E.erkenne('29758b848624300621c9949725bfd65a', MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
+  /^Das ist schon Pokémon Unbound DE Port-Beta 3b \(Unbound 2\.1\.1\.1\), passend: keine unserer Versionen\.$/);
+
 // 3) falsche Fassung
 fall('FireRed Rev 1', E.erkenne(fake, MB16, datei(64, [], 'BPRE', 1), live, kennungen), 'rev1', /^Das ist FireRed \(USA\) Rev 1, passend: keine unserer Versionen/);
 fall('Feuerrote (DE)', E.erkenne(fake, MB16, datei(64, [], 'BPRD'), live, kennungen), 'de', /^Das ist die deutsche Feuerrote Edition, passend: keine unserer Versionen/);
