@@ -6,10 +6,10 @@
 
 ## Neu: Beta 2 für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.2)
 
-**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** Rund **93 % der Spieltexte** sind auf Deutsch. Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
+**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** Rund **93 % der geprüften Textstellen** haben eine deutsche Vorlage. Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
 
 ·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
-·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/<<TAG I1>>)** (beide `.bps`-Dateien und Prüfsummen)
+·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v2.0.0-beta.2)** (beide `.bps`-Dateien und Prüfsummen)
 ·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden in `#port-feedback`)
 ·  🛠️ **[Wie wir den Port gebaut haben](docs/PORT_BAU.md)**
 
@@ -62,18 +62,18 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 21.11.2026) -->
-- Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(folgt mit Stable v1.0.0)*
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 25.11.2026) -->
+- Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(behoben, kommt mit dem nächsten Release)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
+- Kanon-Abweichungen Items/Attacken (z. B. Glare „Giftblick“ ≠ „Schlangenblick“, …
 - Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt *(eigener Track)*
 - Port: Kampf-Healthboxen zerrupft (Oberkante der Namen abgeschnitten, Level … *(behoben, kommt mit dem nächsten Release)*
+- MENUEFENSTER_ZU_SCHMAL in 1.0.1 *(behoben, kommt mit dem nächsten Release)*
 - Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
 - Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
 - Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
-- Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … *(folgt mit dem Port 2.1.1.1)*
-- EN-Rest „Autumn“ + uneinheitliche Ortsnamen (Fund aus Marias … *(folgt mit dem Port 2.1.1.1)*
-- … und 4 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- … und 6 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
@@ -140,22 +140,20 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 21.11.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 25.11.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 21.11.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 25.11.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
 |---|---|
-| v0.1.9 Pre-Stable | ✔ veröffentlicht |
-| Testphase | bis zu 4 Wochen ab v0.1.7 |
-| Stable v1.0.0 | nach 14 Tagen ohne Pflichtfehler (EN-Reste, Text läuft aus dem Fenster, Grammatik/Umlaute, Grafik, Absturz/Speichern) – Stil-/Begriffswünsche blockieren nicht |
+| v1.0.0 Stable | ✔ veröffentlicht |
 | Pokédex-Einträge offiziell (#117) | eigener Track, schrittweise |
-| Port auf Unbound 2.1.1.1 | offene Beta v2.0.0-beta.1 seit 18.11.2026 (93 % der Texte auf Deutsch) · nächste Beta v2.0.0-beta.2 mit den restlichen Texten |
+| Port auf Unbound 2.1.1.1 | offene Beta v2.0.0-beta.2 · Fehler aus der Beta und letzte englische Texte folgen in weiteren Betas |
 
 ## Mitmachen
 

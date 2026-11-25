@@ -7,7 +7,7 @@ Main maintainer and point of contact: Nevio · Official Repository: https://gith
 Key facts:
 - Language: German (Deutsch) localization of an English ROM hack.
 - Base: Pokémon Unbound on Pokémon FireRed (BPRE), CFRU ecosystem.
-- Status: Public Beta since 2026-10-08 (v0.1.9 on 2026-11-21 at the time of writing; latest: https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest). Stable v1.0.0 for Unbound 1.0.1; open beta v2.0.0-beta.2 for Unbound 2.1.1.1. AI-assisted and machine-checked; human proofreading ongoing.
+- Status: Public Beta since 2026-10-08 (v1.0.0 on 2026-11-25 at the time of writing; latest: https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest). Stable v1.0.0 for Unbound 1.0.1; open beta v2.0.0-beta.2 for Unbound 2.1.1.1. AI-assisted and machine-checked; human proofreading ongoing.
 - Distribution policy: patch-only, no ROMs or commercial assets are hosted or shared.
 - Not affiliated with or endorsed by the rights holders; unofficial fan project.
 
