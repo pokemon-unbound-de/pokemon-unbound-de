@@ -2,7 +2,7 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-> **Großes Update diese Woche (geplant Dienstag, 24.11.2026, spätestens Mittwoch, 25.11.2026):** die Stable-Fassung für Unbound 1.0.1 (**v1.0.0**, mit Credits im Spiel), die nächste Port-Beta (**v2.0.0-beta.2**) mit den restlichen Texten für Unbound 2.1.1.1 und unser Übersetzungswerkzeug **Glyphwerk**. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+> **Großes Update diese Woche (geplant Mittwoch, 25.11.2026):** die Stable-Fassung für Unbound 1.0.1 (**v1.0.0**, mit Credits im Spiel), die nächste Port-Beta (**v2.0.0-beta.2**) mit den restlichen Texten für Unbound 2.1.1.1 und unser Übersetzungswerkzeug **Glyphwerk**. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
 
 ## Neu: Offene Beta für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.1)
 
