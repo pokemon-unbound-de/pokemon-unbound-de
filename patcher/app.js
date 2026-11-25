@@ -21,8 +21,8 @@ const ui = {
   basisHinweis: document.getElementById('footnote-basis')
 };
 const HILFE_ADRESSE = 'neviocore@pokemonunboundde.studio';
-// Gründe ohne exakte Prüfsumme: dafür Prüfsummen-Anfang, Größe und Spielcode zählen (Top 5 in der Wochenstatistik)
-const LERN_GRUENDE = ['unbekannt', 'keine_gba', 'anderes_spiel', 'firered_veraendert', 'firered_sprache', 'unbound2x'];
+// Gründe ohne exakte Prüfsumme: dafür nur Größenklasse und Spielcode-Familie zählen, keine Prüfsumme (I3 25.11.: keine fremden Hashes)
+const LERN_GRUENDE = ['unbekannt', 'keine_gba', 'anderes_spiel', 'firered_veraendert', 'firered_sprache', 'unbound2x', 'kopf_kaputt'];
 
 function setStatus(message, kind = 'idle') {
   ui.status.textContent = message;
@@ -60,7 +60,7 @@ window.flushGoatEvents = function () {
 
 function hilfeZeigen(info) {
   ui.hilfeTitel.textContent = info.titel;
-  ui.hilfeText.textContent = info.text;
+  ui.hilfeText.textContent = info.satz ? `${info.satz} ${info.text || ''}`.trim() : info.text;
   ui.hilfeMail.href = RomErkennung.hilfeMail(HILFE_ADRESSE, info);
   ui.hilfeAktion.hidden = true;                  // nur fehlerZeigen blendet den Knopf bei Bedarf ein
   ui.hilfePruefsumme.hidden = true;
@@ -126,6 +126,10 @@ async function start() {
     const BASIS_VON_MODUS = { firered: 'firered', port_firered: 'firered', unbound: 'unbound101', port_unbound: 'port' };
     const istPort = m => m === 'port_firered' || m === 'port_unbound';
     const versionVon = m => istPort(m) ? `Port ${port.version}` : release.version;
+    // Zählname = Release-Tag (I8 25.11.): statistik.py sucht „patch-erfolg-<tag_name>“; „Port-2.0.0-beta.2“ fand es nie (Port-Erfolge = 0)
+    const portTag = port && /^port-[A-Za-z0-9._-]+$/.test(port.tag || '') ? port.tag : (port ? `port-v${port.version}` : '');
+    const tagVon = m => istPort(m) ? portTag : release.version;
+    const linieVon = z => z === 'port' ? 'port' : 'stable';   // ohne „-v“: statistik.py schneidet ab „-v“ ab
     let modus = 'firered';
     let wechsel = false;
     let ziel = 'v101';       // Auswahl der Person, nur sichtbar wenn der Port freigegeben ist
@@ -146,7 +150,7 @@ async function start() {
     directPatch.href = patchFireRed.file;
     directPatch.download = `${outputName}.bps`;
     directPatch.hidden = false;
-    directPatch.addEventListener('click', () => trackEvent('bps-direkt', versionVon(modus).replace(' ', '-')));
+    directPatch.addEventListener('click', () => trackEvent('bps-direkt', tagVon(modus)));
 
     // welcher Patch passt zu (erkannter Basis, Auswahl)? null = passt nicht
     function modusFuer(grund) {
@@ -156,14 +160,17 @@ async function start() {
       return null;
     }
 
+    // Linie verwechselt (I3 25.11.): der Satz nennt, was die ROM ist und welche Version dazu passt
     function falscheBasis() {
       if (romGrund === 'unbound101' && ziel === 'port') {
-        return { grund: 'port_falsche_basis', titel: 'Für den Port brauchst du eine andere Basis', untertitel: 'Unbound EN 1.0.1 erkannt',
-          text: 'Der Port läuft auf Unbound EN 2.1.1.1 oder auf FireRed (USA) Rev 0. Deine ROM ist Unbound EN 1.0.1 – dafür wähle oben „Unbound 1.0.1“.' };
+        return { grund: 'port_falsche_basis', satz: RomErkennung.basisSatz({ grund: 'unbound101' }, release),
+          titel: 'Falsche Linie: diese ROM passt zu Unbound 1.0.1, nicht zum Port', untertitel: 'Unbound EN 1.0.1 erkannt',
+          text: 'Der Port läuft auf Unbound EN 2.1.1.1 oder auf FireRed (USA) Rev 0. Wähle oben „Unbound 1.0.1“, dann passt deine ROM.' };
       }
       if (romGrund === 'port' && ziel === 'v101') {
-        return { grund: 'v101_falsche_basis', titel: 'Dafür brauchst du eine andere Basis', untertitel: 'Unbound EN 2.1.1.1 erkannt',
-          text: 'Unbound EN 2.1.1.1 passt nur zum Port. Für „Unbound 1.0.1“ brauchst du FireRed (USA) Rev 0 oder Unbound EN 1.0.1.' };
+        return { grund: 'v101_falsche_basis', satz: RomErkennung.basisSatz({ grund: 'port' }, release),
+          titel: 'Falsche Linie: diese ROM passt nur zum Port', untertitel: 'Unbound EN 2.1.1.1 erkannt',
+          text: 'Wähle oben „Port-Beta“, dann passt deine ROM. Für „Unbound 1.0.1“ brauchst du FireRed (USA) Rev 0 oder Unbound EN 1.0.1.' };
       }
       return null;
     }
@@ -274,7 +281,8 @@ async function start() {
           hilfeVerbergen();
           romGrund = BASIS_VON_MODUS[modus];
           ui.fileSubtitle.textContent = ERKANNT[modus];
-          setStatus(istPort(modus) ? 'Basis geprüft. Bereit für die Port-Beta.' : 'Basis geprüft. Bereit zum Patchen.', 'good');
+          const satz = RomErkennung.basisSatz({ grund: romGrund }, release);
+          setStatus(`${satz} ${istPort(modus) ? `Bereit für die Port-Beta ${port.version}.` : `Bereit zum Patchen (${release.version}).`}`, 'good');
           return;
         }
         const md5 = romFile.hashMD5().toLowerCase();
@@ -293,10 +301,10 @@ async function start() {
         const fehlerInfo = falscheBasis() || info;               // z. B. Port gewählt, ROM ist Unbound 1.0.1
         if (!fehlerGezaehlt) {
           trackEvent('patch-fehler', fehlerInfo.grund);           // nur der Grund, keine Dateidaten
+          trackEvent(`fehler-${linieVon(ziel)}`, fehlerInfo.grund);   // je Linie (stable | port) und Grund, anonym
           fehlerMerken(fehlerInfo.grund);
-          if (LERN_GRUENDE.includes(info.grund)) {                // Prüfsummen-Anfang, Größe, Spielcode: Erkennung erweitern
-            const code = RomErkennung.headerInfo(romFile._u8array).code.replace(/[^A-Z0-9]/g, '_') || 'kein';
-            trackEvent('rom-unbekannt', `${md5.slice(0, 8)}-${Math.round(romFile.fileSize / 1024)}k-${code}`);
+          if (LERN_GRUENDE.includes(info.grund)) {                // nur Größenklasse + Spielcode-Familie, KEINE Prüfsumme
+            trackEvent('rom-unbekannt', RomErkennung.zaehlKennung(romFile.fileSize, romFile._u8array));
           }
           fehlerGezaehlt = true;
         }
@@ -319,7 +327,8 @@ async function start() {
         setStatus(`Fertig. Ergebnis geprüft (${versionVon(modus)}).`, 'good');
       },
       ondownloadstart() {
-        trackEvent('patch-erfolg', versionVon(modus).replace(' ', '-'));
+        trackEvent('patch-erfolg', tagVon(modus));
+        trackEvent(`erfolg-${linieVon(istPort(modus) ? 'port' : 'v101')}`);
         const vorher = fehlerAbholen();
         if (vorher) trackEvent('patch-erfolg-nach-fehler', vorher);
       }

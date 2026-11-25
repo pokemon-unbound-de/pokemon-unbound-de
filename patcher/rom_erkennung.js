@@ -39,7 +39,61 @@
     if (s.startsWith('7z\xBC\xAF\x27\x1C') || s.startsWith('Rar!') || s.startsWith('\x1F\x8B')) return 'archiv';
     if (/\.(bps|ips|ups|ppf|xdelta)$/i.test(dateiname || '')) return 'patch';
     if (/\.(7z|rar|gz|tar)$/i.test(dateiname || '')) return 'archiv';
+    // Browser/Download: statt der Datei wurde eine Webseite gespeichert (Fehlerseite, Weiterleitung, Download-Portal)
+    if (/^(\xEF\xBB\xBF)?\s*<(!doctype|html|head|\?xml)/i.test(anfang(u8, 64))) return 'webseite';
     return null;
+  }
+
+  const MB16 = 16777216, MB32 = 33554432;
+  /* Größe/Kopf (I8 25.11.): -> 'kopf_versatz' | 'unvollstaendig' | 'kopf_kaputt' | null */
+  function groesseKopf(u8, size, h) {
+    if (u8 && (size === MB16 + 512 || size === MB32 + 512) && u8.length > 512 + 0xB2 && u8[512 + 0xB2] === 0x96) return 'kopf_versatz';
+    if (h.gba && h.code.startsWith('BPR') && size < MB16) return 'unvollstaendig';
+    if (!h.gba && (size === MB16 || size === MB32)) return 'kopf_kaputt';
+    return null;
+  }
+
+  function mb(size) { return (size / 1048576).toFixed(1).replace('.', ','); }
+
+  /* Ein Satz: was ist das, und welche Version passt dazu (I3 25.11. 18:40: „Das ist Unbound 2.1.1.1 englisch, passend: …“). */
+  function basisSatz(info, release) {
+    const port = portBereit(release) ? release.port : null;
+    const v = release.version || '';
+    const pv = port ? `v${String(port.version).replace(/^v/, '')}` : '';
+    const beide = port ? `${v} (Unbound 1.0.1) und die Port-Beta ${pv} (Unbound 2.1.1.1)` : v;
+    const keiner = 'passend: keine unserer Versionen';   // was stattdessen nötig ist, steht im Hilfetext darunter
+    switch (info.grund) {
+      case 'firered': return `Das ist FireRed (USA) Rev 0 englisch, passend: ${beide}.`;
+      case 'unbound101': return `Das ist Unbound 1.0.1 englisch, passend: ${v}.`;
+      case 'port': return `Das ist Unbound 2.1.1.1 englisch, passend: ${pv ? 'Port-Beta ' + pv : 'die Port-Beta (noch nicht freigegeben)'}.`;
+      case 'port_gesperrt': return 'Das ist Unbound 2.1.1.1 englisch, passend: die Port-Beta, die hier noch nicht freigegeben ist.';
+      case 'bereits_gepatcht': return `Das ist schon ${info.version_de || 'eine deutsche Version'}, ${info.aktuell ? 'du musst nichts patchen' : keiner}.`;
+      case 'unbound2x': return `Das ist ${info.name_2x || 'eine unbekannte 32-MB-Datei auf FireRed-Basis (meist eine andere Unbound-Version oder eine ältere deutsche ROM)'}, ${keiner}.`;
+      case 'rev1': return `Das ist FireRed (USA) Rev 1, ${keiner}.`;
+      case 'de': return `Das ist die deutsche Feuerrote Edition, ${keiner}.`;
+      case 'leafgreen': return `Das ist BlattGrün / LeafGreen, ${keiner}.`;
+      case 'firered_sprache': return `Das ist FireRed in einer anderen Sprache, ${keiner}.`;
+      case 'firered_veraendert': return `Das ist eine veränderte FireRed (USA) Rev 0, ${keiner}.`;
+      case 'unvollstaendig': return `Das ist eine unvollständige FireRed-Datei (${mb(info.size)} MB statt 16 MB), ${keiner}.`;
+      case 'kopf_kaputt': return `Das ist eine Datei in ROM-Größe mit beschädigtem Kopf, ${keiner}.`;
+      case 'kopf_versatz': return `Das ist eine ROM mit 512 Byte Vorspann, ${keiner}.`;
+      case 'webseite': return `Das ist eine gespeicherte Webseite, kein Spiel; ${keiner}.`;
+      case 'patchdatei': return `Das ist eine Patch-Datei, kein Spiel; ${keiner}.`;
+      case 'archiv': return `Das ist ein Archiv, kein Spiel; ${keiner}.`;
+      case 'spielstand': return `Das ist ein Spielstand, kein Spiel; ${keiner}.`;
+      case 'anderes_spiel': return `Das ist ein anderes GBA-Spiel, ${keiner}.`;
+      case 'keine_gba': return `Das ist keine GBA-Spieldatei, ${keiner}.`;
+      default: return `Diese Datei kennen wir nicht, ${keiner}.`;
+    }
+  }
+
+  /* Anonyme Zählkennung ohne Prüfsumme (I3 25.11.: keine fremden Hashes): Größenklasse + Spielcode-Familie. */
+  function zaehlKennung(size, u8) {
+    const h = headerInfo(u8);
+    const g = size === MB16 ? '16M' : size === MB32 ? '32M' : size < MB16 ? 'klein' : 'andere';
+    const f = !h.gba ? 'keingba' : h.code === 'BPRE' ? 'BPRE' : h.code === 'BPRD' ? 'BPRD'
+      : h.code.startsWith('BPR') ? 'BPRx' : h.code.startsWith('BPG') ? 'BPGx' : 'gba';
+    return `${g}-${f}`;
   }
 
   const SAVE_GROESSEN = [0x2000, 0x8000, 0x10000, 0x20000, 0x20010];
@@ -58,6 +112,12 @@
             rev1 | de | leafgreen | firered_sprache | firered_veraendert | anderes_spiel | keine_gba | unbekannt
      aktion (optional): 'zur_port_beta' = die Seite bietet einen Knopf „Zur Port-Beta wechseln“ an */
   function erkenne(md5, size, u8, release, kennungen, dateiname) {
+    const info = erkenneGrund(md5, size, u8, release, kennungen, dateiname);
+    info.satz = basisSatz(Object.assign({ size }, info), release);
+    return info;
+  }
+
+  function erkenneGrund(md5, size, u8, release, kennungen, dateiname) {
     const h = headerInfo(u8);
     md5 = (md5 || '').toLowerCase();
     kennungen = kennungen || {};
@@ -74,22 +134,25 @@
 
     // Schon deutsch: die aktuellen Ergebnisse stehen in release.json (nie veraltet), ältere in rom_kennungen.json
     if (release.outputMd5 && md5 === release.outputMd5.toLowerCase()) {
-      return { grund: 'bereits_gepatcht', titel: 'Das ist schon die aktuelle deutsche Version', untertitel: `Pokémon Unbound DE ${release.version} erkannt`,
+      return { grund: 'bereits_gepatcht', version_de: `Pokémon Unbound DE ${release.version}`, aktuell: true,
+        titel: 'Das ist schon die aktuelle deutsche Version', untertitel: `Pokémon Unbound DE ${release.version} erkannt`,
         text: `Diese ROM ist bereits Pokémon Unbound DE ${release.version}, die neueste Version. Du musst nichts patchen: spiel einfach weiter.` };
     }
     if (port.outputMd5 && md5 === port.outputMd5.toLowerCase()) {
-      return { grund: 'bereits_gepatcht', titel: 'Das ist schon die aktuelle Port-Beta', untertitel: 'Port-Beta DE erkannt',
+      return { grund: 'bereits_gepatcht', version_de: `die deutsche Port-Beta ${port.version || ''}`.trim(), aktuell: true,
+        titel: 'Das ist schon die aktuelle Port-Beta', untertitel: 'Port-Beta DE erkannt',
         text: `Diese ROM ist bereits die deutsche Port-Beta ${port.version || ''}. Du musst nichts patchen: spiel einfach weiter.` };
     }
     const gepatcht = (kennungen.bereits_gepatcht || {})[md5];
     if (gepatcht) {
-      return { grund: 'bereits_gepatcht', titel: 'Diese ROM ist schon deutsch', untertitel: `${gepatcht} erkannt`,
+      return { grund: 'bereits_gepatcht', version_de: gepatcht, aktuell: false,
+        titel: 'Diese ROM ist schon deutsch', untertitel: `${gepatcht} erkannt`,
         text: `Das ist bereits ${gepatcht}. Für das Update brauchst du wieder deine Original-ROM (${basis}). Bei einem Update der 1.0.1-Linie kannst du deinen Spielstand (.sav) einfach weiterverwenden.` };
     }
 
     const zweix = (kennungen.unbound2x || {})[md5];
     if (zweix) {
-      return { grund: 'unbound2x', titel: `${zweix} erkannt`, aktion: portBereit(release) ? 'zur_port_beta' : undefined,
+      return { grund: 'unbound2x', name_2x: zweix, titel: `${zweix} erkannt`, aktion: portBereit(release) ? 'zur_port_beta' : undefined,
         text: portBereit(release)
           ? 'Für den Port passen FireRed (USA) Rev 0 oder genau Unbound EN 2.1.1.1 mit der jeweiligen passenden Prüfsumme. Der 1.0.1-Patch passt zu Unbound EN 1.0.1 oder FireRed (USA) Rev 0.'
           : 'Für den Port passen genau Unbound EN 2.1.1.1 oder FireRed (USA) Rev 0. Der Beta-Patch ist hier noch nicht verfügbar. Für die bisherige Version kannst du Unbound EN 1.0.1 oder FireRed (USA) Rev 0 verwenden.' };
@@ -108,6 +171,23 @@
     if (art === 'archiv') {
       return { grund: 'archiv', titel: 'Bitte zuerst entpacken', untertitel: 'Gepacktes Archiv gewählt',
         text: `Das ist ein gepacktes Archiv (.7z, .rar oder .gz). Entpacke es zuerst, zum Beispiel mit 7-Zip, und wähle dann hier die .gba-Datei darin. Passend: ${basis}.` };
+    }
+    if (art === 'webseite') {
+      return { grund: 'webseite', titel: 'Das ist eine Webseite, kein Spiel', untertitel: 'Webseite statt Spieldatei',
+        text: `Beim Herunterladen wurde eine Webseite gespeichert statt der Spieldatei (das passiert bei Fehlerseiten und Download-Portalen). Wähle deine eigene Spieldatei (.gba): ${basis}.` };
+    }
+    const gk = groesseKopf(u8, size, h);
+    if (gk === 'kopf_versatz') {
+      return { grund: 'kopf_versatz', titel: 'Vor dem Spiel hängen 512 Byte', untertitel: 'ROM mit Vorspann',
+        text: `Die Datei ist 512 Byte größer als eine GBA-ROM, weil vorne ein Kopier-Vorspann hängt. Damit passt keine Prüfsumme. Nimm eine Sicherung ohne Vorspann: ${basis}.` };
+    }
+    if (gk === 'unvollstaendig') {
+      return { grund: 'unvollstaendig', titel: 'Die Datei ist unvollständig', untertitel: `${mb(size)} MB statt 16 MB`,
+        text: `Die Datei ist nur ${mb(size)} MB groß. Eine FireRed-ROM hat genau 16 MB. Meist ist der Download abgebrochen oder die ROM wurde gekürzt („trimmed“). Lade bzw. kopiere sie vollständig neu: ${basis}.` };
+    }
+    if (gk === 'kopf_kaputt') {
+      return { grund: 'kopf_kaputt', titel: 'Dateikopf beschädigt', untertitel: 'ROM-Größe, aber kein gültiger Kopf',
+        text: `Die Datei hat die Größe einer GBA-ROM, aber ihr Kopf ist beschädigt. Meist ist beim Kopieren oder Herunterladen etwas schiefgegangen. Nimm eine frische Kopie: ${basis}.` };
     }
     if (!h.gba && istSpielstand(size, dateiname)) {
       return { grund: 'spielstand', titel: 'Das ist ein Spielstand, kein Spiel', untertitel: 'Spielstand gewählt',
@@ -172,7 +252,7 @@
     return `mailto:${adresse}?subject=${encodeURIComponent(betreff)}&body=${encodeURIComponent(text)}`;
   }
 
-  const api = { erkenne, headerInfo, hilfeMail, portBereit, dateiArt, bpsQuellCrc };
+  const api = { erkenne, headerInfo, hilfeMail, portBereit, dateiArt, bpsQuellCrc, basisSatz, zaehlKennung };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else global.RomErkennung = api;
 })(typeof window !== 'undefined' ? window : globalThis);
