@@ -129,7 +129,14 @@ async function start() {
     // Zählname = Release-Tag (I8 25.11.): statistik.py sucht „patch-erfolg-<tag_name>“; „Port-2.0.0-beta.2“ fand es nie (Port-Erfolge = 0)
     const portTag = port && /^port-[A-Za-z0-9._-]+$/.test(port.tag || '') ? port.tag : (port ? `port-v${port.version}` : '');
     const tagVon = m => istPort(m) ? portTag : release.version;
-    const linieVon = z => z === 'port' ? 'port' : 'stable';   // ohne „-v“: statistik.py schneidet ab „-v“ ab
+    const zielTag = () => ziel === 'port' && port ? portTag : release.version;
+    // Ein Weg für alle Fehler (Basis und Ergebnis, Review I5 25.11.): Grund allein (kompatibel) und Grund + aktiver Release-Tag.
+    // Form „fehler-<grund>-<tag>“: der Grund hat kein „-“, der Rest ist genau der tag_name (statistik.py ordnet je Release zu).
+    function fehlerZaehlen(grund, tag) {
+      trackEvent('patch-fehler', grund);
+      trackEvent(`fehler-${grund}`, tag);
+      fehlerMerken(grund);
+    }
     let modus = 'firered';
     let wechsel = false;
     let ziel = 'v101';       // Auswahl der Person, nur sichtbar wenn der Port freigegeben ist
@@ -300,9 +307,7 @@ async function start() {
         }
         const fehlerInfo = falscheBasis() || info;               // z. B. Port gewählt, ROM ist Unbound 1.0.1
         if (!fehlerGezaehlt) {
-          trackEvent('patch-fehler', fehlerInfo.grund);           // nur der Grund, keine Dateidaten
-          trackEvent(`fehler-${linieVon(ziel)}`, fehlerInfo.grund);   // je Linie (stable | port) und Grund, anonym
-          fehlerMerken(fehlerInfo.grund);
+          fehlerZaehlen(fehlerInfo.grund, zielTag());             // nur Grund und Release-Tag, keine Dateidaten
           if (LERN_GRUENDE.includes(info.grund)) {                // nur Größenklasse + Spielcode-Familie, KEINE Prüfsumme
             trackEvent('rom-unbekannt', RomErkennung.zaehlKennung(romFile.fileSize, romFile._u8array));
           }
@@ -316,8 +321,7 @@ async function start() {
         const hash = romFile.hashMD5().toLowerCase();
         const erwartet = istPort(modus) ? port.outputMd5 : release.outputMd5;
         if (hash !== erwartet) {
-          trackEvent('patch-fehler', 'ergebnis');
-          fehlerMerken('ergebnis');
+          fehlerZaehlen('ergebnis', tagVon(modus));
           const info = { grund: 'ergebnis', titel: 'Ergebnis weicht ab',
             text: 'Die erzeugte ROM hat nicht die erwartete Prüfsumme. Es wurde nichts heruntergeladen.' };
           setStatus('Ergebnis weicht von der erwarteten Prüfsumme ab. Kein Download.', 'bad');
@@ -327,8 +331,7 @@ async function start() {
         setStatus(`Fertig. Ergebnis geprüft (${versionVon(modus)}).`, 'good');
       },
       ondownloadstart() {
-        trackEvent('patch-erfolg', tagVon(modus));
-        trackEvent(`erfolg-${linieVon(istPort(modus) ? 'port' : 'v101')}`);
+        trackEvent('patch-erfolg', tagVon(modus));             // Linie folgt aus dem Tag (port-v… = Port)
         const vorher = fehlerAbholen();
         if (vorher) trackEvent('patch-erfolg-nach-fehler', vorher);
       }

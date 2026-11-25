@@ -68,7 +68,8 @@
       case 'port': return `Das ist Unbound 2.1.1.1 englisch, passend: ${pv ? 'Port-Beta ' + pv : 'die Port-Beta (noch nicht freigegeben)'}.`;
       case 'port_gesperrt': return 'Das ist Unbound 2.1.1.1 englisch, passend: die Port-Beta, die hier noch nicht freigegeben ist.';
       case 'bereits_gepatcht': return `Das ist schon ${info.version_de || 'eine deutsche Version'}, ${info.aktuell ? 'die neueste Version' : keiner}.`;
-      case 'unbound2x': return `Das ist ${info.name_2x || 'eine unbekannte 32-MB-Datei auf FireRed-Basis (meist eine andere Unbound-Version oder eine ältere deutsche ROM)'}, ${keiner}.`;
+      // Größe aus der Datei, nicht aus der Gruppe (Review I5 25.11. P1: 20 MiB hieß sonst „32-MB-Datei“)
+      case 'unbound2x': return `Das ist ${info.name_2x || `eine unbekannte FireRed-Datei${info.size ? ` mit ${mb(info.size).replace(/,0$/, '')} MB` : ''} (meist eine andere Unbound-Version oder eine ältere deutsche ROM)`}, ${keiner}.`;
       case 'rev1': return `Das ist FireRed (USA) Rev 1, ${keiner}.`;
       case 'de': return `Das ist die deutsche Feuerrote Edition, ${keiner}.`;
       case 'leafgreen': return `Das ist BlattGrün / LeafGreen, ${keiner}.`;
