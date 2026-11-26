@@ -33,7 +33,7 @@ Aus der Fehlerliste des Ports, automatisch erzeugt. Diese Punkte betreffen die P
 | PORT-017 | Auswahl zeigt „No“ statt „Nein“: Mehrfachauswahl, z. B. Randomizer-Frage „Variante mit neu abgestimmten Werten“ | offen (P1) |
 | PORT-020 | Namen und Etiketten weichen von der 1.0-Version ab (Mom, Alt): Namensschild, Rivale, Schwierigkeit, Speicherbox-Label | offen (P1) |
 | PORT-021 | Namenseingabe: Tasten englisch (Grafik): Namenseingabe, Tastatur | offen (P2) |
-| PORT-045 | Nach Rückgabe des Pakets an Prof. Lärch: NPC erklärt Karte, das X zeigt immer das nächste Ziel (neu in 2.1.1, nicht in 1.0.1) | offen (P3) |
+| PORT-045 | Nach Rückgabe des Pakets an Prof. Lärch: NPC erklärt Karte, das X zeigt immer das nächste Ziel (neu in 2.1.1.1, nicht in 1.0.1) | offen (P3) |
 | PORT-052 | Option "Speicherfrage: Ein" fragt vor Kaempfen und Story-Ereignissen nach dem Speichern | offen (P2) |
 | PORT-058 | Pokedex-Eintrag Nebulak: Text links abgeschnitten ("Mit gasartigem Koerper ...") | offen (P1) |
 | PORT-059 | Pokedex Seite 5/8 (Werte): "HP, Atk, Def, SpA, SpD, Spe" englisch (Nebulak) | offen (P1) |
