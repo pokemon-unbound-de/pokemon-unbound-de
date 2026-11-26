@@ -4,6 +4,8 @@
   "9cad8e771940e7f7094d13911552cef0": "Unbound (EN) 2.1.1.1"
  },
  "bereits_gepatcht": {
+  "29758b848624300621c9949725bfd65a": "Pokémon Unbound DE Port-Beta 3b (Unbound 2.1.1.1)",
+  "d87d4ba5e24f592f976434abab6d03ee": "Pokémon Unbound DE Port-Beta v2.0.0-beta.2",
   "f8c03e43a52145d0e46a1f065cb32502": "Pokémon Unbound DE v0.1",
   "1365c66b0a833e22be8e6ec4337d780e": "Pokémon Unbound DE v0.1.1",
   "21666331e1f7e98a45bb8eb9f1d3bb10": "Pokémon Unbound DE v0.1.2",
@@ -13,6 +15,10 @@
   "554cadea4265428ca4818cfc45d1afbc": "Pokémon Unbound DE v0.1.6",
   "e96d7af72c60d8991bccbd86ea3de3f5": "Pokémon Unbound DE v0.1.7",
   "816bada9e28bf744c0a753202c7acdda": "Pokémon Unbound DE v0.1.7.1",
-  "4c9fdd88666bc86b572badfc1d1272c8": "Pokémon Unbound DE v0.1.7.2"
+  "4c9fdd88666bc86b572badfc1d1272c8": "Pokémon Unbound DE v0.1.7.2",
+  "ac1e29a026391f1ddb394a3276f0864c": "Pokémon Unbound DE v0.1.7.3",
+  "10916159a44548f0338615646f60cb2f": "Pokémon Unbound DE v0.1.8",
+  "dfd5b845bda94590572987f0fc6fde8e": "Pokémon Unbound DE v0.1.9",
+  "155aba19258e1f7ccd00264961b643ee": "Pokémon Unbound DE v1.0.0"
  }
 }

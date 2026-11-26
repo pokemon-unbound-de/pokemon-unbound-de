@@ -9,6 +9,7 @@ const kennungen = JSON.parse(readFileSync(new URL('./rom_kennungen.json', import
 const header = (code, rev = 0) => {
   const data = new Uint8Array(0xc0);
   for (let i = 0; i < 4; i++) data[0xac + i] = code.charCodeAt(i);
+  data[0xb2] = 0x96;                       // fester Wert jedes echten GBA-Headers
   data[0xbc] = rev;
   return data;
 };
@@ -18,7 +19,7 @@ const fake = '1'.repeat(32);
 const de = erkennen(fake, mb16, 'BPRD');
 assert.equal(de.grund, 'de');
 assert.match(de.text, /USA.*Rev 0/);
-assert.match(de.titel, /Möglicherweise/);
+assert.match(de.titel, /Deutsche Feuerrote Edition/);
 const port = erkennen(release.port.baseMd5, 2 * mb16, 'BPRE');
 assert.equal(port.grund, 'port_gesperrt');
 assert.equal(E.portBereit(release), false);
@@ -35,8 +36,8 @@ assert.match(known.text, /Für den Port passen genau Unbound EN 2\.1\.1\.1 oder 
 assert.match(heuristic.text, /Für den Port passen genau Unbound EN 2\.1\.1\.1 oder FireRed \(USA\) Rev 0/);
 assert.equal(erkennen(release.baseMd5, mb16, 'BPRE').grund, 'firered');
 assert.equal(erkennen(release.unboundBaseMd5, 2 * mb16, 'BPRE').grund, 'unbound101');
-assert.equal(erkennen(fake, mb16, 'BPRE').grund, 'unbekannt');
-assert.equal(erkennen(fake, mb16, 'BPEE').grund, 'unbekannt');
+assert.equal(erkennen(fake, mb16, 'BPRE').grund, 'firered_veraendert');   // 23.11.: eigener Grund statt „unbekannt“
+assert.equal(erkennen(fake, mb16, 'BPEE').grund, 'anderes_spiel');
 const enabled = { ...release, port: { ...release.port, enabled: true, version: '2.1.1.1-beta',
   baseCrc32: '01234567', outputMd5: '2'.repeat(32),
   fireredPatch: 'patches/port_test_firered.bps', fireredPatchSha256: '3'.repeat(64),

@@ -32,8 +32,8 @@
       <div id="rom-patcher-container">
         <fieldset class="ziel" id="ziel" hidden>
           <legend>Welche Version?</legend>
-          <label><input type="radio" name="ziel" value="v101" checked> Unbound 1.0.1 DE <small>Pre-Stable</small></label>
-          <label><input type="radio" name="ziel" value="port"> Port Unbound 2.1.1 DE <small>Beta</small></label>
+          <label><input type="radio" name="ziel" value="v101" checked> Unbound 1.0.1 DE <small>Stable</small></label>
+          <label><input type="radio" name="ziel" value="port"> Port Unbound 2.1.1.1 DE <small>Beta</small></label>
         </fieldset>
         <p class="port-hinweis" id="port-hinweis" hidden></p>
         <div class="field-head"><label for="rom-patcher-input-file-rom">Deine ROM</label><span id="field-hint">.gba · FireRed USA Rev 0 oder Unbound EN 1.0.1</span></div>
@@ -48,12 +48,14 @@
         <div class="hilfe" id="hilfe" role="alert" hidden>
           <strong id="hilfe-titel"></strong>
           <p id="hilfe-text"></p>
+          <p class="hilfe-pruefsumme" id="hilfe-pruefsumme" hidden></p>
+          <p><button type="button" class="hilfe-aktion" id="hilfe-aktion" hidden>Zur Port-Beta wechseln (für Unbound 2.1.1.1)</button></p>
           <p class="hilfe-links"><a id="hilfe-mail" href="#">Hilfe per E-Mail</a> · <a href="https://discord.gg/fSkhHppgcv" target="_blank" rel="noopener noreferrer">Discord, Kanal #hilfe ↗</a></p>
           <small>Die E-Mail öffnet sich in deinem Mailprogramm mit Fehlergrund, Prüfsumme (MD5) und Browser – du siehst alles vor dem Senden. Bitte keine ROM anhängen.</small>
         </div>
       </div>
       <p class="footnote" id="footnote-basis">Du benötigst eine eigene legale Sicherung: FireRed (USA) Rev 0 oder Pokémon Unbound (EN) 1.0.1. Nicht passend: FireRed Rev 1, die deutsche Feuerrote Edition, BlattGrün, Unbound 2.x oder eine schon gepatchte deutsche ROM.</p>
-      <p class="footnote">Anonyme Zählung ohne Cookies (GoatCounter): ROM-Wahl, Patch-Erfolg oder -Fehler (mit Fehlergrund, z. B. „Rev 1“; bei unbekannter ROM auch Prüfsummen-Anfang, Dateigröße und Spielcode) und direkter BPS-Download. Keine ROM-Daten oder Dateinamen werden übertragen.</p>
+      <p class="footnote">Datenschutz: Wir zählen anonym und ohne Cookies (GoatCounter) nur, wie oft eine ROM gewählt wurde, wie oft das Patchen geklappt hat und aus welchem Grund nicht (z. B. „Rev 1“, je Version), dazu den direkten BPS-Download. Bei unbekannten Dateien zählen wir nur die Größenklasse (z. B. 16 MB) und die Spielfamilie (z. B. FireRed). IP-Adressen werden nicht gespeichert. Keine Prüfsummen an die Seitenstatistik, keine Dateinamen, keine Dateien: geprüft wird alles lokal. Nur wenn du die Hilfe-Mail selbst öffnest und abschickst, steht darin die Prüfsumme deiner ROM.</p>
       <p class="footnote"><a id="bps-direct" href="#" hidden>Nur BPS-Patch direkt herunterladen</a></p>
     </section>
   </main>
