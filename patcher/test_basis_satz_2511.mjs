@@ -7,7 +7,7 @@ const require = createRequire(import.meta.url);
 const E = require('./rom_erkennung.js');
 const echt = JSON.parse(readFileSync(new URL('./release.json', import.meta.url), 'utf8'));
 const kennungen = JSON.parse(readFileSync(new URL('./rom_kennungen.json', import.meta.url), 'utf8'));
-// wie live (25.11.): Stable v1.0.0, Port 2.0.0-beta.2 freigegeben
+// wie live (26.11.): Stable v1.0.0, Port 2.0.0-beta.3 freigegeben
 const live = { ...echt, version: 'v1.0.0', outputMd5: '155aba19258e1f7ccd00264961b643ee' };
 const aus = { ...live, port: { ...live.port, enabled: false } };
 const MB16 = 16777216, MB32 = 33554432, fake = '1'.repeat(32);
@@ -33,20 +33,20 @@ function fall(name, info, grund, satzMuster, rel = live) {
 
 // 1) Basis per Hash, ein Satz mit passender Version
 fall('FireRed Rev 0', E.erkenne(live.baseMd5, MB16, datei(64, [], 'BPRE'), live, kennungen), 'firered',
-  /^Das ist FireRed \(USA\) Rev 0 englisch, passend: v1\.0\.0 \(Unbound 1\.0\.1\) und die Port-Beta v2\.0\.0-beta\.2 \(Unbound 2\.1\.1\.1\)\.$/);
+  /^Das ist FireRed \(USA\) Rev 0 englisch, passend: v1\.0\.0 \(Unbound 1\.0\.1\) und die Port-Beta v2\.0\.0-beta\.3 \(Unbound 2\.1\.1\.1\)\.$/);
 fall('FireRed Rev 0, Port aus', E.erkenne(live.baseMd5, MB16, datei(64, [], 'BPRE'), aus, kennungen), 'firered',
   /^Das ist FireRed \(USA\) Rev 0 englisch, passend: v1\.0\.0\.$/);
 fall('Unbound EN 1.0.1', E.erkenne(live.unboundBaseMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'unbound101',
   /^Das ist Unbound 1\.0\.1 englisch, passend: v1\.0\.0\.$/);
 fall('Unbound EN 2.1.1.1 (Beispiel aus dem Auftrag)', E.erkenne(live.port.baseMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'port',
-  /^Das ist Unbound 2\.1\.1\.1 englisch, passend: Port-Beta v2\.0\.0-beta\.2\.$/);
+  /^Das ist Unbound 2\.1\.1\.1 englisch, passend: Port-Beta v2\.0\.0-beta\.3\.$/);
 fall('Unbound EN 2.1.1.1, Port aus', E.erkenne(live.port.baseMd5, MB32, datei(64, [], 'BPRE'), aus, kennungen), 'port_gesperrt', /noch nicht freigegeben/);
 
 // 2) schon gepatcht: aktuell (beide Linien) und ältere Version
 fall('schon v1.0.0', E.erkenne(live.outputMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
   /^Das ist schon Pokémon Unbound DE v1\.0\.0, die neueste Version\.$/);
-fall('schon Port-Beta 2.0.0-beta.2', E.erkenne(live.port.outputMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
-  /^Das ist schon die deutsche Port-Beta 2\.0\.0-beta\.2, die neueste Version\.$/);
+fall('schon Port-Beta 2.0.0-beta.3', E.erkenne(live.port.outputMd5, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
+  /^Das ist schon die deutsche Port-Beta 2\.0\.0-beta\.3, die neueste Version\.$/);
 const alt = Object.keys(kennungen.bereits_gepatcht).find(k => kennungen.bereits_gepatcht[k] === 'Pokémon Unbound DE v0.1');
 fall('schon ältere DE-Version', E.erkenne(alt, MB32, datei(64, [], 'BPRE'), live, kennungen), 'bereits_gepatcht',
   /^Das ist schon Pokémon Unbound DE v0\.1, passend: keine unserer Versionen\.$/);
@@ -88,7 +88,7 @@ assert.ok(/fehlerZaehlen\(fehlerInfo\.grund, zielTag\(\)\)/.test(app), 'Basisfeh
 assert.ok(/fehlerZaehlen\('ergebnis', tagVon\(modus\)\)/.test(app), 'Ergebnisfehler nicht über fehlerZaehlen');
 assert.ok(!/trackEvent\('patch-fehler', 'ergebnis'\)/.test(app), 'Ergebnisfehler zählt noch am Weg vorbei');
 assert.ok(/trackEvent\('patch-erfolg', tagVon\(modus\)\)/.test(app) && !/replace\(' ', '-'\)/.test(app), 'Erfolg nicht per Release-Tag');
-assert.equal('patch-erfolg-' + live.port.tag, 'patch-erfolg-port-v2.0.0-beta.2', 'Port-Erfolg = patch-erfolg-<tag_name>');
+assert.equal('patch-erfolg-' + live.port.tag, 'patch-erfolg-port-v2.0.0-beta.3', 'Port-Erfolg = patch-erfolg-<tag_name>');
 // Zerlegung „fehler-<grund>-<tag>“: kein Grund enthält „-“, sonst wäre der Tag nicht eindeutig
 const gruende = new Set([...app.matchAll(/grund: '([^']+)'/g), ...readFileSync(new URL('./rom_erkennung.js', import.meta.url), 'utf8').matchAll(/grund: '([^']+)'/g)].map(m => m[1]));
 for (const g of gruende) assert.ok(!g.includes('-'), `Grund ${g} enthält „-“`);
