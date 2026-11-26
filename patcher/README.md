@@ -26,7 +26,7 @@ Freischalten (erst nach der Port-Beta, nur per Pull Request nach Freigabe):
    (oder den Workflow) laufen lassen. Der Sync prüft Basis-Prüfsummen, SHA-256 der Assets, BPS-CRCs und dass beide Wege
    dasselbe Ergebnis liefern, spiegelt die Patches nach `patches/port_*.bps` und trägt Ergebnis-MD5, Version und
    Hashes in `port` ein. Schlägt eine Prüfung fehl, bricht der Sync ab (die Seite wird dann nicht veröffentlicht).
-3. Die Seite zeigt dann die Auswahl „Unbound 1.0.1 DE“ / „Port Unbound 2.1.1 DE (Beta)“: FireRed Rev 0 → je nach
+3. Die Seite zeigt dann die Auswahl „Unbound 1.0.1 DE · Stable“ / „Port Unbound 2.1.1.1 DE · Beta“: FireRed Rev 0 → je nach
    Auswahl, Unbound 2.1.1.1 → immer Port. Das Ergebnis wird gegen `port.outputMd5` geprüft.
 
 Tests: `node patcher/test_rom_erkennung.mjs` (Erkennung, Flag, Block-Prüfung) und `python patcher/test_sync_port.py`

@@ -9,21 +9,21 @@
 ## 1. Hauptweg: Patch-Seite (Browser – PC, Handy, Tablet)
 
 Öffne die **[Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)**, wähle deine eigene **Pokémon FireRed (USA), Rev 0** und tippe auf **Deutsche ROM erstellen**.
-Die Seite prüft deine ROM, wendet immer den Patch der **neuesten Beta** an und kontrolliert die fertige ROM per Prüfsumme, bevor sie heruntergeladen wird.
+Die Seite prüft deine ROM, wendet immer den Patch der **neuesten Version** an (Stable v1.0.0 für Unbound 1.0.1; für die Port-Beta oben „Port Unbound 2.1.1.1 DE“ wählen) und kontrolliert die fertige ROM per Prüfsumme, bevor sie heruntergeladen wird.
 Deine ROM wird dabei nur in deinem Browser verarbeitet und **nicht hochgeladen**.
 
 FireRed **Rev 1**, die europäische/deutsche „Feuerrote Edition“ oder eine bereits gepatchte ROM werden abgelehnt.
 
 ## 2. Alternativen (offline / ohne Browser oder mit Unbound-EN-ROM)
 
-Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) gibt es beide Patches (`vX.Y.Z` = Versionsnummer der neuesten Beta):
+Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) gibt es beide Patches (`vX.Y.Z` = Versionsnummer der neuesten Stable-Version, derzeit v1.0.0):
 
 | Weg | Basis-ROM | MD5 der Basis | Patch-Datei |
 | --- | --- | --- | --- |
 | **A** | Pokémon FireRed (USA), Rev 0 | `e26ee0d44e809351c8ce2d73c7400cdd` | `pokemon_unbound_de_vX.Y.Z_von_firered_usa.bps` (enthält Unbound v1.0.1) |
 | B | Pokémon Unbound (englisch) v1.0.1 | `52192d7e7268245e2e30b7d1a802d33d` | `pokemon_unbound_de_vX.Y.Z.bps` |
 
-Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen **nicht**.
+Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen zu diesen Patches **nicht**. Für Unbound 2.1.1.1 gibt es die eigene Port-Beta (Release `port-v2.0.0-beta.2`).
 MD5 deiner Datei: Windows `certutil -hashfile "DeineROM.gba" MD5` · macOS `md5 "DeineROM.gba"` · Linux `md5sum "DeineROM.gba"`.
 
 - **[Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/)** (Browser, auch für Weg B): ROM wählen (zeigt die MD5), `.bps` wählen, *Apply patch*.
