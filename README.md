@@ -62,18 +62,18 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 25.11.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 26.11.2026) -->
+- REGRESSION/Rest von #56/#113 in v1.0.0: „A critical hit on Pokémon]!“ EN …
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(behoben, kommt mit dem nächsten Release)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
 - Kanon-Abweichungen Items/Attacken (z. B. Glare „Giftblick“ ≠ „Schlangenblick“, …
 - Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt *(eigener Track)*
 - Port: Kampf-Healthboxen zerrupft (Oberkante der Namen abgeschnitten, Level … *(behoben, kommt mit dem nächsten Release)*
 - MENUEFENSTER_ZU_SCHMAL in 1.0.1 *(behoben, kommt mit dem nächsten Release)*
+- Ankauf abgelehnt EN: „Item]? Oh, no. I can't buy that.“ (Laden, Verkaufen …
 - Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
-- Spieler-Pronomen dort, wo das Original nicht verzweigt (13 neutrale Texte) *(folgt mit dem Port 2.1.1.1)*
-- Datum DE-Format, Doppelfragen Speichern/Attacke lernen *(folgt mit dem Port 2.1.1.1)*
-- … und 6 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- … und 8 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
 Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
@@ -140,13 +140,13 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 25.11.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 26.11.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 25.11.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 26.11.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |

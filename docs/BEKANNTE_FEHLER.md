@@ -1,16 +1,18 @@
 # Bekannte Fehler – Pokémon Unbound auf Deutsch
 
-Automatisch erzeugt aus der internen Fehlerliste (Stand 25.11.2026). Nicht von Hand bearbeiten.
+Automatisch erzeugt aus der internen Fehlerliste (Stand 26.11.2026). Nicht von Hand bearbeiten.
 Neue Fehler bitte mit Ort + Screenshot in `#beta-bugs` auf Discord melden.
 
 | Nr. | Problem | Status |
 |---|---|---|
+| 147 | REGRESSION/Rest von #56/#113 in v1.0.0: „A critical hit on Pokémon]!“ EN … | offen (P1) |
 | 72 | Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … | behoben, kommt mit dem nächsten Release |
 | 117 | Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) | eigener Track |
 | 139 | Kanon-Abweichungen Items/Attacken (z. B. Glare „Giftblick“ ≠ „Schlangenblick“, … | offen (P2) |
 | 142 | Dialogwerkstatt: Spielbegriffe noch änderbar, Vorschau doppelt | eigener Track |
 | 143 | Port: Kampf-Healthboxen zerrupft (Oberkante der Namen abgeschnitten, Level … | behoben, kommt mit dem nächsten Release |
 | 146 | MENUEFENSTER_ZU_SCHMAL in 1.0.1 | behoben, kommt mit dem nächsten Release |
+| 148 | Ankauf abgelehnt EN: „Item]? Oh, no. I can't buy that.“ (Laden, Verkaufen … | offen (P2) |
 | 145 | Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes | offen (P3) |
 | 60 | Stockwerke EN (B2F, 1F …) → „2. UG, 1. UG, EG, 1. OG, 2. OG …“ global … | folgt im Port (Unbound 2.x) |
 | 137 | EN-Rest „Autumn“ + uneinheitliche Ortsnamen (Fund aus Marias … | folgt im Port (Unbound 2.x) |
@@ -33,7 +35,12 @@ Aus der Fehlerliste des Ports, automatisch erzeugt. Diese Punkte betreffen die P
 | PORT-017 | Auswahl zeigt „No“ statt „Nein“: Mehrfachauswahl, z. B. Randomizer-Frage „Variante mit neu abgestimmten Werten“ | offen (P1) |
 | PORT-020 | Namen und Etiketten weichen von der 1.0-Version ab (Mom, Alt): Namensschild, Rivale, Schwierigkeit, Speicherbox-Label | offen (P1) |
 | PORT-021 | Namenseingabe: Tasten englisch (Grafik): Namenseingabe, Tastatur | offen (P2) |
+| PORT-036 | Pokémon-Ruf als Attackenname übersetzt: Eishöhle, Ruf von Sandamer („Schlitzer!“) | offen (P2) |
 | PORT-045 | Nach Rückgabe des Pakets an Prof. Lärch: NPC erklärt Karte, das X zeigt immer das nächste Ziel (neu in 2.1.1.1, nicht in 1.0.1) | offen (P3) |
 | PORT-052 | Option "Speicherfrage: Ein" fragt vor Kaempfen und Story-Ereignissen nach dem Speichern | offen (P2) |
 | PORT-058 | Pokedex-Eintrag Nebulak: Text links abgeschnitten ("Mit gasartigem Koerper ...") | offen (P1) |
 | PORT-059 | Pokedex Seite 5/8 (Werte): "HP, Atk, Def, SpA, SpD, Spe" englisch (Nebulak) | offen (P1) |
+| PORT-065 | Attackenbeschreibung: Punkte von Ä/Ö/Ü in der ersten Zeile ragen über den oberen Rand („Überträgt per Suggestion…“) | offen (P3) |
+| PORT-066 | Patcher: „Port Unbound 2.1.1 DE“ statt 2.1.1.1 und „Unbound 1.0.1 DE Pre-Stable“ obwohl v1.0.0 Stable ist | offen (P1) |
+| PORT-069 | Pokémon-Werte, Seite Fleißpunkte/IS: Die Etiketten zeigen Textreste („kte:“ in der IS-Zeile, „reme Supernase“ als KP-Etikett, ein Dialogtext als SVe-Etikett). Kein Absturz | offen (P1) |
+| PORT-070 | Trainerklassen-Namen englisch, z. B. in Kampfansagen: „Light of Ruin Leader“, „Light of Ruin Admin“, „Light of Ruin“, „Terror Granbull“, „Black Ferrothorn“, „Science Society“ | offen (P1) |
