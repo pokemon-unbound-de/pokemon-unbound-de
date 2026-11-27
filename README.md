@@ -2,15 +2,15 @@
 
 [![Neueste Version](https://img.shields.io/github/v/release/pokemon-unbound-de/pokemon-unbound-de?include_prereleases&label=Neueste%20Version&color=blue)](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest)
 
-> **Das große Update ist da:** **v1.0.0**, die Stable-Fassung für Unbound 1.0.1 mit deutschen Credits im Abspann, und **v2.0.0-beta.2**, die neue Beta für Unbound 2.1.1.1. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
+> **Das große Update ist da:** **v1.0.0**, die Stable-Fassung für Unbound 1.0.1 mit deutschen Credits im Abspann, und **v2.0.0-beta.3**, die aktuelle Beta für Unbound 2.1.1.1. Alle Neuigkeiten kommen auf unserem [Discord](https://discord.gg/fSkhHppgcv).
 
-## Neu: Beta 2 für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.2)
+## Neu: Beta 3 für Pokémon Unbound 2.1.1.1 (v2.0.0-beta.3)
 
-**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der zweiten Fassung.** Rund **93 % der geprüften Textstellen** haben eine deutsche Vorlage. Neu sind unter anderem viele bisher englische Texte. Du findest noch englische Reste, und genau die suchen wir.
+**Die deutsche Version für die aktuelle Unbound-Version 2.1.1.1 ist als offene Beta da, jetzt in der dritten Fassung.** Rund **93 % der geprüften Textstellen** haben eine deutsche Vorlage. Neu sind unter anderem das MARKT-Schild, die TM-Box mit Attackenbeschreibungen, die wieder in den Kasten passen, und „VM“ statt „HM“ ([CHANGELOG](CHANGELOG.md)). Du findest noch englische Reste, und genau die suchen wir.
 
 ·  🧩 **[Port-Beta im Browser patchen](https://pokemon-unbound-de.github.io/pokemon-unbound-de/)** (Auswahl „Port Unbound 2.1.1.1 DE“; geht mit deiner eigenen **Unbound-2.1.1.1-ROM (englisch)** oder mit **Pokémon FireRed (USA) Rev 0**)
-·  📦 **[Release v2.0.0-beta.2](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.2)** (beide `.bps`-Dateien und Prüfsummen)
-·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden in `#port-feedback`)
+·  📦 **[Release v2.0.0-beta.3](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.3)** (beide `.bps`-Dateien und Prüfsummen)
+·  💬 **[Discord](https://discord.gg/fSkhHppgcv)** (Fehler melden im Forum `#port-bugs`)
 ·  🛠️ **[Wie wir den Port gebaut haben](docs/PORT_BAU.md)**
 
 Sichere vor dem ersten Start deinen Spielstand, es ist eine Beta. Wie wir die Zahlen gemessen haben, steht [hier](docs/PORT_BAU.md#was-die-zahlen-bedeuten).
@@ -58,11 +58,11 @@ Story, NPC-Dialoge, Kämpfe, Menüs, Items, Attacken, Fähigkeiten und das Missi
 - Die Übersetzung ist **KI-gestützt** und automatisch geprüft, aber vieles hat noch kein Mensch gegengelesen.
 - Manche Namen sind wegen fester Zeichenlimits gekürzt (z. B. einzelne Item-Namen) – Liste: `ABKUERZUNGEN.md` auf der Release-Seite.
 - Basis ist Unbound **v1.0.1**, nicht die aktuelle Version 2.x. Spielstände von 2.x passen nicht.
-- **Port auf Unbound 2.1.1.1:** Seit dem 18.11.2026 gibt es eine offene Beta, jetzt in der Fassung **v2.0.0-beta.2** (siehe oben), siehe auch [Roadmap](ROADMAP.md). Die Basis dieser Stable-Linie bleibt Unbound 1.0.1.
+- **Port auf Unbound 2.1.1.1:** Seit dem 18.11.2026 gibt es eine offene Beta, jetzt in der Fassung **v2.0.0-beta.3** (siehe oben), siehe auch [Roadmap](ROADMAP.md). Die Basis dieser Stable-Linie bleibt Unbound 1.0.1.
 
 Offene Fehler, die wir schon kennen:
 
-<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 26.11.2026) -->
+<!-- BEKANNT:START (automatisch aus der Fehlerliste, Stand 27.11.2026) -->
 - REGRESSION/Rest von #56/#113 in v1.0.0: „A critical hit on Pokémon]!“ EN …
 - Credits & Ende: „Pokémon Unbound Deutsche Edition“; Nevio als Hauptlokalisator … *(behoben, kommt mit dem nächsten Release)*
 - Pokédex-Einträge nicht kanonisch („Dieses Meeres-Pokémon …“ bei Dragoran) *(eigener Track)*
@@ -73,10 +73,10 @@ Offene Fehler, die wir schon kennen:
 - Ankauf abgelehnt EN: „Item]? Oh, no. I can't buy that.“ (Laden, Verkaufen …
 - Weitere Karten mit Map-Skript-Tabelle voller Fremdbytes
 - Kampf-Intro „Arenaleiter“ bei Frauen (+ Thronfolgerin, Ass-Trainerin) *(folgt mit dem Port 2.1.1.1)*
-- … und 8 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#beta-bugs`](https://discord.com/channels/1536411206691328088/1561133876318052444) auf [Discord](https://discord.gg/fSkhHppgcv).
+- … und 8 weitere – komplette Liste: angehefteter Beitrag **„📌 Bekannte Fehler“** in [`#bekannte-fehler`](https://discord.com/channels/1536411206691328088/1569384805743992882) auf [Discord](https://discord.gg/fSkhHppgcv).
 <!-- BEKANNT:ENDE -->
 
-Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf Discord.
+Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Bereits gemeldete Fehler: angehefteter Beitrag „📌 Bekannte Fehler“ in `#bekannte-fehler` auf Discord.
 
 ## Community & Wiki
 
@@ -89,7 +89,7 @@ Was sich mit jeder Version geändert hat, steht im [CHANGELOG](CHANGELOG.md). Be
 
 Du brauchst kein Vorwissen. Spiel einfach und sag uns, was dir auffällt: englischer Text, abgeschnittene Wörter, Text, der aus dem Kasten läuft, oder komische Formulierungen.
 
-- **Discord:** Kanal `#beta-bugs` – [jetzt beitreten](https://discord.gg/fSkhHppgcv)
+- **Discord:** Forum `#stable-bugs` (Stable 1.0.1) oder `#port-bugs` (Port-Beta 2.1.1.1), ein Thread pro Fund – [jetzt beitreten](https://discord.gg/fSkhHppgcv)
 - **Reddit:** [r/PokemonUnboundDE](https://www.reddit.com/r/PokemonUnboundDE/) – Fragen, Funde, Screenshots
 - **GitHub:** [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml)
 
@@ -103,9 +103,9 @@ Am besten mit: Ort im Spiel + Screenshot + (gern) deinem Textvorschlag.
 
 **How to play:** open our [patch page](https://pokemon-unbound-de.github.io/pokemon-unbound-de/), select your own legal **Pokémon FireRed (USA) Rev 0** and create the German ROM right in your browser (latest beta, result is checksum-verified, your ROM is not uploaded). Alternatively, download **one** `.bps` patch from the [latest release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/latest) – for **FireRed (USA) Rev 0** or **Pokémon Unbound (EN) v1.0.1** – and apply it with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) or Flips. MD5 checksums are in `MD5.txt` and the [patch guide](docs/PATCH_ANLEITUNG.md). **No ROMs are provided.**
 
-**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#beta-bugs` on Discord. This stable line is based on Unbound **v1.0.1**. **Stable v1.0.0 is out for Unbound 1.0.1, and the open beta for Unbound 2.1.1.1 is now at v2.0.0-beta.2.** About 93 % of the checked text lines of the port have a German version; the rest follows in further betas. Patch it in the [browser](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) (choose "Port Unbound 2.1.1.1 DE") with your own legal Unbound 2.1.1.1 (EN) or FireRed (USA) Rev 0 ROM, or take a `.bps` from the [release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.2). Back up your save first. How it was built: [docs/PORT_BAU.md](docs/PORT_BAU.md). See the [CHANGELOG](CHANGELOG.md) for what changed.
+**It's a beta:** the translation is AI-assisted and machine-checked (text width, names, control codes, plus an emulator test bot), but much of it hasn't been proofread by humans yet. Some names are shortened due to fixed character limits. The Pokédex shows height in meters since v0.1.6 (weight has been in kg since v0.1.4). Known open bugs are pinned in `#bekannte-fehler` on Discord. This stable line is based on Unbound **v1.0.1**. **Stable v1.0.0 is out for Unbound 1.0.1, and the open beta for Unbound 2.1.1.1 is now at v2.0.0-beta.3.** About 93 % of the checked text lines of the port have a German version; the rest follows in further betas. Patch it in the [browser](https://pokemon-unbound-de.github.io/pokemon-unbound-de/) (choose "Port Unbound 2.1.1.1 DE") with your own legal Unbound 2.1.1.1 (EN) or FireRed (USA) Rev 0 ROM, or take a `.bps` from the [release](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/port-v2.0.0-beta.3). Back up your save first. How it was built: [docs/PORT_BAU.md](docs/PORT_BAU.md). See the [CHANGELOG](CHANGELOG.md) for what changed.
 
-**Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#beta-bugs`), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
+**Help us:** report anything odd in [Discord](https://discord.gg/fSkhHppgcv) (`#stable-bugs` or `#port-bugs`, English is fine), on [Reddit](https://www.reddit.com/r/PokemonUnboundDE/) or via [GitHub Issues](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml). German speakers who proofread are especially welcome.
 
 ---
 
@@ -140,13 +140,13 @@ Pokémon and Pokémon Unbound are owned by their respective rights holders. This
 
 Mitmachen am Projekt: [CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](ROADMAP.md)
 
-<!-- FEHLERLISTE:START (automatisch, Stand 26.11.2026) -->
+<!-- FEHLERLISTE:START (automatisch, Stand 27.11.2026) -->
 ## Fehlerliste – für Interessierte & Mitentwickler
 
 Alle offenen Punkte mit Nummer und Status: **[docs/BEKANNTE_FEHLER.md](docs/BEKANNTE_FEHLER.md)** (automatisch aus unserer Fehlerliste erzeugt).
 <!-- FEHLERLISTE:ENDE -->
 
-<!-- MEILENSTEINE:START (automatisch, Stand 26.11.2026) -->
+<!-- MEILENSTEINE:START (automatisch, Stand 27.11.2026) -->
 ## Meilensteine
 
 | Schritt | Stand |
