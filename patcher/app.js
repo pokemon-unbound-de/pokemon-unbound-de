@@ -332,6 +332,9 @@ async function start() {
       },
       ondownloadstart() {
         trackEvent('patch-erfolg', tagVon(modus));             // Linie folgt aus dem Tag (port-v… = Port)
+        // Basis-ROM je Erfolg (I8 26.11.): „erfolg-basis-<firered|unbound101|port>-<tag>“. Nur die Art der Basis, keine
+        // Prüfsumme; der Name beginnt nicht mit „patch-erfolg“, damit statistik.py Erfolge nicht doppelt zählt.
+        trackEvent('erfolg-basis', `${BASIS_VON_MODUS[modus]}-${tagVon(modus)}`);
         const vorher = fehlerAbholen();
         if (vorher) trackEvent('patch-erfolg-nach-fehler', vorher);
       }
