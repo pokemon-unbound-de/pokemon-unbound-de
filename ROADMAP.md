@@ -13,7 +13,7 @@ Stand: November 2026. Aktuelle Version: siehe [Releases](https://github.com/poke
 
 ## Port auf Pokémon Unbound 2.1.1.1
 
-- **Stand:** offene Beta **v2.0.0-beta.2** (Pre-release), Fortschritt im [Issue #37](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/37). Wie der Port gebaut wird: [docs/PORT_BAU.md](docs/PORT_BAU.md).
+- **Stand:** offene Beta **v2.0.0-beta.3** (Pre-release), Fortschritt im [Issue #37](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/37). Wie der Port gebaut wird: [docs/PORT_BAU.md](docs/PORT_BAU.md).
 - **Als Nächstes:** weitere Betas mit den Fehlern aus euren Meldungen und den letzten englischen Texten, danach eine Stable-Fassung für 2.1.1.1.
 - Spielstände der 1.0.1-Linie passen nicht zu 2.1.1.1 (eigenes Unbound-Spielstandformat).
 

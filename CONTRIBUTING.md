@@ -36,7 +36,7 @@ Eingabe: CSV (UTF-8, Trennzeichen `;`) mit den Spalten `id;en;de` und optional `
 
 ### 1. Tester (kein Vorwissen nötig)
 **Aufgabe:** Die Vorschau bzw. die aktuelle Version spielen und Fehler melden: englische Reste, Text läuft aus dem Kasten, falsche Artikel/Geschlecht, Tippfehler, Grafikfehler, Abstürze.
-**So geht’s:** Patch dir die Version im Browser ([Patch-Seite](https://patch.pokemonunboundde.studio/)), spiel, und melde im Discord (`#beta-bugs`; Port-Vorschau: `#port-feedback`) oder per [Issue-Vorlage „Fehler melden“](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new/choose). Immer mit **Screenshot oder kurzem Video**, **Ort** (Stadt/Route/Etage, mit wem gesprochen), **was ist falsch**, **wie oft**, **Version**. Bekannte Fehler stehen in der angepinnten Liste im Discord.
+**So geht’s:** Patch dir die Version im Browser ([Patch-Seite](https://patch.pokemonunboundde.studio/)), spiel, und melde im Discord (Forum `#stable-bugs` für die Stable 1.0.1, `#port-bugs` für die Port-Beta 2.1.1.1) oder per [Issue-Vorlage „Fehler melden“](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new/choose). Immer mit **Screenshot oder kurzem Video**, **Ort** (Stadt/Route/Etage, mit wem gesprochen), **was ist falsch**, **wie oft**, **Version**. Bekannte Fehler stehen in der angepinnten Liste in `#bekannte-fehler` im Discord.
 **Prompt für deine KI** (zum Aufräumen deiner Notizen, ohne Spieltext zu erfinden):
 ```text
 Du hilfst mir, einen Fehler in einer deutschen Pokémon-Unbound-Übersetzung zu melden. Ich gebe dir meine Stichpunkte und eine

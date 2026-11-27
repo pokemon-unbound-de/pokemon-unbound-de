@@ -23,7 +23,7 @@ Auf der [Release-Seite](https://github.com/pokemon-unbound-de/pokemon-unbound-de
 | **A** | Pokémon FireRed (USA), Rev 0 | `e26ee0d44e809351c8ce2d73c7400cdd` | `pokemon_unbound_de_vX.Y.Z_von_firered_usa.bps` (enthält Unbound v1.0.1) |
 | B | Pokémon Unbound (englisch) v1.0.1 | `52192d7e7268245e2e30b7d1a802d33d` | `pokemon_unbound_de_vX.Y.Z.bps` |
 
-Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen zu diesen Patches **nicht**. Für Unbound 2.1.1.1 gibt es die eigene Port-Beta (Release `port-v2.0.0-beta.2`).
+Beide Wege ergeben exakt dieselbe deutsche ROM. Neuere Unbound-Versionen (z. B. v2.1.1.1) passen zu diesen Patches **nicht**. Für Unbound 2.1.1.1 gibt es die eigene Port-Beta (Release `port-v2.0.0-beta.3`).
 MD5 deiner Datei: Windows `certutil -hashfile "DeineROM.gba" MD5` · macOS `md5 "DeineROM.gba"` · Linux `md5sum "DeineROM.gba"`.
 
 - **[Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/)** (Browser, auch für Weg B): ROM wählen (zeigt die MD5), `.bps` wählen, *Apply patch*.
@@ -42,6 +42,6 @@ MD5 deiner Datei: Windows `certutil -hashfile "DeineROM.gba" MD5` · macOS `md5 
 ## 4. Probleme?
 
 - **Patch schlägt fehl / Prüfsummenfehler / weißer Bildschirm:** fast immer die falsche Basis-ROM → MD5 prüfen (Tabelle oben) oder die Patch-Seite nutzen, die das automatisch tut.
-- **Übersetzungsfehler gefunden?** Erst die angehefteten „📌 Bekannten Fehler“ in `#beta-bugs` auf [Discord](https://discord.gg/fSkhHppgcv) ansehen, dann melden – dort oder über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
+- **Übersetzungsfehler gefunden?** Erst die angehefteten „📌 Bekannten Fehler“ in `#bekannte-fehler` auf [Discord](https://discord.gg/fSkhHppgcv) ansehen, dann melden – im Forum `#stable-bugs` (Stable) bzw. `#port-bugs` (Port-Beta) oder über das Formular [Übersetzungsfehler melden](https://github.com/pokemon-unbound-de/pokemon-unbound-de/issues/new?template=01-uebersetzungsfehler.yml).
 
 Bitte lade **niemals** ROMs oder gepatchte ROMs hoch – weder in Issues noch im Discord. **Spielstände (`.sav`) gern im Discord-Kanal `#spielstände`** – sie helfen uns, Fehler nachzustellen (in GitHub-Issues bitte keine Dateien außer Screenshots). Screenshots sind super!

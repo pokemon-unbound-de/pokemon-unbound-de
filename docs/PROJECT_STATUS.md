@@ -9,7 +9,7 @@
   oder direkt im Browser auf der [Patch-Seite](https://pokemon-unbound-de.github.io/pokemon-unbound-de/). Keine ROMs.
 - **Qualität:** KI-gestützt übersetzt, automatisch geprüft (Textbreite, Namen, Steuercodes, Speicherbereiche) und mit
   einem Emulator-Test-Bot durchgespielt; menschliches Gegenlesen läuft.
-- **Bekannte Fehler:** angehefteter Beitrag „📌 Bekannte Fehler“ in `#beta-bugs` auf
+- **Bekannte Fehler:** angehefteter Beitrag „📌 Bekannte Fehler“ in `#bekannte-fehler` auf
   [Discord](https://discord.gg/fSkhHppgcv).
 - **Aktueller Meilenstein:** [Stable v1.0.0](https://github.com/pokemon-unbound-de/pokemon-unbound-de/releases/tag/v1.0.0) (25.11.2026). Wie es weitergeht, steht in der [Roadmap](../ROADMAP.md).
-- **Port Unbound 2.1.1.1:** offene Beta v2.0.0-beta.2 (Pre-release), Patchen im Browser mit Auswahl „Port Unbound 2.1.1.1 DE“.
+- **Port Unbound 2.1.1.1:** offene Beta v2.0.0-beta.3 (Pre-release), Patchen im Browser mit Auswahl „Port Unbound 2.1.1.1 DE“.
